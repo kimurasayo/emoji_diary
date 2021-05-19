@@ -30,3 +30,6 @@ Emojiを使ってつける日記を一人でも、コミュニティでも楽し
 
 ## 画面遷移図
 https://www.figma.com/file/ft7fjKscozaZZfdkch33qq/Emory?node-id=0%3A1
+
+## ER図
+https://i.gyazo.com/9498143fd6f762054a2f494e29b6a3c6.png
