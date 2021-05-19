@@ -32,4 +32,4 @@ Emojiを使ってつける日記を一人でも、コミュニティでも楽し
 https://www.figma.com/file/ft7fjKscozaZZfdkch33qq/Emory?node-id=0%3A1
 
 ## ER図
-https://i.gyazo.com/fa3ddd47bd269c32ed85aed05d22a553.png
+https://i.gyazo.com/9498143fd6f762054a2f494e29b6a3c6.png
