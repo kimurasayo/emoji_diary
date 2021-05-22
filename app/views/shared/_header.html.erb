@@ -1,11 +1,41 @@
 <header>
-    <h1>
-      <%= link_to 'Emory💐', root_path %>
-    </h1>
-    <nav>
-        <ul>
-            <li><a href="#">ドーナツ🍩</a></li>
-            <li><a href="#">ケーキ🍰</a></li>
-        </ul>
-    </nav>
+  <nav class='navbar navbar-expand-lg navigation navbar-light bg-light'>
+    <%= link_to 'emory', root_path %>
+    
+    <button class='navbar-toggler' data-toggle='collapse' data-target='#navbarSupportedContent'
+      aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class='navbar-toggler-icon'></span>
+    </button>
+
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+      <ul class='navbar-nav ml-auto main-nav align-items-center'>
+        <li class='nav-item dropdown dropdown-slide'>
+          <a href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+            diary
+          </a>
+
+          <div class='dropdown-menu dropdown-menu-right'>
+            <a class='dropdown-item' href='#'>mine</a>
+            <a class='dropdown-item' href='#'>follower's</a>
+          </div>
+        </li>
+
+        <li class='nav-item'>
+          <a class='nav-link' href='#'>bookmarks</a>
+        </li>
+
+        <li class='nav-item dropdown dropdown-slide'>
+          <a href='#' class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
+            💐
+          </a>
+          <div class='dropdown-menu dropdown-menu-right'>
+            <div class='dropdown-item'>nickname</div>
+            <div class='dropdown-divider'></div>
+            <a class='dropdown-item' href='#'>followers</a>
+            <%= link_to 'logout', logout_path, method: :delete, class: 'dropdown-item' %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>
