@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      user: user
+    attributes:
+      user:
+        nickname: nickname
+        name: user name
+        password: password
+        password_confirmation: password confirmation

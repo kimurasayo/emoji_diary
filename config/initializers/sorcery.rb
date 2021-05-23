@@ -226,7 +226,6 @@ Rails.application.config.sorcery.configure do |config|
   # config.line.bot_prompt = "normal"
   # config.line.user_info_mapping = {name: 'displayName'}
 
-  
   # For information about Discord API
   # https://discordapp.com/developers/docs/topics/oauth2
   # config.discord.key = "xxxxxx"
@@ -261,7 +260,7 @@ Rails.application.config.sorcery.configure do |config|
     # Change default email attribute.
     # Default: `:email`
     #
-    user.email_attribute_name =:name
+    user.email_attribute_name = :name
 
     # Change default crypted_password attribute.
     # Default: `:crypted_password`
