@@ -1,0 +1,23 @@
+en:
+  defaults:
+    login: login
+    register: register
+    submit: submit
+    logout: logout
+  users:
+    new:
+      title: register
+      to_login_page: already a member?
+    create:
+      success: success🎉 welcome to emory
+      fail: something happened in your information🔗 please check it again
+  user_sessions:
+    new:
+      title: login
+      to_register_page: make a new account
+      password_forget: forgot a password
+    create:
+      success: success🔓 you are logged in now
+      fail: failed🔐 you are not able to login
+    destroy:
+      success: thank you❤️ please come it again
