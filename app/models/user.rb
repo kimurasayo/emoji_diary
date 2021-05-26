@@ -3,7 +3,7 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
 
   # Diaryモデルとのアソシエーション、ユーザーが消されたら日記も消す
-  has_many :diaries, dependent: :destroy 
+  has_many :diaries, dependent: :destroy
 
   # if~内容変更時パスワードの入力を省略させることが出来る
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
