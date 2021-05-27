@@ -68,3 +68,6 @@ gem 'dotenv-rails'
 gem 'sorcery'
 # デバック用
 gem 'pry-byebug'
+
+# カレンダー
+gem "simple_calendar", "~> 2.4"
