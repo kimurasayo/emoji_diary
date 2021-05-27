@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   # new, createアクション(新規作成)の前にrequire_loginを行わない
-  skip_before_action :require_login, only: %i[new create]
+  skip_before_action :require_login, only: [:new, :create]
 
   # 新規作成したユーザー
   def new
