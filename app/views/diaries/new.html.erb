@@ -1,0 +1,23 @@
+<%= form_with(model: @diary, local: true) do |f| %>
+
+  <div class="feeling">
+    <%= f.label :feeling %>
+    <%= f.text_field :feeling %>
+  </div>
+
+    <div class="time">
+    <%= f.label :start_time %>
+    <%= f.date_select :start_time %>
+  </div>
+
+  <div class="body">
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+
+
+  <div class="submit">
+    <%= f.submit %>
+  </div>
+
+<% end %>
