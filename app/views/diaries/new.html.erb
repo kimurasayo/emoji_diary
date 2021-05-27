@@ -1,23 +1,30 @@
-<%= form_with(model: @diary, local: true) do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <%= form_with(model: @diary, local: true) do |f| %>
 
-  <div class="feeling">
-    <%= f.label :feeling %>
-    <%= f.text_field :feeling %>
+      <div class="form-group">
+        <%= f.label :start_time %></br>
+        <%= f.date_select :start_time, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :feeling %>
+        <%= f.text_field :feeling, class: 'form-control' %>
+      </div>
+    
+      <div class="form-group">
+        <%= f.label :body %>
+        <%= f.text_field :body, class: 'form-control' %>
+      </div>
+    
+    
+      <div class="submit">
+        <%= f.submit class: "btn btn-primary" %>
+      </div>
+    
+    <% end %>
+    
+    </div>
   </div>
-
-    <div class="time">
-    <%= f.label :start_time %>
-    <%= f.date_select :start_time %>
-  </div>
-
-  <div class="body">
-    <%= f.label :body %>
-    <%= f.text_field :body %>
-  </div>
-
-
-  <div class="submit">
-    <%= f.submit %>
-  </div>
-
-<% end %>
+</div>

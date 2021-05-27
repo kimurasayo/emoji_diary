@@ -1,18 +1,30 @@
-<p>
-  <strong>date</strong>
-  <%= @diary.start_time.strftime("%Y-%m-%d") %>
-</p>
-
-<p>
-  <strong>feeling</strong>
-  <%= @diary.feeling %>
-</p>
-
-<p>
-  <strong>about</strong>
-  <%= @diary.body %>
-</p>
-
-<%= link_to 'edit', edit_diary_path(@diary) %> |
-<%= link_to 'Destroy', diary_path(@diary.id), method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'back', diaries_path %>
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <article class="card">
+        <div class="card-body">
+          <div class='row'>
+            <div class='col-md-9'>
+              <h3 style='display: inline;'><%= @diary.start_time.strftime("%Y-%m-%d") %></h3>
+              <ul class="list-inline">
+                <strong>feeling</strong>
+                <li class="list-inline-item"><%= @diary.feeling %></li></br>
+                <strong>about</strong>
+                <li class="list-inline-item"><%= @diary.body %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+      <%= link_to diaries_path do %>
+        <i class="far fa-hand-point-left"></i>
+      <% end %> |
+      <%= link_to edit_diary_path(@diary) do %>
+        <i class="fa fa-pen"></i>
+      <% end %> |
+      <%= link_to diary_path(@diary.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
