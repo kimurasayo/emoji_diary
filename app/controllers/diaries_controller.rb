@@ -1,5 +1,4 @@
 class DiariesController < ApplicationController
-  
   # diaries_path。現在ログインしているユーザーの日記一覧ページ。
   def index
     @diaries = current_user.diaries
@@ -19,8 +18,9 @@ class DiariesController < ApplicationController
   def create
     @diary = current_user.diaries.new(diary_params)
     if @diary.save
-      redirect_to diaries_path, success: "#{@diary.feeling} in #{@diary.start_time}"
+      redirect_to diaries_path, success: t('.success')
     else
+      flash.now[:danger] = t('.fail')
       render :new
     end
   end
@@ -29,9 +29,9 @@ class DiariesController < ApplicationController
   def destroy
     @diary = current_user.diaries.find(params[:id])
     @diary.destroy
-    redirect_to diaries_path, success:"it has beed deleted"
+    redirect_to diaries_path, success: t('.success')
   end
-  
+
   # edit_diary_path(@diary.id)
   def edit
     @diary = current_user.diaries.find(params[:id])
@@ -41,7 +41,7 @@ class DiariesController < ApplicationController
   def update
     @diary = current_user.diaries.find(params[:id])
     if @diary.update(diary_params)
-      redirect_to diaries_path, success: "it has been updated"
+      redirect_to diaries_path, success: t('.success')
     else
       render :edit
     end
@@ -49,7 +49,7 @@ class DiariesController < ApplicationController
 
   private
 
-  #フォームから受け取ることのできる情報カラム
+  # フォームから受け取ることのできる情報カラム
   def diary_params
     params.require(:diary).permit(:feeling, :body, :start_time)
   end
