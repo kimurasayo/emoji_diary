@@ -9,31 +9,23 @@
 
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
       <ul class='navbar-nav ml-auto main-nav align-items-center'>
-        <li class='nav-item dropdown dropdown-slide'>
-          <a href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-            diary
-          </a>
-
-          <div class='dropdown-menu dropdown-menu-right'>
-            <a class='dropdown-item' href='#'>mine</a>
-            <a class='dropdown-item' href='#'>follower's</a>
-          </div>
-        </li>
-
         <li class='nav-item'>
-          <a class='nav-link' href='#'>bookmarks</a>
+          <%= link_to t('defaults.mine'), diaries_path, class: 'nav-link' %>
         </li>
-
-        <li class='nav-item dropdown dropdown-slide'>
-          <a href='#' class='nav-link' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
-            💐
-          </a>
-          <div class='dropdown-menu dropdown-menu-right'>
-            <div class='dropdown-item'>nickname</div>
-            <div class='dropdown-divider'></div>
-            <a class='dropdown-item' href='#'>followers</a>
-            <%= link_to t('defaults.logout'), logout_path, method: :delete, class: 'dropdown-item' %>
-          </div>
+        <li class='nav-item'>
+          <a class='nav-link' href='#'>follower's diary</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='#'>followers</a>
+        </li>
+        <li class='nav-item'>
+          <%= link_to t('defaults.logout'), logout_path, method: :delete, class: 'nav-link' %>
+        </li>
+        <li class='nav-item'>
+          <%= link_to t('defaults.new'), new_diary_path, class: 'nav-link' %>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='#'>💐</a>
         </li>
       </ul>
     </div>

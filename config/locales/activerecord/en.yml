@@ -2,9 +2,14 @@ en:
   activerecord:
     models:
       user: user
+      diary: diary
     attributes:
       user:
         nickname: nickname
         name: user name
         password: password
         password_confirmation: password confirmation
+      diary:
+        feeling: feeling
+        body: about
+        start_time: date

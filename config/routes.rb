@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # new_user_path, users_path
   resources :users, only: [:new, :create]
 
+  resources :diaries
+
   # login_path
   get 'login', to: 'user_sessions#new', as: :login
   post 'login', to: 'user_sessions#create'

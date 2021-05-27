@@ -4,6 +4,8 @@ en:
     register: register
     submit: submit
     logout: logout
+    mine: mine
+    new: new
   users:
     new:
       title: register
@@ -21,3 +23,11 @@ en:
       fail: failed🔐 you are not able to login
     destroy:
       success: thank you❤️ please come it again
+  diaries:
+    create:
+      success: successfully posted🎉
+      fail: something went wrong
+    destroy:
+      success: it has beed deleted
+    update:
+      success: it has been updated
