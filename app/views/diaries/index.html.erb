@@ -1,0 +1,11 @@
+<h1><%= current_user.nickname %>'s diary</h1>
+
+<%= month_calendar events: @diaries do |date, diaries| %>
+  <%= date.day %>
+
+  <% diaries.each do |diary| %>
+    <div>
+      <%= link_to diary.feeling, diary %>
+    </div>
+  <% end %>
+<% end %>
