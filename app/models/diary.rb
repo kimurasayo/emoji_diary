@@ -13,8 +13,8 @@ class Diary < ApplicationRecord
   # バリデーターにて使用できる文字を定義している
   validates :body, emoji: true
 
-  # 日記の日付は必須、一日一日記の制限
-  validates :start_time, presence: true, uniqueness: true
+  # 日記の日付は必須
+  validates :start_time, presence: true
 
   # validateに下記で定義したメソッドを設定
   validate :start_time_cannot_be_in_the_future
