@@ -1,0 +1,18 @@
+<p>
+  <strong>date</strong>
+  <%= @diary.start_time.strftime("%Y-%m-%d") %>
+</p>
+
+<p>
+  <strong>feeling</strong>
+  <%= @diary.feeling %>
+</p>
+
+<p>
+  <strong>about</strong>
+  <%= @diary.body %>
+</p>
+
+<%= link_to 'edit', edit_diary_path(@diary) %> |
+<%= link_to 'Destroy', diary_path(@diary.id), method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'back', diaries_path %>
