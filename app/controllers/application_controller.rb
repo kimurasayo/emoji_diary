@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
   before_action :require_login
 
   private
-  
-  #ログインしていないユーザーがアクセスしてrequire_loginで弾かれた後の処理
+
+  # ログインしていないユーザーがアクセスしてrequire_loginで弾かれた後の処理
   def not_authenticated
     redirect_to login_path, alert: "Please login first"
   end
