@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
     it '違うuser ID(nameカラム)は有効である' do
       create(:user, name: 'name')
       user = build(:user, name: 'name1')
-      user.valid?
+      expect(user).to be_valid
     end
 
     it '全ての項目が有効である' do
