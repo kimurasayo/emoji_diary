@@ -11,7 +11,7 @@ class Diary < ApplicationRecord
                       length: { maximum: 1 }
 
   # バリデーターにて使用できる文字を定義している
-  validates :body, emoji: true
+  validates :body, emoji: true, length: { maximum: 20 }
 
   # 日記の日付は必須
   validates :start_time, presence: true
