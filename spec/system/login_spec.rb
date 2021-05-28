@@ -11,7 +11,7 @@ RSpec.describe "Login", type: :system do
           fill_in 'user name', with: user.name
           fill_in 'password', with: 'password'
           click_button 'login'
-          expect(current_path).to eq root_path
+          expect(current_path).to eq diaries_path
           expect(page).to have_content "success🔓 you are logged in now"
         end
       end
@@ -33,7 +33,6 @@ RSpec.describe "Login", type: :system do
       it '正常にログアウトができる' do
         Login_as(user)
         visit root_path
-        click_link '💐'
         click_link 'logout'
         expect(current_path).to eq root_path
         expect(page).to have_content "thank you❤️ please come it again"
