@@ -6,6 +6,9 @@ en:
     logout: logout
     mine: mine
     new: new
+    followers: followers
+    follow: follow
+    unfollow: unfollow
   users:
     new:
       title: register
