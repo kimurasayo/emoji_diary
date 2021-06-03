@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root to: 'tops#home'
 
   # new_user_path, users_path
-  resources :users, only: [:new, :create, :index]
-
-  resources :diaries
+  # user_diaries_path(index), new_user_diary_path, edit_user_diary, user_diary(show)
+  resources :users, only: [:new, :create, :index] do
+    resources :diaries
+  end
 
   resources :relationships, only: [:create, :destroy]
 
