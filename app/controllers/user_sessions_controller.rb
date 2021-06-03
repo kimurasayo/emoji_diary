@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
   def create
     @user = login(params[:name], params[:password])
     if @user
-      redirect_back_or_to diaries_path, success: t('.success')
+      redirect_back_or_to user_diaries_path(current_user), success: t('.success')
     else
       flash.now[:danger] = t('.fail')
       render :new

@@ -6,35 +6,36 @@ class DiariesController < ApplicationController
     @diaries = @user.diaries
   end
 
-  # new_diary_path
+  # new_user_diary_path
   def new
     @diary = Diary.new
   end
 
-  # diary_path
+  # user_diary_path。ユーザーの情報から日記の記事を絞り込んで、@diaryに入れている。
   def show
-    @diary = current_user.diaries.find(params[:id])
+    @user = User.find(params[:user_id])
+    @diary = @user.diaries.find(params[:id])
   end
 
   # 日記作成アクション。作成できたら一覧ページ、失敗したら日記新規作成ページへ。
   def create
     @diary = current_user.diaries.new(diary_params)
     if @diary.save
-      redirect_to diaries_path, success: t('.success')
+      redirect_to user_diaries_path(current_user), success: t('.success')
     else
       flash.now[:danger] = t('.fail')
       render :new
     end
   end
 
-  # diary_path(@diary.id), method: :delete
+  # 日記消去アクション
   def destroy
     @diary = current_user.diaries.find(params[:id])
     @diary.destroy
-    redirect_to diaries_path, success: t('.success')
+    redirect_to user_diaries_path(current_user), success: t('.success')
   end
 
-  # edit_diary_path(@diary.id)
+  # edit_user_diary_path
   def edit
     @diary = current_user.diaries.find(params[:id])
   end
@@ -43,7 +44,7 @@ class DiariesController < ApplicationController
   def update
     @diary = current_user.diaries.find(params[:id])
     if @diary.update(diary_params)
-      redirect_to diaries_path, success: t('.success')
+      redirect_to user_diary_path(current_user), success: t('.success')
     else
       render :edit
     end
