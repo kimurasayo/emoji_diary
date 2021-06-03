@@ -1,7 +1,9 @@
 class DiariesController < ApplicationController
-  # diaries_path。現在ログインしているユーザーの日記一覧ページ。
+  # user_diaries_path。ユーザーのidをパラメータで受け取って、@userに入れる。
+  # @userの日記一覧を@diariesに入れる。
   def index
-    @diaries = current_user.diaries
+    @user = User.find(params[:user_id])
+    @diaries = @user.diaries
   end
 
   # new_diary_path
