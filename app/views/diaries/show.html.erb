@@ -16,14 +16,16 @@
           </div>
         </div>
       </article>
-      <%= link_to diaries_path do %>
+      <%= link_to user_diaries_path(@user) do %>
         <i class="far fa-hand-point-left"></i>
       <% end %> |
-      <%= link_to edit_diary_path(@diary), id: "button-edit-#{@diary.id}" do %>
-        <i class="fa fa-pen"></i>
-      <% end %> |
-      <%= link_to diary_path(@diary.id), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <i class="far fa-trash-alt"></i>
+      <% if current_user.id == @diary.user.id %>
+        <%= link_to edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}" do %>
+          <i class="fa fa-pen"></i>
+        <% end %> |
+        <%= link_to user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
       <% end %>
     </div>
   </div>
