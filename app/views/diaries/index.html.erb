@@ -5,7 +5,7 @@
 
   <% diaries.each do |diary| %>
     <div>
-      <%= link_to diary.feeling, "#" %>
+      <%= link_to diary.feeling, user_diary_path(@user, diary) %>
     </div>
   <% end %>
 <% end %>
