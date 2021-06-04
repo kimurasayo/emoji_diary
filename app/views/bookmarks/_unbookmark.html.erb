@@ -1,3 +1,11 @@
 <%= link_to bookmark_path(current_user.bookmarks.find_by(diary_id: diary.id)), method: :delete do %>
   <i class="fas fa-heart"></i>
 <% end %>
+<%= link_to index_bookmarks_user_diary_path(diary_id: diary.id) do %>
+  <%= diary.bookmarks.length %>
+  <% if diary.bookmarks.length <= 1 %>
+    like
+  <% else %>
+    likes
+  <% end %>
+<% end %>
