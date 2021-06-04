@@ -1,0 +1,5 @@
+<% if current_user.bookmark?(diary) %>
+  <%= render 'bookmarks/unbookmark', { diary: diary } %>
+<% else %>
+  <%= render 'bookmarks/bookmark', { diary: diary } %>
+<% end %>
