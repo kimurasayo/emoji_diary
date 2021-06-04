@@ -15,7 +15,7 @@
             </div>
           </div>
         </div>
-      </article>
+      </article> 
       <%= link_to user_diaries_path(@user) do %>
         <i class="far fa-hand-point-left"></i>
       <% end %> |
@@ -25,8 +25,9 @@
         <% end %> |
         <%= link_to user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: 'Are you sure?' } do %>
           <i class="far fa-trash-alt"></i>
-        <% end %>
+        <% end %> | 
       <% end %>
+      <%= render 'bookmarks/bookmark_button', { diary: @diary } %>
     </div>
   </div>
 </div>

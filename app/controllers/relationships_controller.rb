@@ -6,7 +6,7 @@ class RelationshipsController < ApplicationController
     # 現在ログインしているユーザーが@other_userをフォローする
     current_user.follow(@other_user)
     # 処理が終わったら同じページに戻る
-		redirect_back fallback_location: root_path
+    redirect_back fallback_location: root_path
   end
 
   def destroy
@@ -15,6 +15,6 @@ class RelationshipsController < ApplicationController
     # 現在ログインしているユーザーがフォローを外す
     current_user.unfollow(params[:id])
     # 処理が終わったら同じページに戻る
-		redirect_back fallback_location: root_path
+    redirect_back fallback_location: root_path
   end
 end

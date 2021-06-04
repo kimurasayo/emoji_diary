@@ -5,10 +5,16 @@ Rails.application.routes.draw do
   # new_user_path, users_path
   # user_diaries_path(index), new_user_diary_path, edit_user_diary, user_diary(show)
   resources :users, only: [:new, :create, :index] do
-    resources :diaries
+    resources :diaries do
+      member do
+        get "index_bookmarks" => "diaries#index_bookmarks"
+      end
+    end
   end
 
   resources :relationships, only: [:create, :destroy]
+
+  resources :bookmarks, only: [:create, :destroy]
 
   # login_path
   get 'login', to: 'user_sessions#new', as: :login
