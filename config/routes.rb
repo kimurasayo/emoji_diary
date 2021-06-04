@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
 
+  resources :bookmarks, only: [:create, :destroy]
+
   # login_path
   get 'login', to: 'user_sessions#new', as: :login
   post 'login', to: 'user_sessions#create'
