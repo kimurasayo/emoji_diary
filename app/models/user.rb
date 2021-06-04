@@ -15,6 +15,11 @@ class User < ApplicationRecord
   # Userはたくさんのfollowersをpassive_relationshipsを通じて持っている。relationshipのuserを参照する
   has_many :followers, through: :passive_relationships, source: :user
 
+  # 各ユーザーはたくさんブックマークをすることが出来る
+  has_many :bookmarks, dependent: :destroy
+  # お気に入りにしている日記を取得する
+  has_many :bookmark_diaries, through: :bookmarks, source: :diary
+
   # if~内容変更時パスワードの入力を省略させることが出来る
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
@@ -25,20 +30,36 @@ class User < ApplicationRecord
   # nameはTwitterでいうユーザーIDのようなもの。一意で必須項目。
   validates :name, uniqueness: true, presence: true
 
-  #フォローする
+  # フォローする
   def follow(other_user)
     # 自分自身はフォローできない
     return if self == other_user
+
     relationships.find_or_create_by!(follower: other_user)
   end
-  
+
   # フォローしているか確認する
   def following?(user)
     followings.include?(user)
   end
-  
-  #　フォローをはずす
+
+  # 　フォローをはずす
   def unfollow(relathinoship_id)
     relationships.find(relathinoship_id).destroy!
+  end
+
+  # ブックマークする
+  def bookmark(diary)
+    bookmark_diaries << diary
+  end
+
+  # ブックマークを外す
+  def unbookmark(diary)
+    bookmark_diaries.delete(diary)
+  end
+
+  # ブックマークしているか判定するメソッド
+  def bookmark?(diary)
+    bookmark_diaries.include?(diary)
   end
 end
