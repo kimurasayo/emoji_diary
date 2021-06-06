@@ -12,4 +12,10 @@ class BookmarksController < ApplicationController
     current_user.unbookmark(diary)
     redirect_back fallback_location: root_path
   end
+
+  # 日記にブックマークしているユーザー一覧のページ
+  def index
+    @diary = Diary.find(params[:id])
+    @bookmarks = Bookmark.where(diary_id: @diary.id).all
+  end
 end
