@@ -3,11 +3,15 @@ Rails.application.routes.draw do
   root to: 'tops#home'
 
   # new_user_path, users_path
+  # user_followers_path
   # user_diaries_path(index), new_user_diary_path, edit_user_diary, user_diary(show)
+  # user_bookmarks_path
   resources :users, only: [:new, :create, :index] do
+    resources :followers, only: [:index]
+  
     resources :diaries do
       member do
-        get "index_bookmarks" => "diaries#index_bookmarks"
+        resources :bookmarks, only: [:index]
       end
     end
   end
