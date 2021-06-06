@@ -1,60 +1,13 @@
-User.seed do |s|
-  s.id = 1
-  s.nickname = 'sayo'
-  s.name = 'kimsayo'
-  s.password  = "password"
-end
-User.seed do |s|
-  s.id = 2
-  s.nickname = 'eri'
-  s.name = 'eri1112'
-  s.password  = "password"
-end
-User.seed do |s|
-  s.id = 3
-  s.nickname = 'yuka'
-  s.name = 'yuka911'
-  s.password  = "password"
-end
-User.seed do |s|
-  s.id = 4
-  s.nickname = 'ayaka'
-  s.name = '110aya'
-  s.password  = "password"
-end
-User.seed do |s|
-  s.id = 5
-  s.nickname = 'asa'
-  s.name = 'asako'
-  s.password  = "password"
-end
-User.seed do |s|
-  s.id = 6
-  s.nickname = 'yuki'
-  s.name = 'bu8yuki'
-  s.password  = "password"
-end
-User.seed do |s|
-  s.id = 7
-  s.nickname = 'rina'
-  s.name = 'rina93'
-  s.password  = "password"
-end
-User.seed do |s|
-  s.id = 8
-  s.nickname = 'yuna'
-  s.name = 'yunana'
-  s.password  = "password"
-end
-User.seed do |s|
-  s.id = 9
-  s.nickname = 'nami'
-  s.name = 'namihe'
-  s.password  = "password"
-end
-User.seed do |s|
-  s.id = 10
-  s.nickname = 'mari'
-  s.name = 'maririn'
-  s.password  = "password"
-end
+User.seed(
+  :id,
+  { id: 1, nickname: 'sayo', name: 'kimsayo', crypted_password: User.encrypt('password') },
+  { id: 2, nickname: 'eri', name: 'eri1112', crypted_password: User.encrypt('password') },
+  { id: 3, nickname: 'yuka', name: 'yuka911', crypted_password: User.encrypt('password') },
+  { id: 4, nickname: 'miki', name: 'mickey', crypted_password: User.encrypt('password') },
+  { id: 5, nickname: 'yuki', name: 'yuki8', crypted_password: User.encrypt('password') },
+  { id: 6, nickname: 'ayaka', name: 'ayaka110', crypted_password: User.encrypt('password') },
+  { id: 7, nickname: 'asa', name: 'asako', crypted_password: User.encrypt('password') },
+  { id: 8, nickname: 'mari', name: 'mari7', crypted_password: User.encrypt('password') },
+  { id: 9, nickname: 'yuna', name: 'yuna61', crypted_password: User.encrypt('password') },
+  { id: 10, nickname: 'hina', name: 'hina4', crypted_password: User.encrypt('password') },
+)
