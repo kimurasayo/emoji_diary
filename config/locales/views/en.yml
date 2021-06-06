@@ -9,6 +9,7 @@ en:
     followers: followers
     follow: follow
     unfollow: unfollow
+    follower_diary: follower's diary
   users:
     new:
       title: register
