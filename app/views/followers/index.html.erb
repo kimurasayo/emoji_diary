@@ -1,0 +1,10 @@
+<% @users.each do |user| %>
+  <h2><%= user.nickname %></h2>
+  <% @diaries = Diary.where(user_id: user.id) %>
+  <%= week_calendar events: @diaries do |date, diaries| %>
+    <%= date %>
+    <% diaries.each do |diary| %>
+      <%= link_to diary.feeling, user_diary_path(user, diary) %>
+    <% end %>
+  <% end %>
+<% end %>
