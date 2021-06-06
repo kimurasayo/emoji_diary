@@ -50,12 +50,6 @@ class DiariesController < ApplicationController
     end
   end
 
-  # 日記にブックマークしているユーザー一覧のページ
-  def index_bookmarks
-    @diary = Diary.find(params[:id])
-    @bookmarks = Bookmark.where(diary_id: @diary.id).all
-  end
-
   private
 
   # フォームから受け取ることのできる情報カラム
