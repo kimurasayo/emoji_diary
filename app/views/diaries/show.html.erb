@@ -1,3 +1,5 @@
+<% content_for(:title, 'diary') %>
+
 <div class="container pt-5">
   <div class="row mb-3">
     <div class="col-lg-8 offset-lg-2">
@@ -16,9 +18,6 @@
           </div>
         </div>
       </article> 
-      <%= link_to user_diaries_path(@user) do %>
-        <i class="far fa-hand-point-left"></i>
-      <% end %> |
       <% if current_user.id == @diary.user.id %>
         <%= link_to edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}" do %>
           <i class="fa fa-pen"></i>

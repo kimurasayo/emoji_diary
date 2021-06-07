@@ -1,3 +1,5 @@
+<% content_for(:title, 'mine') %>
+
 <h1><%= @user.nickname %>'s diary</h1>
 
 <%= month_calendar events: @diaries do |date, diaries| %>
