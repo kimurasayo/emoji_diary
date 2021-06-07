@@ -1,0 +1,12 @@
+<% content_for(:title, 'friend diary') %>
+
+<% @users.each do |user| %>
+  <h3><%= user.nickname %></h3>
+  <% @diaries = Diary.where(user_id: user.id) %>
+  <%= week_calendar events: @diaries do |date, diaries| %>
+    <%= date %>
+    <% diaries.each do |diary| %>
+      <%= link_to diary.feeling, user_diary_path(user, diary) %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,3 +1,5 @@
+<% content_for(:title, 'bookmarks') %>
+
 <table class="table table-sm col-12">
   <thead class="thead-light">
     <tr>
@@ -24,3 +26,4 @@
     <% end %>
   </tbody>
 </table>
+<%= link_to 'Back', user_diary_path, class: "btn btn-outline-primary" %>
