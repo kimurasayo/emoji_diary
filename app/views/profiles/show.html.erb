@@ -1,0 +1,28 @@
+<% content_for(:title, 'profile') %>
+
+<div class="container pt-3">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h1 class="float-left mb-5">profile</h1>
+      <%= link_to '編集', edit_profiles_path, class: 'btn btn-success float-right' %>
+      <table class="table">
+        <tr>
+          <th scope="row">nickname</th>
+          <td><%= current_user.nickname %></td>
+        </tr>
+        <tr>
+          <th scope="row">user name</th>
+          <td><%= current_user.name %></td>
+        </tr>
+        <tr>
+          <th scope="row">following</th>
+          <td><%= current_user.followings.count %></td>
+        </tr>
+        <tr>
+          <th scope="row">followers</th>
+          <td><%= current_user.followers.count %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

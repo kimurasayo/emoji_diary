@@ -20,6 +20,9 @@ Rails.application.routes.draw do
 
   resources :bookmarks, only: [:create, :destroy]
 
+  # profiles_path, edit_profiles_path
+  resource :profiles, only: [:show, :edit, :update]
+
   # login_path
   get 'login', to: 'user_sessions#new', as: :login
   post 'login', to: 'user_sessions#create'
