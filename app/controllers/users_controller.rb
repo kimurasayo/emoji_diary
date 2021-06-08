@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
 
   # ransackを使って検索したユーザーを@qに入れている
+  # ユーザー検索ページ
   def index
     @q = User.ransack(params[:q])
   end
@@ -34,8 +35,9 @@ class UsersController < ApplicationController
   end
 
   # ransackを使って検索したユーザーを@qに入れている
+  # ユーザー検索の結果
   def search
-    @q = User.ransack(params[:q])
+    @q = User.search(search_params)
     @users = @q.result(distinct: true)
   end
 
@@ -44,5 +46,10 @@ class UsersController < ApplicationController
   # パラメーターで送ることができるカラムの情報
   def user_params
     params.require(:user).permit(:nickname, :name, :password, :password_confirmation)
+  end
+
+  # ユーザー検索で受け取ることができるカラムの情報
+  def search_params
+    params.require(:q).permit(:name_cont)
   end
 end
