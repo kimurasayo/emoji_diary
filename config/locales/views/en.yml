@@ -6,7 +6,7 @@ en:
     logout: logout
     mine: mine
     new: new
-    followers: followers
+    search: search
     follow: follow
     unfollow: unfollow
     follower_diary: follower's diary

@@ -1,0 +1,29 @@
+<% content_for(:title, 'search result') %>
+
+<table class="table table-sm col-12">
+  <thead class="thead-light">
+    <tr>
+      <th class="text-center">nickname</th>
+      <th class="text-center">name</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td class="text-center"><%= link_to user.nickname, user_diaries_path(user) %></td>
+        <td class="text-center"><%= user.name %></td>
+        <td class="text-center"><% if logged_in? && current_user != user %>
+          <% if current_user.following?(user) %>
+            <%= render 'relationships/unfollow_button', user: user %>
+          <% else %>
+            <%= render 'relationships/follow_button', user: user %>
+          <% end %>
+        <% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'back', users_path, class: "btn btn-primary"%>

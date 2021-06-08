@@ -2,30 +2,14 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
-
-<table class="table table-sm col-12">
-  <thead class="thead-light">
-    <tr>
-      <th class="text-center">nickname</th>
-      <th class="text-center">name</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td class="text-center"><%= link_to user.nickname, user_diaries_path(user) %></td>
-        <td class="text-center"><%= user.name %></td>
-        <td class="text-center"><% if logged_in? && current_user != user %>
-          <% if current_user.following?(user) %>
-            <%= render 'relationships/unfollow_button', user: user %>
-          <% else %>
-            <%= render 'relationships/follow_button', user: user %>
-          <% end %>
-        <% end %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container pt-3">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+    <h1>search</h1>
+      <%= search_form_for @q, url: search_path do |f| %>
+        <%= f.search_field :name_cont, placeholder: 'user name' %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

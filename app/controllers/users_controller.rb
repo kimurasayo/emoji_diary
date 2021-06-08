@@ -2,9 +2,9 @@ class UsersController < ApplicationController
   # new, createアクション(新規作成)の前にrequire_loginを行わない
   skip_before_action :require_login, only: [:new, :create]
 
-  # ユーザー一覧
+  # ransackを使って検索したユーザーを@qに入れている
   def index
-    @users = User.all
+    @q = User.ransack(params[:q])
   end
 
   # 新規作成したユーザー
@@ -23,12 +23,20 @@ class UsersController < ApplicationController
     end
   end
 
+  # フォローしている人全員
   def following
     @users = current_user.followings
   end
 
+  # フォロワー全員
   def follower
     @users = current_user.followers
+  end
+
+  # ransackを使って検索したユーザーを@qに入れている
+  def search
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true)
   end
 
   private

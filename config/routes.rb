@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # user_bookmarks_path
   resources :users, only: [:new, :create, :index] do
     resources :followers, only: [:index]
-  
+
     resources :diaries do
       member do
         resources :bookmarks, only: [:index]
@@ -31,4 +31,5 @@ Rails.application.routes.draw do
 
   get 'following', to: 'users#following'
   get 'follower', to: 'users#follower'
+  get 'search', to: 'users#search'
 end
