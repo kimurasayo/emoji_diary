@@ -28,4 +28,7 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   # logout_path
   delete 'logout', to: 'user_sessions#destroy', as: :logout
+
+  get 'following', to: 'users#following'
+  get 'follower', to: 'users#follower'
 end

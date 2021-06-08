@@ -1,7 +1,8 @@
 class ProfilesController < ApplicationController
+  # profiles_path
   def show; end
 
-  # DBから取得したオブジェクトを使用する
+  # DBから取得したオブジェクトを使用する。
   def edit
     @user = User.find(current_user.id)
   end

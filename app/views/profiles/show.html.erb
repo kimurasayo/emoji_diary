@@ -16,11 +16,11 @@
         </tr>
         <tr>
           <th scope="row">following</th>
-          <td><%= current_user.followings.count %></td>
+          <td><%= link_to current_user.followings.count, following_path %></td>
         </tr>
         <tr>
           <th scope="row">followers</th>
-          <td><%= current_user.followers.count %></td>
+          <td><%= link_to current_user.followers.count, follower_path %></td>
         </tr>
       </table>
     </div>

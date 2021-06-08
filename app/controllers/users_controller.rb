@@ -23,6 +23,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def following
+    @users = current_user.followings
+  end
+
+  def follower
+    @users = current_user.followers
+  end
+
   private
 
   # パラメーターで送ることができるカラムの情報
