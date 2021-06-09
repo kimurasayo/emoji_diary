@@ -1,5 +1,7 @@
 <% content_for(:title, 'friend diary') %>
 
+<h1>friend's diary</h1>
+
 <% @users.each do |user| %>
   <h3><%= user.nickname %></h3>
   <% @diaries = Diary.where(user_id: user.id) %>
