@@ -5,9 +5,6 @@
       <h1>edit</h1>
       <%= form_with model: @user, url: profiles_path, local: true do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
-        <%= f.label :nickname %>
-        <%= f.text_field :nickname, class: 'form-control mb-3' %>
-
         <%= f.label :name %>
         <%= f.text_field :name, class: 'form-control mb-3' %>
 

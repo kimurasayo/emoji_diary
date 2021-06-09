@@ -25,7 +25,7 @@
           <%= link_to t('defaults.new'), new_user_diary_path(current_user), class: 'nav-link' %>
         </li>
         <li class='nav-item'>
-          <%= link_to '💐', profiles_path %>
+          <%= link_to current_user.nickname, profiles_path %>
         </li>
       </ul>
     </div>
