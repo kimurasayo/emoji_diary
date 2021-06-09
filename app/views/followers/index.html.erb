@@ -3,7 +3,7 @@
 <h1>friend's diary</h1>
 
 <% @users.each do |user| %>
-  <h3><%= user.nickname %></h3>
+  <h3><%= user.nickname %> <%= user.name %></h3>
   <% @diaries = Diary.where(user_id: user.id) %>
   <%= week_calendar events: @diaries do |date, diaries| %>
     <%= date %>
