@@ -6,10 +6,10 @@ en:
     logout: logout
     mine: mine
     new: new
-    followers: followers
+    search: search
     follow: follow
     unfollow: unfollow
-    follower_diary: follower's diary
+    friends_diary: friend's diary
   users:
     new:
       title: register

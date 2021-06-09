@@ -74,3 +74,6 @@ gem "simple_calendar", "~> 2.4"
 
 # 初期データを作成
 gem 'seed-fu'
+
+# 検索機能
+gem 'ransack'

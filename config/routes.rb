@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # user_bookmarks_path
   resources :users, only: [:new, :create, :index] do
     resources :followers, only: [:index]
-  
+
     resources :diaries do
       member do
         resources :bookmarks, only: [:index]
@@ -20,9 +20,16 @@ Rails.application.routes.draw do
 
   resources :bookmarks, only: [:create, :destroy]
 
+  # profiles_path, edit_profiles_path
+  resource :profiles, only: [:show, :edit, :update]
+
   # login_path
   get 'login', to: 'user_sessions#new', as: :login
   post 'login', to: 'user_sessions#create'
   # logout_path
   delete 'logout', to: 'user_sessions#destroy', as: :logout
+
+  get 'following', to: 'users#following'
+  get 'follower', to: 'users#follower'
+  get 'search', to: 'users#search'
 end
