@@ -1,297 +1,473 @@
 <%= form_with model: diary, url: url, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="form-group">
-    <%= f.label :start_time %></br>
-    <%= f.date_select :start_time, class: 'form-control' %>
+
+  <div class="form-group row">
+    <%= f.label :start_time, class: 'col-sm-1 col-form-label'%>
+    <%= f.date_field :start_time, value: Time.now.strftime("%Y-%m-%d"), class: 'form-control col-sm-8' %>
   </div>
   
   <div class="form-group">
     <div class="smile">
-      <%= f.label :feeling, "😀" %>
-      <%= f.radio_button :feeling, "😀" %>
+      <%= f.radio_button :feeling, '😀', id: 'diary_feeling1', checked: 'checked' %>
+      <%= f.label :feeling1, '😀' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_1.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😃' %>
-      <%= f.radio_button :feeling, '😃' %>
+      <%= f.radio_button :feeling, '😃', id: 'diary_feeling2' %>
+      <%= f.label :feeling2, '😃' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_2.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😄' %>
-      <%= f.radio_button :feeling, '😄' %>
+      <%= f.radio_button :feeling, '😄', id: 'diary_feeling3' %>
+      <%= f.label :feeling3, '😄' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_3.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😁' %>
-      <%= f.radio_button :feeling, '😁' %>
+      <%= f.radio_button :feeling, '😁', id: 'diary_feeling4' %>
+      <%= f.label :feeling4, '😁' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_4.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😆' %>
-      <%= f.radio_button :feeling, '😆' %>
+      <%= f.radio_button :feeling, '😆', id: 'diary_feeling5' %>
+      <%= f.label :feeling5, '😆' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_5.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😅' %>
-      <%= f.radio_button :feeling, '😅' %>
+      <%= f.radio_button :feeling, '😅', id: 'diary_feeling6' %>
+      <%= f.label :feeling6, '😅' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_6.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😂' %>
-      <%= f.radio_button :feeling, '😂' %>
+      <%= f.radio_button :feeling, '😂', id: 'diary_feeling7' %>
+      <%= f.label :feeling7, '😂' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_7.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤣' %>
-      <%= f.radio_button :feeling, '🤣' %>
+      <%= f.radio_button :feeling, '🤣', id: 'diary_feeling8' %>
+      <%= f.label :feeling8, '🤣' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_8.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😉' %>
-      <%= f.radio_button :feeling, '😉' %>
+      <%= f.radio_button :feeling, '😉', id: 'diary_feeling9' %>
+      <%= f.label :feeling9, '😉' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_9.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😊' %>
-      <%= f.radio_button :feeling, '😊' %>
+      <%= f.radio_button :feeling, '😊', id: 'diary_feeling10' %>
+      <%= f.label :feeling10, '😊' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_10.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😇' %>
-      <%= f.radio_button :feeling, '😇' %>
+      <%= f.radio_button :feeling, '😇', id: 'diary_feeling11' %>
+      <%= f.label :feeling11, '😇' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_11.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤩' %>
-      <%= f.radio_button :feeling, '🤩' %>
+      <%= f.radio_button :feeling, '🤩', id: 'diary_feeling12' %>
+      <%= f.label :feeling12, '🤩' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_12.svg' %>">
+      <% end %>
     </div>
 
     <div class="love">
-      <%= f.label :feeling, '🥰' %>
-      <%= f.radio_button :feeling, '🥰' %>
+      <%= f.radio_button :feeling, '🥰', id: 'diary_feeling13' %>
+      <%= f.label :feeling13, '🥰' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_13.svg' %>">
+      <% end %>
+      
+      <%= f.radio_button :feeling, '😍', id: 'diary_feeling14' %>
+      <%= f.label :feeling14, '😍' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_14.svg' %>">
+      <% end %>
+      
+      <%= f.radio_button :feeling, '😘', id: 'diary_feeling15' %>
+      <%= f.label :feeling15, '😘' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_15.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😍' %>
-      <%= f.radio_button :feeling, '😍' %>
+      <%= f.radio_button :feeling, '😗', id: 'diary_feeling16' %>
+      <%= f.label :feeling16, '😗' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_16.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😘' %>
-      <%= f.radio_button :feeling, '😘' %>
+      <%= f.radio_button :feeling, '😚', id: 'diary_feeling17' %>
+      <%= f.label :feeling17, '😚' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_17.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😗' %>
-      <%= f.radio_button :feeling, '😗' %>
+      <%= f.radio_button :feeling, '😙', id: 'diary_feeling18' %>
+      <%= f.label :feeling18, '😙' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_18.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😚' %>
-      <%= f.radio_button :feeling, '😚' %>
-
-      <%= f.label :feeling, '😙' %>
-      <%= f.radio_button :feeling, '😙' %>
-
-      <%= f.label :feeling, '🤗' %>
-      <%= f.radio_button :feeling, '🤗' %>
+      <%= f.radio_button :feeling, '🤗', id: 'diary_feeling19' %>
+      <%= f.label :feeling19, '🤗' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_19.svg' %>">
+      <% end %>
     </div>
 
-    <div class="happy"
-      <%= f.label :feeling, '😋' %>
-      <%= f.radio_button :feeling, '😋' %>
+    <div class="happy">
+      <%= f.radio_button :feeling, '😋', id: 'diary_feeling20' %>
+      <%= f.label :feeling20, '😋' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_20.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😛' %>
-      <%= f.radio_button :feeling, '😛' %>
+      <%= f.radio_button :feeling, '😛', id: 'diary_feeling21' %>
+      <%= f.label :feeling21, '😛' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_21.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😜' %>
-      <%= f.radio_button :feeling, '😜' %>
+      <%= f.radio_button :feeling, '😜', id: 'diary_feeling22' %>
+      <%= f.label :feeling22, '😜' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_22.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤪' %>
-      <%= f.radio_button :feeling, '🤪' %>
+      <%= f.radio_button :feeling, '🤪', id: 'diary_feeling23' %>
+      <%= f.label :feeling23, '🤪' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_23.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😝' %>
-      <%= f.radio_button :feeling, '😝' %>
+      <%= f.radio_button :feeling, '😝', id: 'diary_feeling24' %>
+      <%= f.label :feeling24, '😝' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_24.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤑' %>
-      <%= f.radio_button :feeling, '🤑' %>
+      <%= f.radio_button :feeling, '🤑', id: 'diary_feeling25' %>
+      <%= f.label :feeling25, '🤑' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_25.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🥳' %>
-      <%= f.radio_button :feeling, '🥳' %>
+      <%= f.radio_button :feeling, '🥳', id: 'diary_feeling26' %>
+      <%= f.label :feeling26, '🥳' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_26.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😎' %>
-      <%= f.radio_button :feeling, '😎' %>
+      <%= f.radio_button :feeling, '😎', id: 'diary_feeling27' %>
+      <%= f.label :feeling27, '😎' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_27.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤤' %>
-      <%= f.radio_button :feeling, '🤤' %>
+      <%= f.radio_button :feeling, '🤤', id: 'diary_feeling28' %>
+      <%= f.label :feeling28, '🤤' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_28.svg' %>">
+      <% end %>
     </div>
 
     <div class="supprised">
-      <%= f.label :feeling, '😳' %>
-      <%= f.radio_button :feeling, '😳' %>
+      <%= f.radio_button :feeling, '😳', id: 'diary_feeling29' %>
+      <%= f.label :feeling29, '😳' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_29.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😲' %>
-      <%= f.radio_button :feeling, '😲' %>
+      <%= f.radio_button :feeling, '😲', id: 'diary_feeling30' %>
+      <%= f.label :feeling30, '😲' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_30.svg' %>">
+      <% end %>
     </div>
 
     <div class="porkerface">
-      <%= f.label :feeling, '🙂' %>
-      <%= f.radio_button :feeling, '🙂' %>
+      <%= f.radio_button :feeling, '🙂', id: 'diary_feeling31' %>
+      <%= f.label :feeling31, '🙂' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_31.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🙃' %>
-      <%= f.radio_button :feeling, '🙃' %>
+      <%= f.radio_button :feeling, '🙃', id: 'diary_feeling32' %>
+      <%= f.label :feeling32, '🙃' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_32.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😐' %>
-      <%= f.radio_button :feeling, '😐' %>
+      <%= f.radio_button :feeling, '😐', id: 'diary_feeling33' %>
+      <%= f.label :feeling33, '😐' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_33.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😶' %>
-      <%= f.radio_button :feeling, '😶' %>
+      <%= f.radio_button :feeling, '😶', id: 'diary_feeling34' %>
+      <%= f.label :feeling34, '😶' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_34.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😑' %>
-      <%= f.radio_button :feeling, '😑' %>
+      <%= f.radio_button :feeling, '😑', id: 'diary_feeling35' %>
+      <%= f.label :feeling35, '😑' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_35.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😬' %>
-      <%= f.radio_button :feeling, '😬' %>
+      <%= f.radio_button :feeling, '😬', id: 'diary_feeling36' %>
+      <%= f.label :feeling36, '😬' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_36.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤓' %>
-      <%= f.radio_button :feeling, '🤓' %>
+      <%= f.radio_button :feeling, '🤓', id: 'diary_feeling37' %>
+      <%= f.label :feeling37, '🤓' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_37.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😌' %>
-      <%= f.radio_button :feeling, '😌' %>
+      <%= f.radio_button :feeling, '😌', id: 'diary_feeling38' %>
+      <%= f.label :feeling38, '😌' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_38.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😕' %>
-    <%= f.radio_button :feeling, '😕' %>
+      <%= f.radio_button :feeling, '😕', id: 'diary_feeling39' %>
+      <%= f.label :feeling39, '😕' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_39.svg' %>">
+      <% end %>
 
-    <%= f.label :feeling, '😟' %>
-    <%= f.radio_button :feeling, '😟' %>
+      <%= f.radio_button :feeling, '😟', id: 'diary_feeling40' %>
+      <%= f.label :feeling40, '😟' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_40.svg' %>">
+      <% end %>
 
-    <%= f.label :feeling, '🙁' %>
-    <%= f.radio_button :feeling, '🙁' %>
+      <%= f.radio_button :feeling, '🙁', id: 'diary_feeling41' %>
+      <%= f.label :feeling41, '🙁' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_41.svg' %>">
+      <% end %>
 
-    <%= f.label :feeling, '😮' %>
-    <%= f.radio_button :feeling, '😮' %>
+      <%= f.radio_button :feeling, '😮', id: 'diary_feeling42' %>
+      <%= f.label :feeling42, '😮' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_42.svg' %>">
+      <% end %>
 
-    <%= f.label :feeling, '😯' %>
-    <%= f.radio_button :feeling, '😯' %>
+      <%= f.radio_button :feeling, '😯', id: 'diary_feeling43' %>
+      <%= f.label :feeling43, '😯' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_43.svg' %>">
+      <% end %>
     </div>
 
     <div class="doubt">
-      <%= f.label :feeling, '🤭' %>
-      <%= f.radio_button :feeling, '🤭' %>
+      <%= f.radio_button :feeling, '🤭', id: 'diary_feeling44' %>
+      <%= f.label :feeling44, '🤭' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_44.svg' %>">
+      <% end %>
+      
+      <%= f.radio_button :feeling, '🤫', id: 'diary_feeling45' %>
+      <%= f.label :feeling45, '🤫' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_45.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤫' %>
-      <%= f.radio_button :feeling, '🤫' %>
+      <%= f.radio_button :feeling, '🤔', id: 'diary_feeling46' %>
+      <%= f.label :feeling46, '🤔' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_46.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤔' %>
-      <%= f.radio_button :feeling, '🤔' %>
+      <%= f.radio_button :feeling, '🤐', id: 'diary_feeling47' %>
+      <%= f.label :feeling47, '🤐' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_47.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤐' %>
-      <%= f.radio_button :feeling, '🤐' %>
+      <%= f.radio_button :feeling, '🤨', id: 'diary_feeling48' %>
+      <%= f.label :feeling48, '🤨' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_48.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤨' %>
-      <%= f.radio_button :feeling, '🤨' %>
+      <%= f.radio_button :feeling, '🧐', id: 'diary_feeling49' %>
+      <%= f.label :feeling49, '🧐' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_49.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🧐' %>
-      <%= f.radio_button :feeling, '🧐' %>
+      <%= f.radio_button :feeling, '😏', id: 'diary_feeling50' %>
+      <%= f.label :feeling50, '😏' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_50.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😏' %>
-      <%= f.radio_button :feeling, '😏' %>
+      <%= f.radio_button :feeling, '😒', id: 'diary_feeling51' %>
+      <%= f.label :feeling51, '😒' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_51.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😒' %>
-      <%= f.radio_button :feeling, '😒' %>
+      <%= f.radio_button :feeling, '🙄', id: 'diary_feeling52' %>
+      <%= f.label :feeling52, '🙄' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_52.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🙄' %>
-      <%= f.radio_button :feeling, '🙄' %>
+      <%= f.radio_button :feeling, '🤥', id: 'diary_feeling53' %>
+      <%= f.label :feeling53, '🤥' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_53.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤥' %>
-      <%= f.radio_button :feeling, '🤥' %>
-
-      <%= f.label :feeling, '😔' %>
-      <%= f.radio_button :feeling, '😔' %>
+      <%= f.radio_button :feeling, '😔', id: 'diary_feeling54' %>
+      <%= f.label :feeling54, '😔' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_54.svg' %>">
+      <% end %>
+    </div>
 
     <div class="tired">
-      <%= f.label :feeling, '😪' %>
-      <%= f.radio_button :feeling, '😪' %>
+      <%= f.radio_button :feeling, '😪', id: 'diary_feeling55' %>
+      <%= f.label :feeling55, '😪' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_55.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😴' %>
-      <%= f.radio_button :feeling, '😴' %>
+      <%= f.radio_button :feeling, '😴', id: 'diary_feeling56' %>
+      <%= f.label :feeling56, '😴' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_56.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😵' %>
-      <%= f.radio_button :feeling, '😵' %>
+      <%= f.radio_button :feeling, '😵', id: 'diary_feeling57' %>
+      <%= f.label :feeling57, '😵' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_57.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤯' %>
-      <%= f.radio_button :feeling, '🤯' %>
+      <%= f.radio_button :feeling, '🤯', id: 'diary_feeling58' %>
+      <%= f.label :feeling58, '🤯' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_58.svg' %>">
+      <% end %>
     </div>
 
     <div class="sick">
-      <%= f.label :feeling, '😷' %>
-      <%= f.radio_button :feeling, '😷' %>
+      <%= f.radio_button :feeling, '😷', id: 'diary_feeling59' %>
+      <%= f.label :feeling59, '😷' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_59.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤕' %>
-      <%= f.radio_button :feeling, '🤕' %>
+      <%= f.radio_button :feeling, '🤕', id: 'diary_feeling60' %>
+      <%= f.label :feeling60, '🤕' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_60.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤢' %>
-      <%= f.radio_button :feeling, '🤢' %>
+      <%= f.radio_button :feeling, '🤢', id: 'diary_feeling61' %>
+      <%= f.label :feeling61, '🤢' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_61.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤮' %>
-      <%= f.radio_button :feeling, '🤮' %>
+      <%= f.radio_button :feeling, '🤮', id: 'diary_feeling62' %>
+      <%= f.label :feeling62, '🤮' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_62.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤧' %>
-      <%= f.radio_button :feeling, '🤧' %>
+      <%= f.radio_button :feeling, '🤧', id: 'diary_feeling63' %>
+      <%= f.label :feeling63, '🤧' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_63.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🥵' %>
-      <%= f.radio_button :feeling, '🥵' %>
+      <%= f.radio_button :feeling, '🥵', id: 'diary_feeling64' %>
+      <%= f.label :feeling64, '🥵' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_64.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🥶' %>
-      <%= f.radio_button :feeling, '🥶' %>
+      <%= f.radio_button :feeling, '🥶', id: 'diary_feeling65' %>
+      <%= f.label :feeling65, '🥶' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_65.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🥴' %>
-      <%= f.radio_button :feeling, '🥴' %>
+      <%= f.radio_button :feeling, '🥴', id: 'diary_feeling66' %>
+      <%= f.label :feeling66, '🥴' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_66.svg' %>">
+      <% end %>
     </div>
 
     <div class="worried">
-      <%= f.label :feeling, '🥺' %>
-      <%= f.radio_button :feeling, '🥺' %>
+      <%= f.radio_button :feeling, '🥺', id: 'diary_feeling67' %>
+      <%= f.label :feeling67, '🥺' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_67.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😦' %>
-      <%= f.radio_button :feeling, '😦' %>
+      <%= f.radio_button :feeling, '😦', id: 'diary_feeling68' %>
+      <%= f.label :feeling68, '😦' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_68.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😧' %>
-      <%= f.radio_button :feeling, '😧' %>
+      <%= f.radio_button :feeling, '😧', id: 'diary_feeling69' %>
+      <%= f.label :feeling69, '😧' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_69.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😨' %>
-      <%= f.radio_button :feeling, '😨' %>
+      <%= f.radio_button :feeling, '😨', id: 'diary_feeling70' %>
+      <%= f.label :feeling70, '😨' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_70.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😰' %>
-      <%= f.radio_button :feeling, '😰' %>
+      <%= f.radio_button :feeling, '😰', id: 'diary_feeling71' %>
+      <%= f.label :feeling71, '😰' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_71.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😥' %>
-      <%= f.radio_button :feeling, '😥' %>
+      <%= f.radio_button :feeling, '😥', id: 'diary_feeling72' %>
+      <%= f.label :feeling72, '😥' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_72.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😱' %>
-      <%= f.radio_button :feeling, '😱' %>
+      <%= f.radio_button :feeling, '😱', id: 'diary_feeling73' %>
+      <%= f.label :feeling73, '😱' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_73.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😓' %>
-      <%= f.radio_button :feeling, '😓' %>
+      <%= f.radio_button :feeling, '😓', id: 'diary_feeling74' %>
+      <%= f.label :feeling74, '😓' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_74.svg' %>">
+      <% end %>
     </div>
 
     <div class="cried">
-      <%= f.label :feeling, '😢' %>
-      <%= f.radio_button :feeling, '😢' %>
+      <%= f.radio_button :feeling, '😢', id: 'diary_feeling75' %>
+      <%= f.label :feeling75, '😢' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_75.svg' %>">
+      <% end %>
+      
+      <%= f.radio_button :feeling, '😭', id: 'diary_feeling76' %>
+      <%= f.label :feeling76, '😭' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_76.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😭' %>
-      <%= f.radio_button :feeling, '😭' %>
+      <%= f.radio_button :feeling, '😖', id: 'diary_feeling77' %>
+      <%= f.label :feeling77, '😖' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_77.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😖' %>
-      <%= f.radio_button :feeling, '😖' %>
+      <%= f.radio_button :feeling, '😣', id: 'diary_feeling78' %>
+      <%= f.label :feeling78, '😣' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_78.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😣' %>
-      <%= f.radio_button :feeling, '😣' %>
+      <%= f.radio_button :feeling, '😞', id: 'diary_feeling79' %>
+      <%= f.label :feeling79, '😞' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_79.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😞' %>
-      <%= f.radio_button :feeling, '😞' %>
+      <%= f.radio_button :feeling, '😩', id: 'diary_feeling80' %>
+      <%= f.label :feeling80, '😩' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_80.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😩' %>
-      <%= f.radio_button :feeling, '😩' %>
-
-      <%= f.label :feeling, '😫' %>
-      <%= f.radio_button :feeling, '😫' %>
+      <%= f.radio_button :feeling, '😫', id: 'diary_feeling81' %>
+      <%= f.label :feeling81, '😫' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_81.svg' %>">
+      <% end %>
     </div>
 
     <div class="angry">
-      <%= f.label :feeling, '😤' %>
-      <%= f.radio_button :feeling, '😤' %>
+      <%= f.radio_button :feeling, '😤', id: 'diary_feeling82' %>
+      <%= f.label :feeling82, '😤' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_82.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😡' %>
-      <%= f.radio_button :feeling, '😡' %>
+      <%= f.radio_button :feeling, '😡', id: 'diary_feeling83' %>
+      <%= f.label :feeling83, '😡' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_83.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😠' %>
-      <%= f.radio_button :feeling, '😠' %>
+      <%= f.radio_button :feeling, '😠', id: 'diary_feeling84' %>
+      <%= f.label :feeling84, '😠' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_84.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '🤬' %>
-      <%= f.radio_button :feeling, '🤬' %>
+      <%= f.radio_button :feeling, '🤬', id: 'diary_feeling85' %>
+      <%= f.label :feeling85, '🤬' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_85.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '😈' %>
-      <%= f.radio_button :feeling, '😈' %>
+      <%= f.radio_button :feeling, '😈', id: 'diary_feeling86' %>
+      <%= f.label :feeling86, '😈' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_86.svg' %>">
+      <% end %>
 
-      <%= f.label :feeling, '👿' %>
-      <%= f.radio_button :feeling, '👿' %>
+      <%= f.radio_button :feeling, '👿', id: 'diary_feeling87' %>
+      <%= f.label :feeling87, '👿' do %>
+        <img src="<%= asset_pack_path 'media/images/emoji_87.svg' %>">
+      <% end %>
     </div>
   </div>
 
-  <div class="form-group">
-    <%= f.label :body %>
-    <%= f.text_field :body, class: 'form-control' %>
+  <div class="form-group row">
+    <%= f.label :body, class: 'col-sm-1 col-form-label'%>
+    <%= f.text_field :body, class: 'form-control col-sm-8' %>
   </div>
 
 

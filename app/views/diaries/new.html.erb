@@ -1,10 +1,10 @@
 <% content_for(:title, 'new diary') %>
 
-<h1>new diary</h1>
-
 <div class="container">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
+    <h1>new diary</h1>
+    <br>
     <%= render 'form', { diary: @diary, url: user_diaries_path } %>
     </div>
   </div>

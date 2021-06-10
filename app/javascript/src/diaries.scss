@@ -1,0 +1,22 @@
+/* ラジオボタンの○を消す */
+input[type="radio"] {
+  display: none;
+}
+
+
+/* 画像の周りに隙間をあける */
+label img {
+  margin: 4px;
+  padding: 5px;
+ }
+
+/* 未選択の場合、絵文字の大きさが小さい */
+input[type="radio"] + label img {
+  width: 30px;
+  height: 30px;
+}
+/* 選択済みの場合、絵文字の大きさが大きい */
+input[type="radio"]:checked + label img {
+  width: 50px;
+  height: 50px;
+}
