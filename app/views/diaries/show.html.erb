@@ -1,32 +1,26 @@
 <% content_for(:title, 'diary') %>
 
-<div class="container pt-5">
-  <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2">
-      <article class="card">
-        <div class="card-body">
-          <div class='row'>
-            <div class='col-md-9'>
-              <h3 style='display: inline;'><%= @diary.start_time.strftime("%Y-%m-%d") %></h3>
-              <ul class="list-inline">
-                <strong>feeling</strong>
-                <li class="list-inline-item"><%= @diary.feeling %></li></br>
-                <strong>about</strong>
-                <li class="list-inline-item"><%= @diary.body %></li>
-              </ul>
-            </div>
-          </div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="card col-10 text-center">
+      <div class="card-body">
+        <div class="card-link text-right">
+          <%= render 'bookmarks/bookmark_button', { diary: @diary } %>
         </div>
-      </article> 
-      <% if current_user.id == @diary.user.id %>
-        <%= link_to edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}" do %>
-          <i class="fa fa-pen"></i>
-        <% end %> |
-        <%= link_to user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <i class="far fa-trash-alt"></i>
-        <% end %> | 
-      <% end %>
-      <%= render 'bookmarks/bookmark_button', { diary: @diary } %>
+        <h1 class="card-title"><%= @user.nickname %> <%= @diary.start_time.strftime("%b %d, %Y ( %a )") %></h1>
+        <h2 class="card-text rounded"><%= @diary.feeling %><%= @diary.body %></h2>
+        <% if current_user.id == @diary.user.id %>
+          <div class="btn-group">
+            <%= button_to 'edit', edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-primary' %>
+            <%= button_to 'delete', user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: 'Are you sure?' }, class:'btn outline btn-primary' %>
+          </div>
+        <% else %>
+          <%= button_to user_diaries_path(@user), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-primary' do %>
+            <%= @user.name %>'s diary
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
