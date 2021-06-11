@@ -20,3 +20,72 @@ input[type="radio"]:checked + label img {
   width: 50px;
   height: 50px;
 }
+
+/* 詳細画面の日付 */
+.card-title {
+  letter-spacing: 0.20em;
+  color: #c76e54;
+}
+
+/* 絵文字日記の本文 */
+.card-text {
+  letter-spacing: 0.5em;
+  background-color: #f5cdbd;
+  padding: 20px;
+  margin: 50px;
+}
+
+/* 日記詳細の枠 */
+.card {
+  margin: 100px;
+  padding: 100px;
+}
+
+
+.btn.btn-primary {
+  background: #bf9288; //ボタンの背景色
+  color: #f5ece4; //ボタンのテキストの色
+  border: 3px solid #bf9288;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 10px;
+}
+
+.btn.btn-primary:hover, .btn.btn-primary:focus, 
+.btn.btn-primary:active, .btn.btn-primary:active:focus, .btn.btn-primary:active:hover, .btn.btn-primary:active.focus,
+.btn.btn-primary.active, .btn.btn-primary.active:focus, .btn.btn-primary.active:hover, .btn.btn-primary.active.focus,
+.open > .dropdown-toggle.btn.btn-primary, 
+.open > .dropdown-toggle.btn.btn-primary:hover,
+.open > .dropdown-toggle.btn.btn-primary:focus, 
+.open > .dropdown-toggle.btn.btn-primary.focus,
+.btn.btn-primary.disabled:hover, .btn.btn-primary[disabled]:hover, fieldset[disabled] .btn.btn-primary:hover,
+.btn.btn-primary.disabled:focus, .btn.btn-primary[disabled]:focus, fieldset[disabled] .btn.btn-primary:focus,
+.btn.btn-primary.disabled.focus, .btn.btn-primary[disabled].focus, fieldset[disabled] .btn.btn-primary.focus {
+  background: #f5cdbd; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+  color: #f5ece4; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+  border: 3px solid #f5cdbd;
+}
+
+.like-btn {
+  width: 50px;
+  height: 65px;
+  font-size: 40px;
+  color: #e54747; 
+  margin-left: 20px;
+}
+ 
+.unlike-btn {
+  width: 50px;
+  height: 65px;
+  font-size: 40px;
+  color: #e54747;
+  margin-left: 20px;
+}
+
+.count {
+  color: #e54747;
+}
+
+.count:hover {
+  color: #e54747;
+}
