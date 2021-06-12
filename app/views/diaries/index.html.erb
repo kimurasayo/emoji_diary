@@ -1,13 +1,32 @@
 <% content_for(:title, 'mine') %>
 
-<h1><%= @user.nickname %> <%= @user.name %></h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="calendar col-10">
+      
+      <div class="text-right">
+      <% if logged_in? && current_user != @user %>
+        <% if current_user.following?(@user) %>
+          <%= render 'relationships/unfollow_button', user: @user %>
+        <% else %>
+          <%= render 'relationships/follow_button', user: @user %>
+        <% end %>
+      <% end %>
+      </div>
+    
+      <h1 class="calendar-name">
+        <%= @user.nickname %><%= @user.name %>
+      </h1>
 
-<%= month_calendar events: @diaries do |date, diaries| %>
-  <%= date.day %>
-
-  <% diaries.each do |diary| %>
-    <div>
-      <%= link_to diary.feeling, user_diary_path(@user, diary) %>
+      <%= month_calendar events: @diaries do |date, diaries| %>
+        <%= date.day %>
+      
+        <% diaries.each do |diary| %>
+          <div class="feeling">
+            <%= link_to diary.feeling, user_diary_path(@user, diary) %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
-  <% end %>
-<% end %>
+  </div>
+</div>
