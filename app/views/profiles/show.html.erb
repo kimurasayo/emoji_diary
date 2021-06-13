@@ -1,28 +1,55 @@
 <% content_for(:title, 'profile') %>
 
-<div class="container pt-3">
-  <div class="row">
-    <div class="col-md-10 offset-md-1">
-      <h1 class="float-left mb-5">profile</h1>
-      <%= link_to '編集', edit_profiles_path, class: 'btn btn-success float-right' %>
-      <table class="table">
-        <tr>
-          <th scope="row">nickname</th>
-          <td><%= current_user.nickname %></td>
-        </tr>
-        <tr>
-          <th scope="row">user name</th>
-          <td><%= current_user.name %></td>
-        </tr>
-        <tr>
-          <th scope="row">following</th>
-          <td><%= link_to current_user.followings.count, following_path %></td>
-        </tr>
-        <tr>
-          <th scope="row">followers</th>
-          <td><%= link_to current_user.followers.count, follower_path %></td>
-        </tr>
-      </table>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="resulting col-10">
+      <div class="text-right">
+        <%= link_to 'edit', edit_profiles_path, class: "btn btn-primary" %>
+      </div>
+      <h1 class="result"><%= current_user.nickname %> profile</h1>
+      
+      <div class="row justify-content-center">
+        <div class="col-6">
+        <table class="result-table table table-borderless">
+
+          <tbody>
+            <tr class="result text-left">
+              <td style="width: 50%">
+                nickname
+              </td>
+              <td class="text-right" style="width: 50%">
+                <%= current_user.nickname %>
+              </td>
+            </tr>
+            <tr class="result text-left">
+              <td style="width: 50%">
+                user name
+              </td>
+              <td class="text-right" style="width: 50%">
+                <%= current_user.name %>
+              </td>
+            </tr>
+            <tr class="result text-left">
+              <td style="width: 50%">
+                following counts
+              </td>
+              <td class="text-right" style="width: 50%">
+                <%= link_to current_user.followings.count, following_path %>
+              </td>
+            </tr>
+            <tr class="result text-left">
+              <td style="width: 50%">
+                follower counts
+              </td>
+              <td class="text-right" style="width: 50%">
+                <%= link_to current_user.followers.count, follower_path %>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
