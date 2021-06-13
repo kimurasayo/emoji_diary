@@ -1,0 +1,21 @@
+/* プロフィール編集のラベル */
+.edit-profile {
+  color: #c76e54;
+}
+
+/* プロフィール編集のフォーム */
+.edit-profile input[type="text"]{
+  border: 1px solid #f5ece4;
+  padding: 5px 8px;
+  border-radius: 20px;
+  height: 3.0em;
+  overflow: hidden;
+  background: #f5ece4;
+  color: gray;
+}
+
+/* プロフィール編集中のフォーム */
+.edit-profile input[type="text"]:focus {
+  outline: 0;
+  background: #f5ece4;
+}

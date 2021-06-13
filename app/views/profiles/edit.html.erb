@@ -1,15 +1,23 @@
 <% content_for(:title, "edit profile") %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-10 offset-md-1">
-      <h1>edit</h1>
-      <%= form_with model: @user, url: profiles_path, local: true do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control mb-3' %>
 
-        <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="resulting col-10">
+      
+      <h1 class="result"><%= current_user.nickname %> edit profile</h1>
+      
+      <div class="row justify-content-center">
+        <div class="edit-profile col-6">
+          <%= form_with model: @user, url: profiles_path, local: true do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control mb-3' %>
+            <div class="text-center">
+              <%= f.submit class: 'btn btn-primary' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
