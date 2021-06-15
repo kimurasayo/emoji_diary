@@ -1,7 +1,7 @@
 /* ユーザー検索のフォーム、タイトルを含めたクラス */
 .searching {
-  margin: 50px;
-  padding: 80px;
+  margin: 100px;
+  padding: 100px;
 }
 
 .user_search{
@@ -52,10 +52,19 @@
   margin-bottom: 80px;
 }
 
+/* ユーザー検索結果の友達の名前リンク */
+.result-link {
+  color: #c76e54;
+}
+
+.result-link:hover {
+  color: #c76e54;
+}
+
 /* ユーザー検索結果のテーブル、タイトル全てを含めたクラス */
 .resulting {
-  margin: 50px;
-  padding: 80px;
+  margin: 100px;
+  padding: 100px;
 }
 
 /* ユーザー検索結果のテーブル */
@@ -155,4 +164,12 @@
 .register input[type="text"]:focus {
   outline: 0;
   background: #f5ece4;
+}
+
+.login-link {
+  color: #c76e54;
+}
+
+.login-link:hover {
+  color: #c76e54;
 }

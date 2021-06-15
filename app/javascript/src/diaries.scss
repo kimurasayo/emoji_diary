@@ -37,8 +37,8 @@ input[type="radio"]:checked + label img {
 
 /* 日記詳細の枠 */
 .card {
-  margin: 50px;
-  padding: 80px;
+  margin: 100px;
+  padding: 100px;
 }
 
 /* btn-primaryのレイアウト */
@@ -97,8 +97,8 @@ input[type="radio"]:checked + label img {
 
 /* カレンダー、タイトル含めた全てのクラス */
 .calendar {
-  margin: 50px;
-  padding: 80px;
+  margin: 100px;
+  padding: 100px;
 }
 
 /* カレンダーのタイトル */
@@ -107,20 +107,25 @@ input[type="radio"]:checked + label img {
   color: #c76e54;
 }
 
-/* 一覧画面の感情の絵文字 */
-.feeling {
-  text-align: center;
-  font-size: 20px;
-}
-
 /* 友達の日記一覧ページの友達の名前 */
 h3.calendar-name {
   margin-top: 50px;
 }
 
-/* リンクをクリックした時、カーソルを当てた時の色 */
-a:link, a:visited, a:hover, a:active {
+/* 友達の日記一覧ページの友達の名前のリンク */
+.calendar-name-link {
   color: #c76e54;
+  letter-spacing: 0.20em;
+}
+
+.calendar-name-link:hover {
+  color: #c76e54;
+}
+
+/* 一覧画面の感情の絵文字 */
+.feeling {
+  text-align: center;
+  font-size: 20px;
 }
 
 /* 日記の枠の色 */
