@@ -21,9 +21,8 @@ class DiariesController < ApplicationController
   def create
     @diary = current_user.diaries.new(diary_params)
     if @diary.save
-      redirect_to user_diaries_path(current_user), success: t('.success')
+      redirect_to user_diaries_path(current_user)
     else
-      flash.now[:danger] = t('.fail')
       render :new
     end
   end
@@ -32,7 +31,7 @@ class DiariesController < ApplicationController
   def destroy
     @diary = current_user.diaries.find(params[:id])
     @diary.destroy
-    redirect_to user_diaries_path(current_user), success: t('.success')
+    redirect_to user_diaries_path(current_user)
   end
 
   # edit_user_diary_path
@@ -44,7 +43,7 @@ class DiariesController < ApplicationController
   def update
     @diary = current_user.diaries.find(params[:id])
     if @diary.update(diary_params)
-      redirect_to user_diary_path(current_user), success: t('.success')
+      redirect_to user_diary_path(current_user)
     else
       render :edit
     end
