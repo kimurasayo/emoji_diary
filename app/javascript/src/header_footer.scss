@@ -1,0 +1,61 @@
+/* ヘッダーのアイコン */
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+}
+
+/* ヘッダーの左側の文字 */
+.message {
+  color: gray;
+  font-size: 10px;
+}
+
+/* ヘッダーのリンク */
+.main-nav {
+  letter-spacing: 0.20em;
+}
+
+/* フッター */
+.copyright {
+  letter-spacing: 0.20em;
+  color: gray;
+  font-size: 10px;
+}
+
+/* フッターのリンク */
+.copylight-link {
+  color: gray;
+}
+
+.copylight-link:hover {
+  color: gray;
+}
+
+/* 日記新規作成のボタン */
+.btn-circle-border {
+  position: fixed;
+  /*基準を画面の左上に*/
+  top: 85px;
+  right: 20px;
+  /*余白が入らないように*/
+  margin: 0;
+  display: inline-block;
+  text-decoration: none;
+  background: #c76e54;
+  color: rgba(255, 255, 255, 0.47);
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #c76e54;
+  border: solid 2px rgba(255, 255, 255, 0.47);
+  transition: .4s;
+}
+
+.btn-circle-border:hover {
+  border-style: dashed;
+  color: rgba(255, 255, 255, 0.47);
+}

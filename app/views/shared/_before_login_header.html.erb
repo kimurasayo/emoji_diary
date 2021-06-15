@@ -1,12 +1,18 @@
 <header>
-  <nav class="navbar navbar-expand-lg navigation navbar-light bg-light">
-    <%= link_to 'emory', root_path %>
-    
-    <button class='navbar-toggler' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-expand-lg navigation navbar-light fixed-top" style="background-color: #fbe6de;">
+    <div class="message navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      keep and share my emotional diary
+    </div>
+    <div class="mx-auto order-0">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <img src="<%= asset_pack_path 'media/images/emory.png' %>" >
+      <% end %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
       <ul class="navbar-nav ml-auto main-nav align-items-center">
         <li class="nav-item">
           <%= link_to t('defaults.login'), login_path, class: "nav-link" %>
