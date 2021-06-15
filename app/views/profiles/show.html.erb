@@ -34,7 +34,7 @@
                 following counts
               </td>
               <td class="text-right" style="width: 50%">
-                <%= link_to current_user.followings.count, following_path %>
+                <%= link_to current_user.followings.count, following_path, class: "result-link" %>
               </td>
             </tr>
             <tr class="result text-left">
@@ -42,7 +42,7 @@
                 follower counts
               </td>
               <td class="text-right" style="width: 50%">
-                <%= link_to current_user.followers.count, follower_path %>
+                <%= link_to current_user.followers.count, follower_path, class: "result-link" %>
               </td>
             </tr>
           </tbody>

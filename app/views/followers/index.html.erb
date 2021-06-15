@@ -8,7 +8,7 @@
 
       <% @users.each do |user| %>
         <h3 class="calendar-name">
-          <%= link_to user_diaries_path(user) do %>
+          <%= link_to user_diaries_path(user), class: "calendar-name-link" do %>
             <%= user.nickname %> <%= user.name %>
           <% end %>
         </h3>

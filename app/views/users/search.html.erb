@@ -13,7 +13,7 @@
             <% @users.each do |user| %>
               <tr class="result text-left">
                 <td style="width: 50%">
-                  <%= link_to user_diaries_path(user) do%>
+                  <%= link_to user_diaries_path(user), class: "result-link" do%>
                     <%= user.nickname %> <%= user.name %>
                   <% end %>
                 </td>
