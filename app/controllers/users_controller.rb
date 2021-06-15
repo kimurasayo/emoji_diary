@@ -18,9 +18,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.nickname = array.sample
     if @user.save
-      redirect_to login_path, success: t('.success')
+      redirect_to login_path
     else
-      flash.now[:danger] = t('.fail')
       render :new
     end
   end

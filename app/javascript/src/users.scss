@@ -1,7 +1,7 @@
 /* ユーザー検索のフォーム、タイトルを含めたクラス */
 .searching {
-  margin: 50px;
-  padding: 80px;
+  margin: 100px;
+  padding: 100px;
 }
 
 .user_search{
@@ -10,20 +10,20 @@
 
 /* ユーザー検索のフォーム */
 .user_search input[type="search"]{
-  border: 1px solid #f5cdbd;
+  border: 1px solid #f5ece4;
   padding: 5px 8px;
   border-radius: 20px;
   height: 3.0em;
   width: 245px;
   overflow: hidden;
-  background: #f5cdbd;
+  background: #f5ece4;
   color: gray;
 }
 
 /* ユーザー検索のボタン押した時 */
 .user_search input[type="search"]:focus {
   outline: 0;
-  background: #f5cdbd;
+  background: #f5ece4;
 }
 
 /* ユーザー検索のボタン */
@@ -52,10 +52,19 @@
   margin-bottom: 80px;
 }
 
+/* ユーザー検索結果の友達の名前リンク */
+.result-link {
+  color: #c76e54;
+}
+
+.result-link:hover {
+  color: #c76e54;
+}
+
 /* ユーザー検索結果のテーブル、タイトル全てを含めたクラス */
 .resulting {
-  margin: 50px;
-  padding: 80px;
+  margin: 100px;
+  padding: 100px;
 }
 
 /* ユーザー検索結果のテーブル */
@@ -73,6 +82,7 @@
   padding-left: 40px;
   padding-right: 40px;
   margin: 10px;
+  letter-spacing: 0.20em;
 }
 
 .btn.btn-outline-primary:hover, .btn.btn-outline-primary:focus, 
@@ -98,6 +108,7 @@
   padding-left: 40px;
   padding-right: 40px;
   margin: 10px;
+  letter-spacing: 0.20em;
 }
 
 .btn.btn-outline-danger:hover, .btn.btn-outline-danger:focus, 
@@ -113,4 +124,52 @@
   background: #f28482; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
   color: #f5ece4; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
   border: 3px solid #f28482;
+}
+
+/* 新規登録画面のラベル */
+.register {
+  color: #c76e54;
+  letter-spacing: 0.20em;
+}
+
+/* 新規登録画面のパスワードフォーム */
+.register input[type="password"]{
+  border: 1px solid #f5ece4;
+  padding: 5px 8px;
+  border-radius: 20px;
+  height: 3.0em;
+  overflow: hidden;
+  background: #f5ece4;
+  color: gray;
+}
+
+/* 新規登録画面のパスワードフォーム選択中 */
+.register input[type="password"]:focus {
+  outline: 0;
+  background: #f5ece4;
+}
+
+/* 新規登録画面のテキストフォーム */
+.register input[type="text"]{
+  border: 1px solid #f5ece4;
+  padding: 5px 8px;
+  border-radius: 20px;
+  height: 3.0em;
+  overflow: hidden;
+  background: #f5ece4;
+  color: gray;
+}
+
+/* 新規登録画面のテキストフォーム選択中 */
+.register input[type="text"]:focus {
+  outline: 0;
+  background: #f5ece4;
+}
+
+.login-link {
+  color: #c76e54;
+}
+
+.login-link:hover {
+  color: #c76e54;
 }

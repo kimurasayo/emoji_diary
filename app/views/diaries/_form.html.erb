@@ -1,6 +1,6 @@
 <%= form_with model: diary, url: url, local: true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-
+  
   <div class="form-group row">
     <%= f.label :start_time, class: 'col-sm-1 col-form-label'%>
     <%= f.date_field :start_time, value: Time.now.strftime("%Y-%m-%d"), class: 'form-control col-sm-8' %>
