@@ -1,5 +1,7 @@
-<% if current_user.bookmark?(diary) %>
-  <%= render 'bookmarks/unbookmark', { diary: diary } %>
-<% else %>
-  <%= render 'bookmarks/bookmark', { diary: diary } %>
-<% end %>
+<div id="js-bookmark-button-<%= diary.id %>">
+  <% if current_user.bookmark?(diary) %>
+    <%= render 'bookmarks/unbookmark', { diary: diary } %>
+  <% else %>
+    <%= render 'bookmarks/bookmark', { diary: diary } %>
+  <% end %>
+</div>

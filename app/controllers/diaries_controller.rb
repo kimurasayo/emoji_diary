@@ -11,10 +11,10 @@ class DiariesController < ApplicationController
     @diary = Diary.new
   end
 
-  # user_diary_path。ユーザーの情報から日記の記事を絞り込んで、@diaryに入れている。
+  # user_diary_path。現在アクセスしている日記のidを取得、それを使い日記の所有者のユーザーidを使いユーザーを特定
   def show
-    @user = User.find(params[:user_id])
-    @diary = @user.diaries.find(params[:id])
+    @diary = Diary.find(params[:id])
+    @user = @diary.user
   end
 
   # 日記作成アクション。作成できたら一覧ページ、失敗したら日記新規作成ページへ。

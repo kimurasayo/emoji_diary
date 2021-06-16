@@ -1,6 +1,9 @@
-<%= link_to bookmark_path(current_user.bookmarks.find_by(diary_id: diary.id)), method: :delete do %>
+<%= link_to bookmark_path(current_user.bookmarks.find_by(diary_id: diary.id)),
+            method: :delete,
+            class: 'unlike-btn',
+            remote: true do %>
   <i class="fas fa-heart unlike-btn"></i>
 <% end %>
-<%= link_to user_bookmarks_path, class: "count" do %>
-  <%= diary.bookmarks.length %>
+<%= link_to user_bookmarks_path(current_user, @diary), class: "count" do %>
+  <%= diary.bookmarks.count %>
 <% end %>

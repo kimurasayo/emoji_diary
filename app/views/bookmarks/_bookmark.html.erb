@@ -1,6 +1,9 @@
-<%= link_to bookmarks_path(diary_id: diary.id), method: :post do %>
+<%= link_to bookmarks_path(diary_id: diary.id),
+            method: :post,
+            class: 'like-btn',
+            remote: true do %>
   <i class="far fa-heart like-btn"></i>
 <% end%>
-<%= link_to user_bookmarks_path, class: "count" do %>
-   <%= diary.bookmarks.length %>
+<%= link_to user_bookmarks_path(current_user, @diary), class: "count" do %>
+  <%= diary.bookmarks.count %>
 <% end %>
