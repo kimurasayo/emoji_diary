@@ -33,11 +33,9 @@
 
 /* 日記新規作成のボタン */
 .btn-circle-border {
-  position: fixed;
-  /*基準を画面の左上に*/
-  top: 85px;
-  right: 20px;
-  /*余白が入らないように*/
+  position: absolute;
+  top: 100px;
+  right: 50px;
   margin: 0;
   display: inline-block;
   text-decoration: none;

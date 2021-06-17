@@ -98,6 +98,7 @@
   background: #84a59d; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
   color: #f5ece4; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
   border: 3px solid #84a59d;
+  outline: none;
 }
 
 /* アンフォローボタン */
@@ -124,6 +125,7 @@
   background: #f28482; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
   color: #f5ece4; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
   border: 3px solid #f28482;
+  outline: none;
 }
 
 /* 新規登録画面のラベル */
@@ -145,7 +147,7 @@
 
 /* 新規登録画面のパスワードフォーム選択中 */
 .register input[type="password"]:focus {
-  outline: 0;
+  outline: none;
   background: #f5ece4;
 }
 
@@ -158,11 +160,12 @@
   overflow: hidden;
   background: #f5ece4;
   color: gray;
+  letter-spacing: 0.20em;
 }
 
 /* 新規登録画面のテキストフォーム選択中 */
 .register input[type="text"]:focus {
-  outline: 0;
+  outline: none;
   background: #f5ece4;
 }
 
@@ -172,4 +175,21 @@
 
 .login-link:hover {
   color: #c76e54;
+}
+
+/* 日記新規作成の日付フォーム */
+.register input[type="date"]{
+  border: 1px solid #f5ece4;
+  padding: 5px 8px;
+  border-radius: 20px;
+  height: 3.0em;
+  overflow: hidden;
+  background: #f5ece4;
+  color: gray;
+  letter-spacing: 0.20em;
+}
+
+.register input[type="date"]:focus {
+  outline: none;
+  background: #f5ece4;
 }
