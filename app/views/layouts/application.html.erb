@@ -6,16 +6,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   </head>
 
   <body>
     <% if logged_in? %>
       <%= render 'shared/header' %>
       <%= link_to "write diary", new_user_diary_path(current_user), class: "btn-circle-border" %>
-      <%= button_to "new", new_user_diary_path(current_user), method: :get, id: "fixed" %>
     <% else %>
       <%= render 'shared/before_login_header' %>
     <% end %>

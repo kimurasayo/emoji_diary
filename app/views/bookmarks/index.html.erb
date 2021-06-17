@@ -1,29 +1,43 @@
 <% content_for(:title, 'bookmarks') %>
 
-<table class="table table-sm col-12">
-  <thead class="thead-light">
-    <tr>
-      <th class="text-center">nickname</th>
-      <th class="text-center">name</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @bookmarks.each do |bookmark| %>
-    <% @user_id = bookmark.user_id %>
-    <% user = User.find(@user_id) %>
-    <tr>
-      <td class="text-center"><%= user.nickname %></td>
-      <td class="text-center"><%= user.name %></td>
-      <td class="text-center"><% if logged_in? && current_user != user %>
-        <% if current_user.following?(user) %>
-          <%= render 'relationships/unfollow_button', user: user %>
-        <% else %>
-          <%= render 'relationships/follow_button', user: user %>
-        <% end %>
-      <% end %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= link_to 'Back', user_diary_path, class: "btn btn-outline-primary" %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="resulting col-10">
+      <div class="text-right">
+        <%= link_to 'back', user_diary_path(@user, @diary), class: "btn btn-primary" %>
+      </div>
+      <h1 class="result"><%= current_user.nickname %> followers</h1>
+      
+      <div class="row justify-content-center">
+        <div class="col-6">
+        <table class="result-table table table-borderless">
+
+          <tbody>
+          <% @bookmarks.each do |bookmark| %>
+            <% @user_id = bookmark.user_id %>
+            <% user = User.find(@user_id) %>
+              <tr class="result text-left">
+                <td style="width: 50%">
+                  <%= link_to user_diaries_path(user), class: "result-link" do%>
+                    <%= user.nickname %> <%= user.name %>
+                  <% end %>
+                </td>
+                <td class="text-right" style="width: 50%"><% if logged_in? && current_user != user %>
+                    <div id="js-follow-button-#{user.id}">
+                    <% if current_user.following?(user) %>
+                      <%= render 'relationships/unfollow_button', user: user %>
+                    <% else %>
+                      <%= render 'relationships/follow_button', user: user %>
+                    <% end %>
+                    </div>
+                <% end %></td>
+              </tr>
+            <% end %>
+          </tbody>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

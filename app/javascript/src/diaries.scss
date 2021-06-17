@@ -62,9 +62,10 @@ input[type="radio"]:checked + label img {
 .btn.btn-primary.disabled:hover, .btn.btn-primary[disabled]:hover, fieldset[disabled] .btn.btn-primary:hover,
 .btn.btn-primary.disabled:focus, .btn.btn-primary[disabled]:focus, fieldset[disabled] .btn.btn-primary:focus,
 .btn.btn-primary.disabled.focus, .btn.btn-primary[disabled].focus, fieldset[disabled] .btn.btn-primary.focus {
-  background: #f5cdbd; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+  background: #bf9288; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
   color: #f5ece4; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
-  border: 3px solid #f5cdbd;
+  border: 3px solid #bf9288;
+  outline: none;
 }
 
 /* いいねボタン */
@@ -76,6 +77,10 @@ input[type="radio"]:checked + label img {
   margin-left: 20px;
 }
  
+.like-btn:hover {
+  text-decoration: none;
+}
+
 /* いいね解除ボタン */
 .unlike-btn {
   width: 50px;
@@ -83,6 +88,10 @@ input[type="radio"]:checked + label img {
   font-size: 40px;
   color: #e54747;
   margin-left: 20px;
+}
+
+.unlike-btn:hover {
+  text-decoration: none;
 }
 
 /* いいね数 */
