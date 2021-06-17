@@ -6,11 +6,7 @@
       
       <div class="text-right">
       <% if logged_in? && current_user != @user %>
-        <% if current_user.following?(@user) %>
-          <%= render 'relationships/unfollow_button', user: @user %>
-        <% else %>
-          <%= render 'relationships/follow_button', user: @user %>
-        <% end %>
+        <%= render 'relationships/follow_button_area', user: @user %>
       <% end %>
       </div>
     
