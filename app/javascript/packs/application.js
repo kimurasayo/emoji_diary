@@ -11,6 +11,8 @@ import '@fortawesome/fontawesome-free/js/all'
 import '../src/application.scss'
 
 require('jquery');
+// require("chartkick/chart.js")
+require("chartkick").use(require("highcharts"))
 
 const images = require.context("../images", true);
 const imagePath = name => images(name, true);
