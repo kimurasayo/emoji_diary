@@ -80,3 +80,6 @@ gem 'ransack'
 
 # Ajax実装のためのjquery
 gem "jquery-rails"
+
+# グラフ
+gem "chartkick"

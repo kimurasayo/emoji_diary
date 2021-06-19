@@ -22,6 +22,9 @@ class Diary < ApplicationRecord
   # validateに下記で定義したメソッドを設定
   validate :start_time_cannot_be_in_the_future
 
+  # 最終更新日から30日分の日記の感情だけを表示するためのスコープ
+  scope :current_month, -> { where(start_time: Time.now - 30.days..Time.now) }
+
   # 生年月日の未来日のチェックメソッド
   def start_time_cannot_be_in_the_future
     # 日時が入力済かつ未来日(現在日付より未来)ならば、エラー対象とするプロパティとエラーメッセージを設定

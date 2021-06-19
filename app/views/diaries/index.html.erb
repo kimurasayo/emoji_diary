@@ -1,19 +1,17 @@
 <% content_for(:title, 'mine') %>
 
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="calendar col-10">
-      
-      <div class="text-right">
-      <% if logged_in? && current_user != @user %>
-        <%= render 'relationships/follow_button_area', user: @user %>
-      <% end %>
-      </div>
-    
+
+  <div class="row calendar justify-content-center">
+    <div class="col-md">
+    <div class="text-right">
+    <% if logged_in? && current_user != @user %>
+      <%= render 'relationships/follow_button_area', user: @user %>
+    <% end %>
+    </div>
       <h1 class="calendar-name">
         <%= @user.nickname %> <%= @user.name %>
       </h1>
-
       <%= month_calendar events: @diaries do |date, diaries| %>
         <%= date.day %>
       
@@ -24,5 +22,9 @@
         <% end %>
       <% end %>
     </div>
+    <div class="chart col-md d-flex align-items-end"> 
+      <%= area_chart @diaries.current_month.group(:start_time).sum(:score) %>
+    </div>
+
   </div>
 </div>
