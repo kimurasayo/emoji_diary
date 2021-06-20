@@ -83,3 +83,6 @@ gem "jquery-rails"
 
 # グラフ
 gem "chartkick"
+
+# フォーム
+gem 'simple_form'
