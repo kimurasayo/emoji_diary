@@ -7,11 +7,10 @@
       <h1 class="result"><%= current_user.nickname %> write a diary</h1>
       
       <div class="row justify-content-center">
-        <div class="register col-6">
+        <div class="register col-10">
           <%= render 'form', { diary: @diary, url: user_diaries_path } %>
         </div>
       </div>
     </div>
   </div>
 </div>
-

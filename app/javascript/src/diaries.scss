@@ -10,15 +10,17 @@ label img {
   padding: 5px;
  }
 
-/* 未選択の場合、絵文字の大きさが小さい */
+/* 未選択の場合の絵文字 */
 input[type="radio"] + label img {
   width: 30px;
   height: 30px;
 }
-/* 選択済みの場合、絵文字の大きさが大きい */
+/* 選択済みの場合の絵文字、背景色がつく */
 input[type="radio"]:checked + label img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+  background: #c76e54;
+  border-radius: 20px;
 }
 
 /* 詳細画面の日付 */
@@ -140,4 +142,51 @@ h3.calendar-name {
 /* 日記の枠の色 */
 .table > thead > tr > th{
   border:1px solid #f5cdbd;
+}
+
+/* 感情絵文字のタブ */
+.area {
+  width: auto;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+ 
+/* ６分割するタブの設定 */
+.tab_class {
+  width: calc(100%/6);
+  height: 50px;
+  background-color: #f5ece4;
+  line-height: 50px;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+}
+
+input[name="tab_name"] {
+  display: none;
+}
+
+/* タブをチェックしている部分のレイアウト */
+input:checked + .tab_class {
+  background-color: #f5cdbd;
+  color: #c76e54;
+}
+ 
+/* タブのレイアウト */
+.content_class {
+  display: none;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+ 
+input:checked + .tab_class + .content_class {
+  display: block;
+}
+
+.form-group {
+  padding-bottom: 2px;
 }
