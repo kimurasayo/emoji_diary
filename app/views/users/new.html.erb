@@ -8,23 +8,19 @@
       
       <div class="row justify-content-center">
         <div class="register col-6">
-        <%= form_with model: @user, local: true do |f| %>
-          <%= render 'shared/error_messages', object: f.object %>
+        <%= simple_form_for @user, local: true do |f| %>
           <div class="form-group">
-            <%= f.label :name %>
-            <%= f.text_field :name, class: 'form-control' %>
+            <%= f.input :name, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :password %>
-            <%= f.password_field :password, class: "form-control" %>
+            <%= f.input :password, class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :password_confirmation %>
-            <%= f.password_field :password_confirmation, class: "form-control" %>
+            <%= f.input :password_confirmation, class: "form-control" %>
           </div>
 
           <div class="text-center">
-            <%= f.submit t('defaults.register'), class: 'btn btn-primary' %>
+            <%= f.button :submit, class: 'btn btn-primary' %>
           </div>
         <% end %>
         <div class='text-center'>
