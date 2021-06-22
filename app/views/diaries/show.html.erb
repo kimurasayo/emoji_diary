@@ -11,12 +11,12 @@
         <h2 class="card-text rounded"><%= @diary.feeling %><%= @diary.body %></h2>
         <% if current_user.id == @diary.user.id %>
           <div class="btn-group">
-            <%= button_to 'edit', edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-primary' %>
-            <%= button_to 'delete', user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: 'Are you sure?' }, class:'btn outline btn-primary' %>
+            <%= button_to 'edit', edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' %>
+            <%= button_to 'delete', user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-normal' %>
           </div>
         <% else %>
-          <%= button_to user_diaries_path(@user), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-primary' do %>
-            <%= @user.name %>'s diary
+          <%= button_to user_diaries_path(@user), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' do %>
+            <%= @user.name %>
           <% end %>
         <% end %>
       </div>
