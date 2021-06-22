@@ -24,7 +24,7 @@ class User < ApplicationRecord
   VALID_PASSWORD_REGEX = /\A[a-zA-Z0-9]+\z/
 
   # if~内容変更時パスワードの入力を省略させることが出来る。パスワードの長さは6-12文字。
-  validates :password, length: { in: 6..12 }, format: { with: VALID_PASSWORD_REGEX}, if: -> { new_record? || changes[:crypted_password] }
+  validates :password, length: { in: 6..12 }, format: { with: VALID_PASSWORD_REGEX }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 

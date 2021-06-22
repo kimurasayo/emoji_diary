@@ -210,6 +210,7 @@
   background: #f5ece4;
 }
 
+/* 退会 */
 .withdraw  {
   color: gray;
   font-size: 13px;
@@ -217,4 +218,9 @@
 
 .withdraw:hover {
   color: lightgray;
+}
+
+/* 検索機能などの説明文 */
+.follow_text {
+  color: gray;
 }
