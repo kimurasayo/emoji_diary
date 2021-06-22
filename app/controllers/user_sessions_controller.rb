@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
   # ログイン時はnameとpasswordの情報でDBからユーザーを探す
   # もしユーザーが探せたら自分の日記一覧ページに遷移、一致しなかったらログインページに遷移
   def create
-    @user = login(params[:name], params[:password])
+    @user = login(params[:email], params[:password])
     if @user
       redirect_to user_diaries_path(current_user)
     else

@@ -20,6 +20,6 @@ class ProfilesController < ApplicationController
 
   # パラメーターで送ることができるカラムの情報
   def user_params
-    params.require(:user).permit(:nickname, :name)
+    params.require(:user).permit(:nickname, :name, :password, :password_confirmation, :email)
   end
 end

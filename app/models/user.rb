@@ -20,15 +20,22 @@ class User < ApplicationRecord
   # お気に入りにしている日記を取得する
   has_many :bookmark_diaries, through: :bookmarks, source: :diary
 
-  # if~内容変更時パスワードの入力を省略させることが出来る
-  validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
+  # パスワードは半角英数字数字のみ可能。
+  VALID_PASSWORD_REGEX = /\A[a-zA-Z0-9]+\z/
+
+  # if~内容変更時パスワードの入力を省略させることが出来る。パスワードの長さは6-12文字。
+  validates :password, length: { in: 6..12 }, format: { with: VALID_PASSWORD_REGEX}, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
+  # emailは必須条件、一意であること
+  validates :email, uniqueness: true, presence: true
+
   # nicknameは必須項目
   validates :nickname, presence: true
-  # nameはTwitterでいうユーザーIDのようなもの。一意で必須項目。
-  validates :name, uniqueness: true, presence: true
+
+  # nameはTwitterでいうユーザーIDのようなもの。一意で必須項目。15文字以内。半角英数字のみ。
+  validates :name, uniqueness: true, presence: true, length: { maximum: 15 }, format: { with: /\A[a-zA-Z0-9]+\z/ }
 
   # フォローする
   def follow(other_user)
