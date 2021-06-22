@@ -1,6 +1,11 @@
 .top-wrapper {
-  margin: 100px;
+  margin: 20px;
   padding: 40px;
   position: relative;
   background-position: center;
+}
+
+/* フラッシュメッセージが見えるように */
+body { 
+  padding-top: 60px; 
 }
