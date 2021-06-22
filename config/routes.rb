@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # user_followers_path
   # user_diaries_path(index), new_user_diary_path, edit_user_diary, user_diary(show)
   # user_bookmarks_path
-  resources :users, only: [:new, :create, :index] do
+  resources :users, only: [:new, :create, :index, :destroy] do
     resources :followers, only: [:index]
 
     resources :diaries do

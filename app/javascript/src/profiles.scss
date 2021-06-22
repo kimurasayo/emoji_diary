@@ -19,3 +19,37 @@
   outline: 0;
   background: #f5ece4;
 }
+
+/* プロフィール編集のフォーム、password */
+.edit-profile input[type="password"]{
+  border: 1px solid #f5ece4;
+  padding: 5px 8px;
+  border-radius: 20px;
+  height: 3.0em;
+  overflow: hidden;
+  background: #f5ece4;
+  color: gray;
+}
+
+/* プロフィール編集中のフォーム、password */
+.edit-profile input[type="password"]:focus {
+  outline: 0;
+  background: #f5ece4;
+}
+
+/* プロフィール編集のフォーム、email */
+.edit-profile input[type="email"]{
+  border: 1px solid #f5ece4;
+  padding: 5px 8px;
+  border-radius: 20px;
+  height: 3.0em;
+  overflow: hidden;
+  background: #f5ece4;
+  color: gray;
+}
+
+/* プロフィール編集中のフォーム、email */
+.edit-profile input[type="email"]:focus {
+  outline: 0;
+  background: #f5ece4;
+}

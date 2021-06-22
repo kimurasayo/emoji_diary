@@ -8,14 +8,26 @@
       
       <div class="row justify-content-center">
         <div class="edit-profile col-6">
-          <%= form_with model: @user, url: profiles_path, local: true do |f| %>
-            <%= render 'shared/error_messages', object: f.object %>
-            <%= f.label :name %>
-            <%= f.text_field :name, class: 'form-control mb-3' %>
+          <%= simple_form_for @user, url: profiles_path, local: true do |f| %>
+            <div class="form-group">
+              <%= f.input :name, class: 'form-control mb-3', hint: '半角英数字のみ使用できます' %>
+            </div>
+            <div class="form-group">
+              <%= f.input :email, class: 'form-control mb-3' %>
+            </div>
+            <div class="form-group">  
+              <%= f.input :password, class: 'form-control mb-3', label: 'reset password', hint: '半角英数字6−12文字を入力してください' %>
+            </div>
+            <div class="form-group">  
+              <%= f.input :password_confirmation, class: 'form-control mb-3' %>
+            </div>
             <div class="text-center">
-              <%= f.submit class: 'btn btn-primary' %>
+              <%= f.button :submit, class: 'btn btn-primary' %>
             </div>
           <% end %>
+          <div class="text-center">
+            <%= link_to '退会', user_path(@user), method: :delete, data: { confirm: '退会してもよろしいですか？' }, class: "withdraw" %>
+          </div>
         </div>
       </div>
     </div>

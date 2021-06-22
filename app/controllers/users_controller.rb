@@ -18,10 +18,18 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.nickname = array.sample
     if @user.save
-      redirect_to login_path
+      auto_login(@user)
+      redirect_to new_user_diary_path(@user)
     else
       render :new
     end
+  end
+
+  # 退会
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to root_path, success: 'thank you'
   end
 
   # フォローしている人全員
@@ -45,7 +53,7 @@ class UsersController < ApplicationController
 
   # パラメーターで送ることができるカラムの情報
   def user_params
-    params.require(:user).permit(:nickname, :name, :password, :password_confirmation)
+    params.require(:user).permit(:nickname, :name, :password, :password_confirmation, :email)
   end
 
   # ユーザー検索で受け取ることができるカラムの情報

@@ -9,6 +9,7 @@ en:
         name: user name
         password: password
         password_confirmation: password confirmation
+        email: email
       diary:
         feeling: feeling
         body: about
