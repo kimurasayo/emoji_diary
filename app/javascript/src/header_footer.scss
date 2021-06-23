@@ -15,16 +15,24 @@
   letter-spacing: 0.20em;
 }
 
+/* ページ全体の高さ */
+.footerFixed{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
 /* フッター */
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 50px;
   color: gray;
   font-size: 12px;
   background-color: #fbe6de;
+  padding-top: 2px;
 }
 
 body > .container {
