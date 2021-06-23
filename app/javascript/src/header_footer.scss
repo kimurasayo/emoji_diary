@@ -16,10 +16,24 @@
 }
 
 /* フッター */
-.copyright {
-  letter-spacing: 0.20em;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
   color: gray;
-  font-size: 10px;
+  font-size: 12px;
+  background-color: #fbe6de;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+   
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* フッターのリンク */
