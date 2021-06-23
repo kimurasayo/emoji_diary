@@ -1,6 +1,6 @@
 <%= link_to t('defaults.follow'),
               relationships_path(follower: user),
-              class: "btn btn-sm btn-outline-primary",
+              class: "btn btn-sm follow-button",
               method: :post,
               id: "js-follow-button-#{user.id}",
               remote: true %>

@@ -15,11 +15,33 @@
   letter-spacing: 0.20em;
 }
 
+/* ページ全体の高さ */
+.footerFixed{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
 /* フッター */
-.copyright {
-  letter-spacing: 0.20em;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
   color: gray;
-  font-size: 10px;
+  font-size: 12px;
+  background-color: #fbe6de;
+  padding-top: 2px;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+   
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* フッターのリンク */

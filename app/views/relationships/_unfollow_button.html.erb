@@ -1,6 +1,6 @@
 <%= link_to t('defaults.unfollow'),
               relationship_path(current_user.relationships.find_by(follower: user)),
-              class: "btn btn-sm btn-outline-danger",
+              class: "btn btn-sm unfollow-button",
               method: :delete,
               id: "js-follow-button-#{user.id}",
               remote: true %>

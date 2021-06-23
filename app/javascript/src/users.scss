@@ -20,24 +20,6 @@
   color: gray;
 }
 
-/* ユーザー検索のボタン押した時 */
-.user_search input[type="search"]:focus {
-  outline: 0;
-  background: #f5ece4;
-}
-
-/* ユーザー検索のボタン */
-.user_search input[type="submit"]{
-  cursor: pointer;
-  font-size: 1.3em;
-  border: none;
-  background: #bf9288;
-  color: #f5ece4;
-  outline : none;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 /* ユーザー検索のタイトル */
 .search {
   letter-spacing: 0.20em;
@@ -75,57 +57,49 @@
 }
 
 /* フォローボタン */
-.btn.btn-outline-primary {
-  background: #84a59d; //ボタンの背景色
-  color: #f5ece4; //ボタンのテキストの色
-  border: 3px solid #84a59d;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 10px;
+.btn.follow-button {
+  position: relative;
+  width: 160px;
+	padding: 10px;
+  margin: 5px;
+	text-align: center;
+	text-decoration: none;
+	color: #f5ece4;
+	background: #84a59d;
   letter-spacing: 0.20em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
 
-.btn.btn-outline-primary:hover, .btn.btn-outline-primary:focus, 
-.btn.btn-outline-primary:active, .btn.btn-outline-primary:active:focus, .btn.btn-outline-primary:active:hover, .btn.btn-outline-primary:active.focus,
-.btn.btn-outline-primary.active, .btn.btn-outline-primary.active:focus, .btn.btn-outline-primary.active:hover, .btn.btn-outline-primary.active.focus,
-.open > .dropdown-toggle.btn.btn-outline-primary, 
-.open > .dropdown-toggle.btn.btn-outline-primary:hover,
-.open > .dropdown-toggle.btn.btn-outline-primary:focus, 
-.open > .dropdown-toggle.btn.btn-outline-primary.focus,
-.btn.btn-outline-primary.disabled:hover, .btn.btn-outline-primary[disabled]:hover, fieldset[disabled] .btn.btn-outline-primary:hover,
-.btn.btn-outline-primary.disabled:focus, .btn.btn-outline-primary[disabled]:focus, fieldset[disabled] .btn.btn-outline-primary:focus,
-.btn.btn-outline-primary.disabled.focus, .btn.btn-outline-primary[disabled].focus, fieldset[disabled] .btn.btn-outline-primary.focus {
-  background: #84a59d; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
-  color: #f5ece4; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
-  border: 3px solid #84a59d;
-  outline: none;
+.btn.follow-button:hover {
+	 opacity:0.8;
+	 cursor: pointer;
+	 text-decoration: none;
+   color: #f5ece4;
 }
 
 /* アンフォローボタン */
-.btn.btn-outline-danger {
-  background: #f28482; //ボタンの背景色
-  color: #f5ece4; //ボタンのテキストの色
-  border: 3px solid #f28482;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 10px;
+.btn.unfollow-button {
+  position: relative;
+  width: 160px;
+	padding: 10px;
+  margin: 5px;
+	text-align: center;
+	text-decoration: none;
+	color: #f5ece4;
+	background: #f28482;
   letter-spacing: 0.20em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
 
-.btn.btn-outline-danger:hover, .btn.btn-outline-danger:focus, 
-.btn.btn-outline-danger:active, .btn.btn-outline-danger:active:focus, .btn.btn-outline-danger:active:hover, .btn.btn-outline-danger:active.focus,
-.btn.btn-outline-danger.active, .btn.btn-outline-danger.active:focus, .btn.btn-outline-danger.active:hover, .btn.btn-outline-danger.active.focus,
-.open > .dropdown-toggle.btn.btn-outline-danger, 
-.open > .dropdown-toggle.btn.btn-outline-danger:hover,
-.open > .dropdown-toggle.btn.btn-outline-danger:focus, 
-.open > .dropdown-toggle.btn.btn-outline-danger.focus,
-.btn.btn-outline-danger.disabled:hover, .btn.btn-outline-danger[disabled]:hover, fieldset[disabled] .btn.btn-outline-danger:hover,
-.btn.btn-outline-danger.disabled:focus, .btn.btn-outline-danger[disabled]:focus, fieldset[disabled] .btn.btn-outline-danger:focus,
-.btn.btn-outline-danger.disabled.focus, .btn.btn-outline-danger[disabled].focus, fieldset[disabled] .btn.btn-outline-danger.focus {
-  background: #f28482; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
-  color: #f5ece4; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
-  border: 3px solid #f28482;
-  outline: none;
+.btn.unfollow-button:hover {
+	 opacity:0.8;
+	 cursor: pointer;
+	 text-decoration: none;
+   color: #f5ece4;
 }
 
 /* 新規登録画面のラベル */
@@ -210,6 +184,7 @@
   background: #f5ece4;
 }
 
+/* 退会 */
 .withdraw  {
   color: gray;
   font-size: 13px;
@@ -217,4 +192,9 @@
 
 .withdraw:hover {
   color: lightgray;
+}
+
+/* 検索機能などの説明文 */
+.follow_text {
+  color: gray;
 }

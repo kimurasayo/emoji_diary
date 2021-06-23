@@ -4,34 +4,41 @@
   <div class="row justify-content-center">
     <div class="resulting col-10">
       <div class="text-right">
-        <%= link_to 'back', profiles_path, class: "btn btn-primary" %>
+        <%= link_to 'back', profiles_path, class: "btn btn-normal" %>
       </div>
       <h1 class="result"><%= current_user.nickname %> followers</h1>
       
-      <div class="row justify-content-center">
-        <div class="col-6">
-        <table class="result-table table table-borderless">
-
-          <tbody>
-            <% @users.each do |user| %>
-              <tr class="result text-left">
-                <td style="width: 50%">
-                  <%= link_to user_diaries_path(user), class: "result-link" do%>
-                    <%= user.nickname %> <%= user.name %>
-                  <% end %>
-                </td>
-                <td class="text-right" style="width: 50%">
-                  <% if logged_in? && current_user != user %>
-                    <%= render 'relationships/follow_button_area', user: user %>
-                  <% end %>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-
-        </table>
+      <% if @users.empty? %>
+        <div class="card">
+          <div class="card-body text-center">
+            <p class="follow_text">フォロワーがいません。</p>
+          </div>
         </div>
-      </div>
+      <% else %>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <table class="result-table table table-borderless">
+
+            <tbody>
+              <% @users.each do |user| %>
+                <tr class="result text-left">
+                  <td style="width: 50%">
+                    <%= link_to user_diaries_path(user), class: "result-link" do%>
+                      <%= user.nickname %> <%= user.name %>
+                    <% end %>
+                  </td>
+                  <td class="text-right" style="width: 50%">
+                    <% if logged_in? && current_user != user %>
+                      <%= render 'relationships/follow_button_area', user: user %>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+            </table>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

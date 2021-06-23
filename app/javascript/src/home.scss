@@ -1,6 +1,4 @@
 .top-wrapper {
-  margin: 20px;
-  padding: 40px;
   position: relative;
   background-position: center;
 }
@@ -8,4 +6,13 @@
 /* フラッシュメッセージが見えるように */
 body { 
   padding-top: 60px; 
+}
+
+/* 画像をレスポンシブ対応させる */
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }

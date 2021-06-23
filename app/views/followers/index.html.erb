@@ -6,19 +6,36 @@
 
       <h1 class="calendar-name"><%= current_user.nickname %> friend's diary</h1>
 
-      <% @users.each do |user| %>
-        <h3 class="calendar-name">
-          <%= link_to user_diaries_path(user), class: "calendar-name-link" do %>
-            <%= user.nickname %> <%= user.name %>
+      <% if @users.empty? %>
+        <div class="card">
+          <div class="card-body text-center">
+            <p class="follow_text">まだフォローしている人がいません。<br>
+            フォローをすると友達の日記を一覧で表示することができます。<br>
+            友達を検索してフォローしませんか？</p>
+            <%= link_to 'search friends', users_path, class: 'btn-normal' %>
+          </div>
+        </div>
+      <% else %>
+        <div class="text-center">
+          <%= search_form_for @q, url: user_followers_path do |f| %>
+            <%= f.search_field :name_cont, placeholder: 'user name' %>
+          <%= f.submit class: 'btn btn-normal' %>
           <% end %>
-        </h3>
-        <% @diaries = Diary.where(user_id: user.id) %>
-        <%= week_calendar events: @diaries do |date, diaries| %>
-          <%= date %>
-          <% diaries.each do |diary| %>
-            <div class="feeling">
-              <%= link_to diary.feeling, user_diary_path(user, diary) %>
-            </div>
+        </div>
+        <% @users.each do |user| %>
+          <h3 class="calendar-name">
+            <%= link_to user_diaries_path(user), class: "calendar-name-link" do %>
+              <%= user.nickname %> <%= user.name %>
+            <% end %>
+          </h3>
+          <% @diaries = Diary.where(user_id: user.id) %>
+          <%= week_calendar events: @diaries do |date, diaries| %>
+            <%= date %>
+            <% diaries.each do |diary| %>
+              <div class="feeling">
+                <%= link_to diary.feeling, user_diary_path(user, diary) %>
+              </div>
+            <% end %>
           <% end %>
         <% end %>
       <% end %>
