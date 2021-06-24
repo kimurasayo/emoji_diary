@@ -31,7 +31,7 @@
 .result {
   letter-spacing: 0.20em;
   color: #c76e54;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 /* ユーザー検索結果の友達の名前リンク */
@@ -45,8 +45,8 @@
 
 /* ユーザー検索結果のテーブル、タイトル全てを含めたクラス */
 .resulting {
-  margin: 100px;
-  padding: 40px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* ユーザー検索結果のテーブル */
@@ -59,7 +59,7 @@
 /* フォローボタン */
 .btn.follow-button {
   position: relative;
-  width: 160px;
+  width: 140px;
 	padding: 10px;
   margin: 5px;
 	text-align: center;
@@ -82,7 +82,7 @@
 /* アンフォローボタン */
 .btn.unfollow-button {
   position: relative;
-  width: 160px;
+  width: 140px;
 	padding: 10px;
   margin: 5px;
 	text-align: center;
@@ -112,7 +112,7 @@
   border: 1px solid #f5ece4;
   padding: 5px 8px;
   border-radius: 20px;
-  height: 3.0em;
+  height: 2.0em;
   overflow: hidden;
   background: #f5ece4;
   color: gray;
@@ -129,7 +129,7 @@
   border: 1px solid #f5ece4;
   padding: 5px 8px;
   border-radius: 20px;
-  height: 3.0em;
+  height: 2.0em;
   overflow: hidden;
   background: #f5ece4;
   color: gray;
@@ -147,7 +147,7 @@
   border: 1px solid #f5ece4;
   padding: 5px 8px;
   border-radius: 20px;
-  height: 3.0em;
+  height: 2.0em;
   overflow: hidden;
   background: #f5ece4;
   color: gray;
@@ -172,7 +172,7 @@
   border: 1px solid #f5ece4;
   padding: 5px 8px;
   border-radius: 20px;
-  height: 3.0em;
+  height: 2.0em;
   overflow: hidden;
   background: #f5ece4;
   color: gray;

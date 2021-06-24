@@ -1,1 +1,2 @@
 $("#js-follow-button-<%= @user.id %>").replaceWith("<%= j(render 'follow_button', user: @user) %>");
+$("#followers").html('<%= @user.followers.count %>');

@@ -38,9 +38,9 @@ input[type="radio"]:checked + label img {
 }
 
 /* 日記詳細の枠 */
-.card {
-  margin: 100px;
-  padding: 40px;
+.diary-show {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* サブミットや戻るなどの普通のボタン */
@@ -102,10 +102,9 @@ input[type="radio"]:checked + label img {
   color: #e54747;
 }
 
-/* カレンダー、タイトル含めた全てのクラス */
 .calendar {
-  margin: 100px;
-  padding: 40px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* カレンダーのタイトル */
@@ -117,6 +116,16 @@ input[type="radio"]:checked + label img {
 /* 友達の日記一覧ページの友達の名前 */
 h3.calendar-name {
   margin-top: 50px;
+}
+
+/* 日記一覧のタイトルになってる名前の編集ページにいくリンク */
+.calendar-name-link {
+  color: #c76e54;
+  letter-spacing: 0.20em;
+}
+
+.calendar-name-link:hover {
+  color: #c76e54;
 }
 
 /* 友達の日記一覧ページの友達の名前のリンク */
@@ -185,4 +194,9 @@ input:checked + .tab_class + .content_class {
 
 .form-group {
   padding-bottom: 2px;
+}
+
+.follow-count {
+  font-size: 12px;
+  color: gray;
 }

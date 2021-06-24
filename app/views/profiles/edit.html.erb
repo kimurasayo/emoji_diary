@@ -2,12 +2,11 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="resulting col-10">
-      
-      <h1 class="result"><%= current_user.nickname %> edit profile</h1>
-      
-      <div class="row justify-content-center">
-        <div class="edit-profile col-6">
+  <div class="card resulting col-10 col-md-6 text-center">
+  
+  <div class="card-body text-center">
+    <h3 class="result"><%= current_user.nickname %>edit profile</h3>
+    <div class="edit-profile">
           <%= simple_form_for @user, url: profiles_path, local: true do |f| %>
             <div class="form-group">
               <%= f.input :name, class: 'form-control mb-3', hint: '半角英数字のみ使用できます' %>

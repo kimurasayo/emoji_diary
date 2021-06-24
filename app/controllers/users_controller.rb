@@ -34,12 +34,15 @@ class UsersController < ApplicationController
 
   # フォローしている人全員
   def following
-    @users = current_user.followings
+    @user = User.find(params[:user_id])
+    @users = @user.followings
+    @user = User.find(params[:user_id])
   end
 
   # フォロワー全員
   def follower
-    @users = current_user.followers
+    @user = User.find(params[:user_id])
+    @users = @user.followers
   end
 
   # ransackを使って検索したユーザーを@qに入れている
