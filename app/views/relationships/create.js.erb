@@ -1,2 +1,2 @@
 $("#js-follow-button-<%= @other_user.id %>").replaceWith("<%= j(render 'unfollow_button', user: @other_user) %>");
-console.log("Hello");
+$("#followers").html('<%= @other_user.followers.count %>');
