@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :index, :destroy] do
     resources :followers, only: [:index]
 
+    get 'following', to: 'users#following'
+    get 'follower', to: 'users#follower'
+
     resources :diaries do
       member do
         resources :bookmarks, only: [:index]
@@ -29,7 +32,5 @@ Rails.application.routes.draw do
   # logout_path
   delete 'logout', to: 'user_sessions#destroy', as: :logout
 
-  get 'following', to: 'users#following'
-  get 'follower', to: 'users#follower'
   get 'search', to: 'users#search'
 end

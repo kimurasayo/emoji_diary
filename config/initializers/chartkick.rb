@@ -6,7 +6,7 @@ Chartkick.options = {
   max: 100,
   library: {
     title: {
-      text: 'recent emotional chages',
+      text: '最近の感情の変化',
       align: 'center',
       style: {
         color: '#c76e54'

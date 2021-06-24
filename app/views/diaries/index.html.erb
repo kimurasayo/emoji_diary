@@ -2,29 +2,42 @@
 
 <div class="container">
 
-  <div class="row calendar justify-content-center">
-    <div class="col-md">
-    <div class="text-right">
-    <% if logged_in? && current_user != @user %>
-      <%= render 'relationships/follow_button_area', user: @user %>
-    <% end %>
-    </div>
-      <h1 class="calendar-name">
-        <%= @user.nickname %> <%= @user.name %>
-      </h1>
-      <%= month_calendar events: @diaries do |date, diaries| %>
-        <%= date.day %>
+  <div class="calendar">
+    <div class="row justify-content-center">
       
-        <% diaries.each do |diary| %>
-          <div class="feeling">
-            <%= link_to diary.feeling, user_diary_path(@user, diary) %>
-          </div>
-        <% end %>
+      <% if logged_in? && current_user != @user %>
+        <h1 class="calendar-name">
+          <%= @user.nickname %><%= @user.name %>
+        </h1>
+        <%= render 'relationships/follow_button_area', user: @user %>
+      <% else %>
+        <h1 class="calendar-name">
+          <%= link_to edit_profiles_path, class: "calendar-name-link" do %>
+            <%= @user.nickname %><%= @user.name %>
+          <% end %>
+        </h1>
       <% end %>
     </div>
-    <div class="chart col-md d-flex align-items-end"> 
-      <%= area_chart @diaries.current_month.group(:start_time).sum(:score) %>
+    
+    <div class="row justify-content-center">
+      <%= render 'relationships/follow_count_area', user: @user %>
     </div>
 
+    <div class="row">
+      <div class="col">
+        <%= month_calendar events: @diaries do |date, diaries| %>
+          <%= date.day %>
+      
+          <% diaries.each do |diary| %>
+            <div class="feeling">
+              <%= link_to diary.feeling, user_diary_path(@user, diary) %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="chart col d-flex align-items-end"> 
+        <%= area_chart @diaries.current_month.group(:start_time).sum(:score) %>
+      </div>
+    </div>
   </div>
 </div>
