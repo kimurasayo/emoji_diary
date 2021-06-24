@@ -2,11 +2,11 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="resulting col-10">
+    <div class="card resulting col-10 col-md-6 text-center">
       
-      <h1 class="result">📖 <%= t '.title' %></h1>
-      <div class="row justify-content-center">
-        <div class="register col-6">
+      <div class="card-body text-center">
+        <h2 class="result card-title">📖 <%= t '.title' %></h2>
+        <div class="register">
         <%= form_with url: login_path, method: :post, local: true do |f| %>
           
             <div class="form-group">

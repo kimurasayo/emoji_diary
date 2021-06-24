@@ -8,7 +8,7 @@
   border: 1px solid #f5ece4;
   padding: 5px 8px;
   border-radius: 20px;
-  height: 3.0em;
+  height: 2.0em;
   overflow: hidden;
   background: #f5ece4;
   color: gray;
@@ -25,7 +25,7 @@
   border: 1px solid #f5ece4;
   padding: 5px 8px;
   border-radius: 20px;
-  height: 3.0em;
+  height: 2.0em;
   overflow: hidden;
   background: #f5ece4;
   color: gray;
@@ -42,7 +42,7 @@
   border: 1px solid #f5ece4;
   padding: 5px 8px;
   border-radius: 20px;
-  height: 3.0em;
+  height: 2.0em;
   overflow: hidden;
   background: #f5ece4;
   color: gray;
@@ -52,4 +52,9 @@
 .edit-profile input[type="email"]:focus {
   outline: 0;
   background: #f5ece4;
+}
+
+.profile {
+  letter-spacing: 0.20em;
+  color: #c76e54;
 }
