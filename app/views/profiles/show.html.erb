@@ -2,36 +2,35 @@
 
 <div class="container">
   <div class="row justify-content-center">
-  <div class="resulting col-10">
+  <div class="resulting col-10 col-md-5 text-center">
 
   <h2 class="profile text-center"><%= current_user.nickname %> profile</h2>
   
   <div class="row justify-content-center">
-    <div class="">
     <table class="result-table table table-borderless">
 
           <tbody>
-            <tr class="result text-left">
-              <td style="width: 50%">
+            <tr class="edit-form text-left">
+              <td>
                 icon
               </td>
-              <td class="text-right" style="width: 50%">
+              <td class="text-right">
                 <%= current_user.nickname %>
               </td>
             </tr>
-            <tr class="result text-left">
-              <td style="width: 50%">
+            <tr class="edit-form text-left">
+              <td>
                 user name
               </td>
-              <td class="text-right" style="width: 50%">
+              <td class="text-right">
                 <%= current_user.name %>
               </td>
             </tr>
-            <tr class="result text-left">
-              <td style="width: 50%">
+            <tr class="edit-form text-left">
+              <td>
                 email
               </td>
-              <td class="text-right" style="width: 50%">
+              <td class="text-right">
                 <%= current_user.email %>
               </td>
             </tr>
@@ -44,6 +43,5 @@
       <div class="text-center">
         <%= link_to 'edit', edit_profiles_path, class: "btn btn-normal" %>
       </div>
-    </div>
   </div>
 </div>
