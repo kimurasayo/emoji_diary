@@ -3,13 +3,13 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="searching col-10">
-      <h1 class="search"><%= current_user.nickname %> search</h1>
+      <h1 class="search text-center"><%= current_user.nickname %> search</h1>
       <div class="text-center">
         <%= search_form_for @q, url: search_path do |f| %>
           <%= f.search_field :name_cont, placeholder: 'user name', required: true %>
-          <%= f.submit class: 'btn btn-normal' %>
+          <%= f.submit class: 'btn-show-back' %>
         <% end %>
-        <p class="follow_text">友達のユーザー名を入力して検索します。</p>
+        <p class="follow_text">ユーザー名を入力して検索します。</p>
       </div>
     </div>
   </div>
