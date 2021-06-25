@@ -138,7 +138,7 @@ input[type="radio"]:checked + label img {
 }
 
 /* 友達の日記一覧ページの友達の名前 */
-h3.calendar-name {
+h4.calendar-name {
   margin-top: 50px;
 }
 
@@ -220,7 +220,37 @@ input:checked + .tab_class + .content_class {
   padding-bottom: 2px;
 }
 
+/* フォロー人数の文字 */
 .follow-count {
   font-size: 12px;
   color: gray;
+}
+
+/* 友達の日記一覧の全体 */
+.friend-calendar {
+  margin-top: 130px;
+  margin-bottom: 100px;
+}
+
+/* 友達一覧の検索ボタン */
+.btn.btn-search {
+  position: relative;
+  width: auto;
+	padding: 5px;
+  margin: 5px;
+	text-align: center;
+	text-decoration: none;
+	color: #f5ece4;
+	background: #bf9288;
+  letter-spacing: 0.20em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.btn.btn-search:hover {
+  opacity:0.8;
+  cursor: pointer;
+  text-decoration: none;
+  color: #f5ece4;
 }

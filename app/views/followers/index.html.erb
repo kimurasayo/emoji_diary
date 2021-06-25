@@ -2,32 +2,32 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="calendar col-10">
+    <div class="friend-calendar col-12 col-md-8">
 
-      <h1 class="calendar-name"><%= current_user.nickname %> friend's diary</h1>
+      <h3 class="calendar-name text-center"><%= current_user.nickname %> friend's diary</h3>
 
       <% if @users.empty? %>
-        <div class="card">
+        <div class="card no-follow">
           <div class="card-body text-center">
             <p class="follow_text">まだフォローしている人がいません。<br>
             フォローをすると友達の日記を一覧で表示することができます。<br>
             友達を検索してフォローしませんか？</p>
-            <%= link_to 'search friends', users_path, class: 'btn-normal' %>
+            <%= link_to 'search friends', users_path, class: 'btn-show-back' %>
           </div>
         </div>
       <% else %>
         <div class="text-center">
           <%= search_form_for @q, url: user_followers_path do |f| %>
             <%= f.search_field :name_cont, placeholder: 'user name' %>
-          <%= f.submit class: 'btn btn-normal' %>
+          <%= f.submit class: 'btn btn-search' %>
           <% end %>
         </div>
         <% @users.each do |user| %>
-          <h3 class="calendar-name">
+          <h4 class="calendar-name">
             <%= link_to user_diaries_path(user), class: "calendar-name-link" do %>
               <%= user.nickname %> <%= user.name %>
             <% end %>
-          </h3>
+          </h4>
           <% @diaries = Diary.where(user_id: user.id) %>
           <%= week_calendar events: @diaries do |date, diaries| %>
             <%= date %>
