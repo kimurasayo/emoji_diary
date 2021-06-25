@@ -24,17 +24,19 @@ input[type="radio"]:checked + label img {
 }
 
 /* 詳細画面の日付 */
-.card-title {
-  letter-spacing: 0.20em;
+.show-date {
+  letter-spacing: 0.15em;
   color: #c76e54;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* 絵文字日記の本文 */
-.card-text {
+.rounded {
   letter-spacing: 0.5em;
   background-color: #f5cdbd;
-  padding: 20px;
-  margin: 50px;
+  padding: 10px;
+  margin: 10px;
 }
 
 /* 日記詳細の枠 */
@@ -64,6 +66,28 @@ input[type="radio"]:checked + label img {
 	 cursor: pointer;
 	 text-decoration: none;
    color: #f5ece4;
+}
+
+.btn-show-back {
+  position: relative;
+  width: auto;
+	padding: 10px 30px 10px 30px;
+  margin: 5px;
+	text-align: center;
+	text-decoration: none;
+	color: #f5ece4;
+	background: #bf9288;
+  letter-spacing: 0.20em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.btn-show-back:hover {
+  opacity:0.8;
+  cursor: pointer;
+  text-decoration: none;
+  color: #f5ece4;
 }
 
 /* いいねボタン */
