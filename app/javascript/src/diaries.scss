@@ -12,13 +12,13 @@ label img {
 
 /* 未選択の場合の絵文字 */
 input[type="radio"] + label img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 /* 選択済みの場合の絵文字、背景色がつく */
 input[type="radio"]:checked + label img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background: #c76e54;
   border-radius: 20px;
 }
@@ -187,7 +187,7 @@ h3.calendar-name {
   height: 50px;
   background-color: #f5ece4;
   line-height: 50px;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   display: block;
   float: left;
