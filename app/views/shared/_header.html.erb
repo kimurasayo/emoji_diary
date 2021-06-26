@@ -21,7 +21,7 @@
           <%= link_to t('defaults.logout'), logout_path, method: :delete, data: { confirm: 'ログアウトしますか？' }, class: 'nav-link' %>
         </li>
         <li class='nav-item'>
-          <%= current_user.nickname %>
+          <%= link_to current_user.nickname, profiles_path %>
         </li>
       </ul>
     </div>

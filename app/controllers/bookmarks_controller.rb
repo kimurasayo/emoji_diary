@@ -1,4 +1,7 @@
 class BookmarksController < ApplicationController
+  # pagyを導入
+  include Pagy::Backend
+  
   # ブックマークする
   def create
     @diary = Diary.find(params[:diary_id])
@@ -18,5 +21,7 @@ class BookmarksController < ApplicationController
     @user = User.find(params[:user_id])
     @diary = Diary.find(params[:id])
     @bookmarks = Bookmark.where(diary_id: @diary.id).all
+    
+    @pagy, @bookmarks = pagy(Bookmark.where(diary_id: @diary.id).all)
   end
 end

@@ -86,3 +86,6 @@ gem "chartkick"
 
 # フォーム
 gem 'simple_form'
+
+# ページネーション
+gem 'pagy'
