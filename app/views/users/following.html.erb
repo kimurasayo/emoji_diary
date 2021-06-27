@@ -22,26 +22,29 @@
           </div>
         </div>
       <% else %>
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6">
-          <table class="result-table table table-borderless">
-            <tbody>
-              <% @users.each do |user| %>
-                <tr class="result text-left">
-                  <td style="width: 50%">
-                    <%= link_to user_diaries_path(user), class: "result-link" do%>
-                      <%= user.nickname %> <%= user.name %>
-                    <% end %>
-                  </td>
-                  <td class="text-right" style="width: 50%">
-                    <% if logged_in? && current_user != user %>
-                      <%= render 'relationships/follow_button_area', user: user %>
-                    <% end %>
-                  </td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
+        <div class="row justify-content-center" id="contents">
+          <div class="col-md-8 col-lg-6 content">
+            <table class="result-table table table-borderless">
+              <tbody>
+                <% @users.each do |user| %>
+                  <tr class="result text-left">
+                    <td style="width: 50%">
+                      <%= link_to user_diaries_path(user), class: "result-link" do%>
+                        <%= user.nickname %> <%= user.name %>
+                      <% end %>
+                    </td>
+                    <td class="text-right" style="width: 50%">
+                      <% if logged_in? && current_user != user %>
+                        <%= render 'relationships/follow_button_area', user: user %>
+                      <% end %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <div class="row justify-content-center">
+              <%== pagy_bootstrap_nav(@pagy) %>
+            </div>
           </div>
         </div>
       <% end %>

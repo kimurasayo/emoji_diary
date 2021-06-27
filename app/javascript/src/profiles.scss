@@ -18,6 +18,8 @@
 .edit-profile input[type="text"]:focus {
   outline: 0;
   background: #f5ece4;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 /* プロフィール編集のフォーム、password */
@@ -35,6 +37,8 @@
 .edit-profile input[type="password"]:focus {
   outline: 0;
   background: #f5ece4;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 /* プロフィール編集のフォーム、email */
@@ -52,6 +56,8 @@
 .edit-profile input[type="email"]:focus {
   outline: 0;
   background: #f5ece4;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 .profile {

@@ -68,6 +68,10 @@ input[type="radio"]:checked + label img {
    color: #f5ece4;
 }
 
+.btn.btn-normal:focus{
+  box-shadow: none;
+}
+
 .btn-show-back {
   position: relative;
   width: auto;
@@ -88,6 +92,10 @@ input[type="radio"]:checked + label img {
   cursor: pointer;
   text-decoration: none;
   color: #f5ece4;
+}
+
+.btn-show-back:focus{
+  box-shadow: none;
 }
 
 /* いいねボタン */
@@ -253,4 +261,8 @@ input:checked + .tab_class + .content_class {
   cursor: pointer;
   text-decoration: none;
   color: #f5ece4;
+}
+
+.btn.btn-search:focus{
+  box-shadow: none;
 }

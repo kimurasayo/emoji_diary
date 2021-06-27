@@ -48,3 +48,36 @@ body {
     margin-left: 80px;
   }
 }
+
+/* ページネーションの選択時の青枠を消す */
+.pagination .page-link:focus{
+  box-shadow: none;
+}
+
+/* ページネーションのレイアウト */
+.pagination>.page-item>.page-link, .pagination>.page-item>span {
+  border: 0;
+  border-radius: 30px;
+  transition: all .3s;
+  padding: 0 11px;
+  margin: 0 3px;
+  min-width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: gray;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: 0 0;
+  text-align: center;
+}
+
+.pagination>.page-item.active>a,
+.pagination>.page-item.active>a:focus,
+.pagination>.page-item.active>a:hover,
+.pagination>.page-item.active>span,
+.pagination>.page-item.active>span:focus,
+.pagination>.page-item.active>span:hover {
+  background-color: #bf9288;
+  border-color: #bf9288;
+}
