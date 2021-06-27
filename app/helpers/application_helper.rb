@@ -1,6 +1,6 @@
 module ApplicationHelper
   include Pagy::Frontend
-  
+
   def page_title(page_title = '')
     base_title = "emory"
     if page_title.empty?

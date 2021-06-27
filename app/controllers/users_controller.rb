@@ -38,15 +38,15 @@ class UsersController < ApplicationController
   # フォローしている人全員
   def following
     @user = User.find(params[:user_id])
-    #@users = @user.followings
-    
+    # @users = @user.followings
+
     @pagy, @users = pagy(@user.followings)
   end
 
   # フォロワー全員
   def follower
     @user = User.find(params[:user_id])
-    #@users = @user.followers
+    # @users = @user.followers
     @pagy, @users = pagy(@user.followers)
   end
 
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   # ユーザー検索の結果
   def search
     @q = User.search(search_params)
-    #@users = @q.result(distinct: true)
+    # @users = @q.result(distinct: true)
 
     @pagy, @users = pagy(@q.result(distinct: true))
   end
