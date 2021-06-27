@@ -21,6 +21,13 @@
   color: gray;
 }
 
+.user_search input[type="search"]:focus {
+  outline: none;
+  background: #f5ece4;
+  box-shadow: none;
+  text-shadow: none;
+}
+
 /* ユーザー検索のタイトル */
 .search {
   letter-spacing: 0.20em;
@@ -80,6 +87,10 @@
    color: #f5ece4;
 }
 
+.btn.follow-button:focus{
+  box-shadow: none;
+}
+
 /* アンフォローボタン */
 .btn.unfollow-button {
   position: relative;
@@ -103,6 +114,10 @@
    color: #f5ece4;
 }
 
+.btn.unfollow-button:focus{
+  box-shadow: none;
+}
+
 /* 新規登録画面のラベル */
 .register {
   color: #c76e54;
@@ -123,6 +138,8 @@
 .register input[type="password"]:focus {
   outline: none;
   background: #f5ece4;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 /* 新規登録画面のテキストフォーム */
@@ -141,6 +158,8 @@
 .register input[type="text"]:focus {
   outline: none;
   background: #f5ece4;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 /* 新規登録画面のemailフォーム */
@@ -158,6 +177,8 @@
 .register input[type="email"]:focus {
   outline: none;
   background: #f5ece4;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 .login-link {
@@ -183,6 +204,8 @@
 .register input[type="date"]:focus {
   outline: none;
   background: #f5ece4;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 /* 退会 */
