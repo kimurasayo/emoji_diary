@@ -1,6 +1,6 @@
 User.seed(
   :id,
-  { id: 1, nickname: '🐒', name: 'kimsayo', email: 'sayo@example.com', crypted_password: User.encrypt('password'), role: 'general' },
+  { id: 1, nickname: '🐒', name: 'kimsayo', email: 'sayo@example.com', crypted_password: User.encrypt('password'), role: 'admin' },
   { id: 2, nickname: '🌸', name: 'eri1112', email: 'eri@example.com', crypted_password: User.encrypt('password'), role: 'general' },
   { id: 3, nickname: '🐷', name: 'yuka911', email: 'yuka@example.com', crypted_password: User.encrypt('password'), role: 'general' },
   { id: 4, nickname: '🐭', name: 'mickey', email: 'miki@example.com', crypted_password: User.encrypt('password'), role: 'general' },
