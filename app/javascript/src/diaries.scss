@@ -3,22 +3,24 @@ input[type="radio"] {
   display: none;
 }
 
-
-/* 画像の周りに隙間をあける */
-label img {
-  margin: 4px;
-  padding: 5px;
+/* 顔の絵文字の周りに隙間をあける */
+label.face {
+  margin: 2px;
+  padding: 2px;
+  font-size: 20px;
+  text-align: center;
  }
 
 /* 未選択の場合の絵文字 */
-input[type="radio"] + label img {
-  width: 35px;
-  height: 35px;
+input[type="radio"] + label.face {
+  width: 30px;
+  height: 30px;
 }
+
 /* 選択済みの場合の絵文字、背景色がつく */
-input[type="radio"]:checked + label img {
-  width: 35px;
-  height: 35px;
+input[type="radio"]:checked + label.face {
+  width: 30px;
+  height: 30px;
   background: #c76e54;
   border-radius: 20px;
 }

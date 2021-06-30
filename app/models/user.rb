@@ -37,6 +37,9 @@ class User < ApplicationRecord
   # nameはTwitterでいうユーザーIDのようなもの。一意で必須項目。15文字以内。半角英数字のみ。
   validates :name, uniqueness: true, presence: true, length: { maximum: 15 }, format: { with: /\A[a-zA-Z0-9]+\z/ }
 
+  # 一般ユーザー、管理者、ゲストユーザー
+  enum role: { general: 0, admin: 1 }
+
   # フォローする
   def follow(other_user)
     # 自分自身はフォローできない

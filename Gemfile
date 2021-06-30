@@ -89,3 +89,9 @@ gem 'simple_form'
 
 # ページネーション
 gem 'pagy'
+
+# 管理者ページ、認証機能
+gem 'rails_admin', '~> 2.0'
+
+# 認可機能
+gem 'cancancan'
