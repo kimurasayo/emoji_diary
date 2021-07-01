@@ -98,3 +98,5 @@ gem 'cancancan'
 
 # LINEbot
 gem 'line-bot-api'
+
+gem 'whenever', require: false
