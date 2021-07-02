@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_01_084337) do
+ActiveRecord::Schema.define(version: 2021_07_02_052700) do
 
   create_table "bookmarks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 2021_07_01_084337) do
     t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
+  create_table "line_users", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "uid"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "relationships", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "follower_id"
@@ -52,7 +58,6 @@ ActiveRecord::Schema.define(version: 2021_07_01_084337) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "email", null: false
     t.integer "role", default: 0, null: false
-    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name", unique: true
   end
