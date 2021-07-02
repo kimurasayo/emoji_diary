@@ -95,3 +95,8 @@ gem 'rails_admin', '~> 2.0'
 
 # 認可機能
 gem 'cancancan'
+
+# LINEbot
+gem 'line-bot-api'
+
+gem 'whenever', require: false

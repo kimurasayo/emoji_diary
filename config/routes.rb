@@ -34,4 +34,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy', as: :logout
 
   get 'search', to: 'users#search'
+
+  # linebot
+  post '/callback', to: 'linebot#callback' 
 end
