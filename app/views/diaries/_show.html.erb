@@ -17,7 +17,8 @@
               <%= button_to 'edit', edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' %>
             </div>
             <div class="col-12 col-xl-3">
-              <%= button_to 'delete', user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-normal' %>
+              <%= button_to 'delete', user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
+              削除してもよろしいですか?", commit: 'delete', cancel: 'cancel' }, class:'btn btn-normal' %>
             </div>
           </div>
         <% else %>

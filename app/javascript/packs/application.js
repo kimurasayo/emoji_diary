@@ -11,6 +11,7 @@ import '@fortawesome/fontawesome-free/js/all'
 import '../src/application.scss'
 
 require('jquery');
+require('data-confirm-modal');
 // require("chartkick/chart.js")
 require("chartkick").use(require("highcharts"))
 
