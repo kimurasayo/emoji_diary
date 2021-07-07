@@ -18,8 +18,9 @@ class BookmarksController < ApplicationController
 
   # 日記にブックマークしているユーザー一覧のページ
   def index
-    @user = User.find(params[:user_id])
+    #@user = User.find(params[:user_id])
     @diary = Diary.find(params[:id])
+    @user = @diary.user
     @bookmarks = Bookmark.where(diary_id: @diary.id).all
 
     @pagy, @bookmarks = pagy(Bookmark.where(diary_id: @diary.id).all)

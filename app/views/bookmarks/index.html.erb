@@ -4,7 +4,7 @@
   <div class="row justify-content-center">
     <div class="resulting col-12 col-md-10 text-center">
   
-      <h2 class="result"><%= current_user.nickname %> liked by</h2>
+      <h2 class="result"><%= @user.nickname %> liked by</h2>
       
       <% if @bookmarks.empty? %>
         <div class="card no-follow">
@@ -43,7 +43,7 @@
         </div>
       <% end %>
       <div class="text-center">
-        <%= link_to 'back', user_diaries_path(current_user, @diary), class: "btn btn-normal" %>
+        <%= link_to 'back', user_diaries_path(@user, @diary), class: "btn btn-normal" %>
       </div>
     </div>
   </div>
