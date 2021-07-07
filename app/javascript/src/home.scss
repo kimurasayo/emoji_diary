@@ -81,3 +81,127 @@ body {
   background-color: #bf9288;
   border-color: #bf9288;
 }
+
+/* 確認ダイアログ　*/
+.modal-dialog {
+  .modal-header {
+    border-bottom: none;
+    text-align: center;
+    padding: 5px;
+    background-color: #bf9288;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+ 
+  .modal-title,
+  button.close {
+    display: none;
+  }
+ 
+  .modal-body {
+    text-align: center;
+    font-size: 15px;
+    padding: 30px 0 5px;
+  }
+ 
+  .fa-exclamation-circle:before {
+      color: #bf9288;
+      font-size: 40px;
+      padding: 5px;
+      position: relative;
+      top: 5px;
+  }
+ 
+  .modal-footer {
+    border-top: none;
+  }
+
+  .btn.btn-danger:hover, .btn.btn-danger:focus, 
+  .btn.btn-danger:active, .btn.btn-danger:active:focus, .btn.btn-danger:active:hover, .btn.btn-danger:active.focus,
+  .btn.btn-danger.active, .btn.btn-danger.active:focus, .btn.btn-danger.active:hover, .btn.btn-danger.active.focus,
+  .open > .dropdown-toggle.btn.btn-danger, 
+  .open > .dropdown-toggle.btn.btn-danger:hover,
+  .open > .dropdown-toggle.btn.btn-danger:focus, 
+  .open > .dropdown-toggle.btn.btn-danger.focus,
+  .btn.btn-danger.disabled:hover, .btn.btn-danger[disabled]:hover, fieldset[disabled] .btn.btn-danger:hover,
+  .btn.btn-danger.disabled:focus, .btn.btn-danger[disabled]:focus, fieldset[disabled] .btn.btn-danger:focus,
+  .btn.btn-danger.disabled.focus, .btn.btn-danger[disabled].focus, fieldset[disabled] .btn.btn-danger.focus {
+      background: #bf9288; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+      color: #bf9288; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+  }
+
+  .btn.btn-danger.outline {
+    border: 3px solid #bf9288; //アウトラインのみのボタンの線の色
+    color: #bf9288; //アウトラインのみのボタンのテキストの色
+  }
+
+  .btn.commit {
+    position: relative;
+    width: auto;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #f5ece4;
+    background: #bf9288;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  .btn.commit:hover {
+    opacity:0.8;
+    cursor: pointer;
+    text-decoration: none;
+    color: #f5ece4;
+  }
+  
+  .btn.commit:focus {
+    box-shadow: none;
+    color: #f5ece4;
+  }
+
+  .btn.cancel {
+    position: relative;
+    width: auto;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #bf9288;
+    background-color: #f5ece4;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  .btn.canel:hover {
+    opacity:0.8;
+    cursor: pointer;
+    text-decoration: none;
+    color: #bf9288;
+  }
+  
+  .btn.cancel:focus {
+    box-shadow: none;
+    color: #bf9288;
+  }
+}
+
+/* ログインさせるためのフラッシュメッセージ */
+.alert.alert-danger {
+  background-color: #f5ece4;
+  text-align: center;
+  border: none;
+  color: #bf9288;
+  letter-spacing: 0.10em;
+}
+
+/* 退会後のフラッシュメッセージ */
+.alert.alert-success {
+  background-color: #f5ece4;
+  text-align: center;
+  border: none;
+  color: #bf9288;
+  letter-spacing: 0.10em;
+}

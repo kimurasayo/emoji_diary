@@ -9,8 +9,10 @@ import "channels"
 import 'bootstrap'
 import '@fortawesome/fontawesome-free/js/all'
 import '../src/application.scss'
+import 'packs/flash.js'
 
 require('jquery');
+require('data-confirm-modal');
 // require("chartkick/chart.js")
 require("chartkick").use(require("highcharts"))
 

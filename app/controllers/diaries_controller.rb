@@ -45,7 +45,7 @@ class DiariesController < ApplicationController
     @diary = current_user.diaries.find(params[:id])
     score_feeling
     if @diary.update(diary_params)
-      redirect_to user_diary_path(current_user)
+      redirect_to user_diaries_path(current_user)
     else
       render :edit
     end

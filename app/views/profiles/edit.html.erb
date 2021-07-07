@@ -25,7 +25,8 @@
             </div>
           <% end %>
           <div class="text-center">
-            <%= link_to '退会', user_path(@user), method: :delete, data: { confirm: '退会してもよろしいですか？' }, class: "withdraw" %>
+            <%= link_to '退会', user_path(@user), method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
+            退会してもよろしいですか?", commit: 'yes', cancel: 'cancel' }, class: "withdraw" %>
           </div>
         </div>
       </div>
