@@ -43,7 +43,7 @@
         </div>
       <% end %>
       <div class="text-center">
-        <%= link_to 'back', user_diary_path(@user, @diary), class: "btn btn-normal" %>
+        <%= link_to 'back', user_diaries_path(current_user, @diary), class: "btn btn-normal" %>
       </div>
     </div>
   </div>

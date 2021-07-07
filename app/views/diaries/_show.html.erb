@@ -1,20 +1,22 @@
-<% content_for(:title, 'diary') %>
-
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="diary-show col-12 col-md-8 text-center">
-      <div class="">
-        <h4 class="show-date"><%= @user.nickname %> <%= @diary.start_time.strftime("%b %d, %Y ( %a )") %></h4>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 text-center">
+    <div class="diary-show">
+    <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+      <span aria-hidden="true">&times; close</span>
+    </button>
+      <div class="diary-modal">
+        <h4 class="show-date"><%= @user.nickname %> <%= @diary.start_time.strftime("%b %d,%Y(%a)") %></h4>
         <h3 class="rounded"><%= @diary.feeling %><%= @diary.body %></h3>
         <div class="text-right">
           <%= render 'bookmarks/bookmark_button', { diary: @diary } %>
         </div>
         <% if current_user.id == @diary.user.id %>
           <div class="row justify-content-center">
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-xl-3">
               <%= button_to 'edit', edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' %>
             </div>
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-xl-3">
               <%= button_to 'delete', user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-normal' %>
             </div>
           </div>
@@ -26,4 +28,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
