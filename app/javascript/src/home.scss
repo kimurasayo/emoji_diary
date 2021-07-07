@@ -169,7 +169,7 @@ body {
     text-align: center;
     text-decoration: none;
     color: #bf9288;
-    background: #f5ece4;
+    background-color: #f5ece4;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -186,4 +186,22 @@ body {
     box-shadow: none;
     color: #bf9288;
   }
+}
+
+/* ログインさせるためのフラッシュメッセージ */
+.alert.alert-danger {
+  background-color: #f5ece4;
+  text-align: center;
+  border: none;
+  color: #bf9288;
+  letter-spacing: 0.10em;
+}
+
+/* 退会後のフラッシュメッセージ */
+.alert.alert-success {
+  background-color: #f5ece4;
+  text-align: center;
+  border: none;
+  color: #bf9288;
+  letter-spacing: 0.10em;
 }
