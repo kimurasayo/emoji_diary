@@ -80,6 +80,7 @@ input[type="radio"]:checked + label.face {
   outline: none;
 }
 
+/* 日記詳細から一覧に戻るボタン */
 .btn-show-back {
   position: relative;
   width: auto;
@@ -183,6 +184,16 @@ h4.calendar-name {
 .feeling {
   text-align: center;
   font-size: 20px;
+  color: #c76e54;
+}
+
+.feeling:hover {
+  background-color: #c76e54;
+  border-radius: 20px;
+}
+
+a.feeling-link:hover {
+  color: #c76e54;
 }
 
 /* 日記の枠の色 */
