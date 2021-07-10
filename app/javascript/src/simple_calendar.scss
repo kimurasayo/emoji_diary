@@ -24,9 +24,13 @@
     color:gray;
   }
 
+  table.table.table-sm {
+    table-layout: fixed;
+    width: 100%;
+  }
+
   tr {
     border-collapse: collapse;
-
   }
 
   tr.week {
@@ -46,9 +50,10 @@
   }
 
   td {
-    padding: 6px;
+    display: table-cell;
+    padding: 3px;
     vertical-align: top;
-    width: 14%;
+    max-width: 14%;
     border: 1px solid #f5cdbd;
     border-top-color: #f5cdbd;
     border-top-style: solid;
