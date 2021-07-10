@@ -1,4 +1,4 @@
-<% if logged_in? %>
+<% if logged_in? && !current_page?(new_user_diary_path) %>
   <%= link_to "write diary", new_user_diary_path(current_user), class: "btn-circle-border" %>
 <% end %>
 
