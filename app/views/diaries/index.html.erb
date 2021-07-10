@@ -24,7 +24,7 @@
     </div>
 
     <div class="row">
-      <div class="col">
+      <div class="col-12 col-lg-6">
         <%= month_calendar events: @diaries do |date, diaries| %>
           <%= date.day %>
       
@@ -41,7 +41,7 @@
           <% end %>
         <% end %>
       </div>
-      <div class="chart col d-flex align-items-end"> 
+      <div class="chart col-12 col-lg-6 d-flex align-items-end"> 
         <%= area_chart @diaries.current_month.group(:start_time).sum(:score) %>
       </div>
     </div>

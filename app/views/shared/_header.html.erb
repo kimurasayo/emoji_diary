@@ -1,4 +1,4 @@
-<header >
+<header>
   <nav class="navbar navbar-expand-lg navigation navbar-light fixed-top" style="background-color: #fbe6de;">
       <%= link_to user_diaries_path(current_user), class: "navbar-brand" do %>
         <img src="<%= asset_pack_path 'media/images/emory.png' %>" >
@@ -28,5 +28,3 @@
     </div>
   </nav>
 </header>
-
-<%= link_to "write diary", new_user_diary_path(current_user), class: "btn-circle-border" %>

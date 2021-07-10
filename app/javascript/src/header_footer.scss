@@ -39,17 +39,18 @@
 /* 日記新規作成のボタン */
 .btn-circle-border {
   position:fixed;
-  top: 90px;
-  right: 20px;
+  bottom: 50px;
+  right: 30px;
   margin: 0;
   display: inline-block;
   text-decoration: none;
   background: #c76e54;
   color: rgba(255, 255, 255, 0.47);
   font-weight: bold;
-  width: 100px;
-  height: 50px;
-  line-height: 50px;
+  width: 150px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
   border-radius: 50%;
   text-align: center;
   overflow: hidden;
@@ -63,4 +64,16 @@
 .btn-circle-border:hover {
   border-style: dashed;
   color: rgba(255, 255, 255, 0.47);
+}
+
+.btn-circle-border {
+  animation: float_2979 3s linear infinite;
+  transform-origin: 50% 50%;
+}
+ 
+@keyframes float_2979 {
+  0% { transform: translateY(0) }
+  33.33333% { transform: translateY(-10px) }
+  66.66667% { transform: translateY(-20px) }
+  100% { transform: translateY(0) }
 }
