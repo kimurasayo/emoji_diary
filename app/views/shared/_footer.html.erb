@@ -1,3 +1,7 @@
+<% if logged_in? %>
+  <%= link_to "write diary", new_user_diary_path(current_user), class: "btn-circle-border" %>
+<% end %>
+
 <footer id='footer'>
   <div class='container'>
     <div class='row'>
