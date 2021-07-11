@@ -2,7 +2,7 @@
   
   <div class="form-group">
     <%= f.input :start_time, as: :date, html5: true,
-        input_html: { value: Time.now.strftime("%Y-%m-%d") } ,
+        input_html: { value: diary.start_time || Time.now.strftime("%Y-%m-%d") } ,
         class: 'form-control' %>
   </div>
   

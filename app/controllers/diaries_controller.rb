@@ -41,8 +41,9 @@ class DiariesController < ApplicationController
 
   # 日記更新アクション。作成できたら一覧ページ、失敗したら日記編集ページへ。
   def update
-    @diary.score_feeling
     if @diary.update(diary_params)
+      @diary.score_feeling
+      @diary.save
       redirect_to user_diaries_path(current_user)
     else
       render :edit
