@@ -6,7 +6,6 @@ class FollowersController < ApplicationController
   def index
     @q = current_user.followings.ransack(params[:q])
     @users = @q.result(distinct: true)
-
     @pagy, @users = pagy(@q.result(distinct: true))
   end
 end
