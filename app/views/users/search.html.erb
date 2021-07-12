@@ -10,6 +10,16 @@
         <table class="result-table table table-borderless">
 
           <tbody>
+            <% if @users.empty? %>
+              <div class="card no-follow">
+                <div class="card-body text-center">
+                  <p class="follow_text">検索結果がありません。<br>
+                    入力を間違えていませんか？<br>
+                    もう一度検索してみましょう。</p>
+                  <%= link_to 'search friends', users_path, class: 'btn-show-back' %>
+                </div>
+              </div>
+            <% else %>
             <% @users.each do |user| %>
               <tr class="result text-left">
                 <td style="width: 50%">
@@ -23,6 +33,7 @@
                   <% end %>
                 </td>
               </tr>
+            <% end %>
             <% end %>
           </tbody>
 

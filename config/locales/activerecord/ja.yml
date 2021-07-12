@@ -11,6 +11,6 @@ ja:
         password_confirmation: password confirmation
         email: email
       diary:
-        feeling: how are you feeling?
-        body: What happened today?
+        feeling: feeling
+        body: about
         start_time: date

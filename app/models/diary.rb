@@ -31,7 +31,7 @@ class Diary < ApplicationRecord
   # 生年月日の未来日のチェックメソッド
   def start_time_cannot_be_in_the_future
     # 日時が入力済かつ未来日(現在日付より未来)ならば、エラー対象とするプロパティとエラーメッセージを設定
-    errors.add(:start_time, "未来の日付は入力できません") if start_time.present? && start_time > Date.today
+    errors.add(:start_time, "に未来の日付は入力できません") if start_time.present? && start_time > Date.today
   end
 
   def score_feeling

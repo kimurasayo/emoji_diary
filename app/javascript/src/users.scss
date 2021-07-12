@@ -19,6 +19,7 @@
   overflow: hidden;
   background: #f5ece4;
   color: gray;
+  transition:ease-out 0.5s;
 }
 
 .user_search input[type="search"]:focus {
@@ -26,6 +27,18 @@
   background: #f5ece4;
   box-shadow: none;
   text-shadow: none;
+  outline: 0;
+  border-color: #c76e54;
+  height:50px;
+}
+
+.user_search input[type="search"]::placeholder { 
+  color: lightgray;
+}
+
+.user_search input[type="search"]:focus::placeholder {
+  color: transparent;
+  transition: .2s;
 }
 
 /* ユーザー検索のタイトル */
