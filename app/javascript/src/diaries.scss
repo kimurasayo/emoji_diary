@@ -301,3 +301,36 @@ input:checked + .tab_class + .content_class {
 .btn.btn-search:focus{
   box-shadow: none;
 }
+
+/* 新規登録画面のテキストフォーム */
+.diary_body input[type="text"]{
+  border: 1px solid #f5ece4;
+  padding: 5px 8px;
+  border-radius: 20px;
+  height: 2.0em;
+  overflow: hidden;
+  background: #f5ece4;
+  color: gray;
+  transition:ease-out 0.5s;
+}
+
+/* 新規登録画面のテキストフォーム選択中 */
+.diary_body input[type="text"]:focus {
+  outline: none;
+  background: #f5ece4;
+  box-shadow: none;
+  text-shadow: none;
+  outline: 0;
+  border-color: #c76e54;
+  height:50px;
+}
+
+/* テキストフォームのプレースホルダー */
+.diary_body input[type="text"]::placeholder { 
+  opacity: 0.3;
+}
+
+.diary_body input[type="text"]:focus::placeholder {
+  color: transparent;
+  transition: .2s;
+}

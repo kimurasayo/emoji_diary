@@ -100,3 +100,5 @@ gem 'cancancan'
 gem 'line-bot-api'
 
 gem 'whenever', require: false
+
+gem 'rails-i18n'

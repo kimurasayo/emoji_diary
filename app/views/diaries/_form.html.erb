@@ -326,12 +326,12 @@
   </div>
 
   <div class="form-group">
-    <%= f.input :body, class: 'form-control', hint: 'どんな一日だったのか絵文字を使って表してみましょう！ 例:🎂🎉🎁🥂' %>
+    <%= f.input :body, class: 'form-control', placeholder: '🎂🎉🎁🥂', hint: '今日の出来事を絵文字で表してみましょう！' %>
   </div>
 
 
   <div class="submit text-center">
-    <%= f.button :submit, class: "btn-normal" %>
+    <%= f.button :submit, t('defaults.save'), class: "btn-normal" %>
   </div>
 
 <% end %>
