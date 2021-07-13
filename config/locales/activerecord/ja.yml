@@ -1,11 +1,11 @@
-en:
+ja:
   activerecord:
     models:
       user: user
       diary: diary
     attributes:
       user:
-        nickname: nickname
+        nickname: icon
         name: user name
         password: password
         password_confirmation: password confirmation

@@ -1,6 +1,7 @@
 /* プロフィール編集のラベル */
 .edit-profile {
   color: #c76e54;
+  letter-spacing: 0.10em;
 }
 
 /* プロフィール編集のフォーム */
@@ -12,6 +13,7 @@
   overflow: hidden;
   background: #f5ece4;
   color: gray;
+  transition:ease-out 0.5s;
 }
 
 /* プロフィール編集中のフォーム */
@@ -20,6 +22,9 @@
   background: #f5ece4;
   box-shadow: none;
   text-shadow: none;
+  outline: 0;
+  border-color: #c76e54;
+  height:50px;
 }
 
 /* プロフィール編集のフォーム、password */
@@ -31,6 +36,7 @@
   overflow: hidden;
   background: #f5ece4;
   color: gray;
+  transition:ease-out 0.5s;
 }
 
 /* プロフィール編集中のフォーム、password */
@@ -39,6 +45,9 @@
   background: #f5ece4;
   box-shadow: none;
   text-shadow: none;
+  outline: 0;
+  border-color: #c76e54;
+  height:50px;
 }
 
 /* プロフィール編集のフォーム、email */
@@ -50,6 +59,7 @@
   overflow: hidden;
   background: #f5ece4;
   color: gray;
+  transition:ease-out 0.5s;
 }
 
 /* プロフィール編集中のフォーム、email */
@@ -58,6 +68,9 @@
   background: #f5ece4;
   box-shadow: none;
   text-shadow: none;
+  outline: 0;
+  border-color: #c76e54;
+  height:50px;
 }
 
 .profile {

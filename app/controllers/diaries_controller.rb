@@ -1,4 +1,5 @@
 class DiariesController < ApplicationController
+  before_action :set_diary, only: %i[edit update destroy]
   # user_diaries_path。ユーザーのidをパラメータで受け取って、@userに入れる。
   # @userの日記一覧を@diariesに入れる。
   def index
@@ -20,7 +21,8 @@ class DiariesController < ApplicationController
   # 日記作成アクション。作成できたら一覧ページ、失敗したら日記新規作成ページへ。
   def create
     @diary = current_user.diaries.new(diary_params)
-    score_feeling
+    # モデルにメソッド記載
+    @diary.score_feeling
     if @diary.save
       redirect_to user_diaries_path(current_user)
     else
@@ -30,21 +32,18 @@ class DiariesController < ApplicationController
 
   # 日記消去アクション
   def destroy
-    @diary = current_user.diaries.find(params[:id])
     @diary.destroy
     redirect_to user_diaries_path(current_user)
   end
 
   # edit_user_diary_path
-  def edit
-    @diary = current_user.diaries.find(params[:id])
-  end
+  def edit; end
 
   # 日記更新アクション。作成できたら一覧ページ、失敗したら日記編集ページへ。
   def update
-    @diary = current_user.diaries.find(params[:id])
-    score_feeling
     if @diary.update(diary_params)
+      @diary.score_feeling
+      @diary.save
       redirect_to user_diaries_path(current_user)
     else
       render :edit
@@ -58,28 +57,7 @@ class DiariesController < ApplicationController
     params.require(:diary).permit(:feeling, :body, :start_time)
   end
 
-  def score_feeling
-    case @diary.feeling
-    when "🤩", "🥰", "😍", "😘", "🥳", "🤪"
-      @diary.score = 100
-    when "😋", "😜", "😝", "🤗", "😳", "🤣", "😂"
-      @diary.score = 90
-    when "😁", "😆", "😊", "😇", "🤤", "😎", "😚"
-      @diary.score = 80
-    when "😅", "😉", "😃", "😙", "😄", "🤑"
-      @diary.score = 70
-    when "😌", "🤓", "😏", "😛", "😗", "😀", "🙂", "🙃"
-      @diary.score = 60
-    when "😐", "😑", "😶", "😒", "🙄", "😬", "😲", "🥺", "🤐", "🤔", "🤠"
-      @diary.score = 50
-    when "🤭", "🤫", "🤨", "🤥", "🧐", "😕", "😟", "🙁", "😦", "😧", "🥸", "😯", "😮", "🥲"
-      @diary.score = 40
-    when "😤", "😠", "😪", "😴", "😨", "😰", "😢", "😥", "😞", "😓", "😔", "🥱"
-      @diary.score = 30
-    when "😷", "🤕", "🤧", "🥵", "🥶", "🥴", "😵", "😡", "😣", "🤯", "😩", "🤒"
-      @diary.score = 20
-    when "😭", "😱", "😖", "😫", "🤬", "😈", "👿", "🤢", "🤮"
-      @diary.score = 10
-    end
+  def set_diary
+    @diary = current_user.diaries.find(params[:id])
   end
 end

@@ -1,6 +1,6 @@
 class UserSessionsController < ApplicationController
   # new, createアクション(ログイン)の前にrequire_loginを行わない
-  skip_before_action :require_login, only: [:new, :create]
+  skip_before_action :require_login, only: %i[new create]
 
   def new; end
 

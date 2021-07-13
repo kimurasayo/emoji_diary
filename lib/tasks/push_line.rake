@@ -17,7 +17,7 @@ namespace :push_line do
       'Content-Type' =>'application/json',
       'Accept'=>'application/json'
     }
-    send_message = '今日はどんな1日でしたか？絵文字で日記をつけてみましょう。'
+    send_message = "こんばんは🌙emoryです💐📖\n本日もお疲れ様です🌟\n\n今日はどんな1日でしたか？😊\n絵文字で日記をつけてみましょう\n\n https://emory-diary.herokuapp.com/"
     # Body
     params = {"messages" => [{"type" => "text", "text" => send_message}]}
 

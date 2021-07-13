@@ -1,0 +1,46 @@
+ja:
+  defaults:
+    login: login
+    register: register
+    submit: submit
+    logout: logout
+    save: save
+    update: update
+    search: search
+    mine: my diary
+    new: new
+    search: search
+    follow: follow
+    unfollow: unfollow
+    friends_diary: friend's diary
+  users:
+    new:
+      title: register
+      to_login_page: already a member?
+  user_sessions:
+    new:
+      title: login
+      to_register_page: make a new account
+  date:
+    abbr_day_names:
+      - sun
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+    month_names:
+      -
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - May
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Oct
+      - Nov
+      - Dec

@@ -19,7 +19,7 @@
         <div class="text-center">
           <%= search_form_for @q, url: user_followers_path do |f| %>
             <%= f.search_field :name_cont, placeholder: 'user name' %>
-          <%= f.submit class: 'btn btn-search' %>
+          <%= f.submit t('defaults.search'), class: 'btn btn-search' %>
           <% end %>
         </div>
         <% @users.each do |user| %>
@@ -51,3 +51,5 @@
     </div>
   </div>
 </div>
+
+<%= link_to "write diary", new_user_diary_path(current_user), class: "btn-circle-border" %>
