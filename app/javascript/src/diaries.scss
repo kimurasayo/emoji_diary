@@ -334,3 +334,39 @@ input:checked + .tab_class + .content_class {
   color: transparent;
   transition: .2s;
 }
+
+.box1 {
+  position: fixed;
+  bottom: 50px;
+  right: 35px;
+  width: 300px;
+  height: 60px;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #c76e54;
+  opacity: 0.8;
+  border-radius: 8px;
+  font-size: 13px;
+  background: #FFF;
+}
+.box1 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 17px;
+  background: #FFF;
+  color: #c76e54;
+  font-weight: bold;
+}
+.box1 p {
+  margin: 0; 
+  padding: 0;
+  color: gray;
+}
+
+@media screen and (max-width:760px){
+  .box1 {display:none}
+  }
