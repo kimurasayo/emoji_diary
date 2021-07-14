@@ -3,7 +3,7 @@
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;
     background-color: rgba(0, 0, 0, 0);
-    border: 3px solid #f5cdbd;
+    border: 3px solid var(--color3);
     border-collapse: collapse;
     box-sizing: border-box;
     max-width: 100%;
@@ -35,16 +35,16 @@
 
   tr.week {
     letter-spacing: 0.20em;
-    background-color: #f5cdbd;
-    color: #f5ece4;
+    background-color: var(--color3);
+    color: var(--color5);
   }
 
   th {
     padding: 6px;
-    border-bottom: 2px solid #f5cdbd;
+    border-bottom: 2px solid var(--color3);
     border-collapse: collapse;
-    border-left: 1px solid #f5cdbd;
-    border-right: 1px solid #f5cdbd;
+    border-left: 1px solid var(--color3);
+    border-right: 1px solid var(--color3);
     box-sizing: border-box;
     text-align: center;
   }
@@ -54,17 +54,17 @@
     padding: 3px;
     vertical-align: top;
     max-width: 14%;
-    border: 1px solid #f5cdbd;
-    border-top-color: #f5cdbd;
+    border: 1px solid var(--color3);
+    border-top-color: var(--color3);
     border-top-style: solid;
     border-top-width: 1px;
-    border-right-color: #f5cdbd;
+    border-right-color: var(--color3);
     border-right-style: solid;
     border-right-width: 1px;
-    border-bottom-color: #f5cdbd;
+    border-bottom-color: var(--color3);
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-left-color: #f5cdbd;
+    border-left-color: var(--color3);
     border-left-style: solid;
     border-left-width: 1px;
   }
@@ -83,7 +83,7 @@
   .wday-6 {}
 
   .today {
-    background: #f5ece4;
+    background: var(--color5);
   }
 
   .past {}

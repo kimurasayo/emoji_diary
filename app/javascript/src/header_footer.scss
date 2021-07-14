@@ -15,6 +15,10 @@
   letter-spacing: 0.20em;
 }
 
+#header {
+  background-color: var(--color1);
+}
+
 /* フッター */
 #footer {
   position:fixed;
@@ -23,7 +27,7 @@
   height: 35px;
   color: gray;
   font-size: 12px;
-  background-color: #fbe6de;
+  background-color: var(--color1);
   z-index: 2;
 }
 
@@ -44,7 +48,7 @@
   margin: 0;
   display: inline-block;
   text-decoration: none;
-  background: #c76e54;
+  background: var(--color2);
   color: rgba(255, 255, 255, 0.47);
   font-weight: bold;
   width: 150px;
@@ -54,7 +58,7 @@
   border-radius: 50%;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0px 0px 0px 5px #c76e54;
+  box-shadow: 0px 0px 0px 5px var(--color2);
   border: solid 2px rgba(255, 255, 255, 0.47);
   transition: .4s;
   z-index: 1;

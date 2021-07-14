@@ -1,6 +1,6 @@
 Chartkick.options = {
-  colors: ["#f5cdbd"],
-  message: { empty: "no diary on this month" },
+  colors: ["#F7EDDC"],
+  empty: "まだ日記をつけていません",
   suffix: "%",
   min: 0,
   max: 100,
@@ -9,11 +9,11 @@ Chartkick.options = {
       text: '最近の感情の変化',
       align: 'center',
       style: {
-        color: '#c76e54'
+        color: '#808080'
       }
     },
     tooltip: {
-      pointFormat: ''
+      enabled: false,
     }
   }
 }

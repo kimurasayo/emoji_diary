@@ -1,17 +1,17 @@
 /* プロフィール編集のラベル */
 .edit-profile {
-  color: #c76e54;
+  color: var(--color2);
   letter-spacing: 0.10em;
 }
 
 /* プロフィール編集のフォーム */
 .edit-profile input[type="text"]{
-  border: 1px solid #f5ece4;
+  border: 1px solid var(--color5);
   padding: 5px 8px;
   border-radius: 20px;
   height: 2.0em;
   overflow: hidden;
-  background: #f5ece4;
+  background: var(--color5);
   color: gray;
   transition:ease-out 0.5s;
 }
@@ -19,22 +19,22 @@
 /* プロフィール編集中のフォーム */
 .edit-profile input[type="text"]:focus {
   outline: 0;
-  background: #f5ece4;
+  background: var(--color5);
   box-shadow: none;
   text-shadow: none;
   outline: 0;
-  border-color: #c76e54;
+  border-color: var(--color2);
   height:50px;
 }
 
 /* プロフィール編集のフォーム、password */
 .edit-profile input[type="password"]{
-  border: 1px solid #f5ece4;
+  border: 1px solid var(--color5);
   padding: 5px 8px;
   border-radius: 20px;
   height: 2.0em;
   overflow: hidden;
-  background: #f5ece4;
+  background: var(--color5);
   color: gray;
   transition:ease-out 0.5s;
 }
@@ -42,22 +42,22 @@
 /* プロフィール編集中のフォーム、password */
 .edit-profile input[type="password"]:focus {
   outline: 0;
-  background: #f5ece4;
+  background: var(--color5);
   box-shadow: none;
   text-shadow: none;
   outline: 0;
-  border-color: #c76e54;
+  border-color: var(--color2);
   height:50px;
 }
 
 /* プロフィール編集のフォーム、email */
 .edit-profile input[type="email"]{
-  border: 1px solid #f5ece4;
+  border: 1px solid var(--color5);
   padding: 5px 8px;
   border-radius: 20px;
   height: 2.0em;
   overflow: hidden;
-  background: #f5ece4;
+  background: var(--color5);
   color: gray;
   transition:ease-out 0.5s;
 }
@@ -65,22 +65,22 @@
 /* プロフィール編集中のフォーム、email */
 .edit-profile input[type="email"]:focus {
   outline: 0;
-  background: #f5ece4;
+  background: var(--color5);
   box-shadow: none;
   text-shadow: none;
   outline: 0;
-  border-color: #c76e54;
+  border-color: var(--color2);
   height:50px;
 }
 
 .profile {
   letter-spacing: 0.20em;
-  color: #c76e54;
+  color: var(--color2);
 }
 
 /* プロフィールのテキスト */
 .edit-form {
-  color: #c76e54;
+  color: var(--color2);
   margin-bottom: 30px;
   font-size: 13px;
 }

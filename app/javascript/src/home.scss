@@ -78,8 +78,8 @@ body {
 .pagination>.page-item.active>span,
 .pagination>.page-item.active>span:focus,
 .pagination>.page-item.active>span:hover {
-  background-color: #bf9288;
-  border-color: #bf9288;
+  background-color: var(--color4);
+  border-color: var(--color4);
 }
 
 /* 確認ダイアログ　*/
@@ -88,7 +88,7 @@ body {
     border-bottom: none;
     text-align: center;
     padding: 5px;
-    background-color: #bf9288;
+    background-color: var(--color4);
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
   }
@@ -105,7 +105,7 @@ body {
   }
  
   .fa-exclamation-circle:before {
-      color: #bf9288;
+      color: var(--color4);
       font-size: 40px;
       padding: 5px;
       position: relative;
@@ -126,13 +126,13 @@ body {
   .btn.btn-danger.disabled:hover, .btn.btn-danger[disabled]:hover, fieldset[disabled] .btn.btn-danger:hover,
   .btn.btn-danger.disabled:focus, .btn.btn-danger[disabled]:focus, fieldset[disabled] .btn.btn-danger:focus,
   .btn.btn-danger.disabled.focus, .btn.btn-danger[disabled].focus, fieldset[disabled] .btn.btn-danger.focus {
-      background: #bf9288; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
-      color: #bf9288; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+      background: var(--color4); //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+      color: var(--color4); //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
   }
 
   .btn.btn-danger.outline {
-    border: 3px solid #bf9288; //アウトラインのみのボタンの線の色
-    color: #bf9288; //アウトラインのみのボタンのテキストの色
+    border: 3px solid var(--color4); //アウトラインのみのボタンの線の色
+    color: var(--color4); //アウトラインのみのボタンのテキストの色
   }
 
   .btn.commit {
@@ -142,8 +142,8 @@ body {
     margin: 5px;
     text-align: center;
     text-decoration: none;
-    color: #f5ece4;
-    background: #bf9288;
+    color: var(--color5);
+    background: var(--color4);
     border-radius: 10px;
     border: none;
     outline: none;
@@ -153,12 +153,12 @@ body {
     opacity:0.8;
     cursor: pointer;
     text-decoration: none;
-    color: #f5ece4;
+    color: var(--color5);
   }
   
   .btn.commit:focus {
     box-shadow: none;
-    color: #f5ece4;
+    color: var(--color5);
   }
 
   .btn.cancel {
@@ -168,8 +168,8 @@ body {
     margin: 5px;
     text-align: center;
     text-decoration: none;
-    color: #bf9288;
-    background-color: #f5ece4;
+    color: var(--color4);
+    background-color: var(--color5);
     border-radius: 10px;
     border: none;
     outline: none;
@@ -179,29 +179,29 @@ body {
     opacity:0.8;
     cursor: pointer;
     text-decoration: none;
-    color: #bf9288;
+    color: var(--color4);
   }
   
   .btn.cancel:focus {
     box-shadow: none;
-    color: #bf9288;
+    color: var(--color4);
   }
 }
 
 /* ログインさせるためのフラッシュメッセージ */
 .alert.alert-danger {
-  background-color: #f5ece4;
+  background-color: var(--color5);
   text-align: center;
   border: none;
-  color: #bf9288;
+  color: var(--color4);
   letter-spacing: 0.10em;
 }
 
 /* 退会後のフラッシュメッセージ */
 .alert.alert-success {
-  background-color: #f5ece4;
+  background-color: var(--color5);
   text-align: center;
   border: none;
-  color: #bf9288;
+  color: var(--color4);
   letter-spacing: 0.10em;
 }

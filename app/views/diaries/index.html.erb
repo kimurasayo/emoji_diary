@@ -1,10 +1,10 @@
-<% content_for(:title, 'mine') %>
+<% content_for(:title, 'my diary') %>
 
 <div class="container">
 
   <div class="calendar">
     <div class="row justify-content-center">
-      
+
       <% if logged_in? && current_user != @user %>
         <h1 class="calendar-name">
           <%= @user.nickname %><%= @user.name %>
@@ -29,7 +29,7 @@
           <%= date.day %>
       
           <% diaries.each do |diary| %>
-            <div class="feeling">
+            <div class="feeling" id="emoji-feeling-<%= diary.score %>">
               <%= link_to diary.feeling, user_diary_path(@user, diary), class: "feeling-link", remote: true, :data => {:toggle=>"modal", :target => "#recordModal", :backdrop => "true"} %>
               <div class="modal fade" id="recordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">

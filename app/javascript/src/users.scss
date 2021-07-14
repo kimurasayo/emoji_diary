@@ -11,24 +11,24 @@
 
 /* ユーザー検索のフォーム */
 .user_search input[type="search"]{
-  border: 1px solid #f5ece4;
+  border: 1px solid var(--color5);
   padding: 5px 8px;
   border-radius: 20px;
   height: 2.0em;
   width: 245px;
   overflow: hidden;
-  background: #f5ece4;
+  background: var(--color5);
   color: gray;
   transition:ease-out 0.5s;
 }
 
 .user_search input[type="search"]:focus {
   outline: none;
-  background: #f5ece4;
+  background: var(--color5);
   box-shadow: none;
   text-shadow: none;
   outline: 0;
-  border-color: #c76e54;
+  border-color: var(--color2);
   height:50px;
 }
 
@@ -44,24 +44,24 @@
 /* ユーザー検索のタイトル */
 .search {
   letter-spacing: 0.20em;
-  color: #c76e54;
+  color: var(--color2);
   margin-bottom: 20px;
 }
 
 /* ユーザー検索結果のタイトル */
 .result {
   letter-spacing: 0.20em;
-  color: #c76e54;
+  color: var(--color2);
   margin-bottom: 30px;
 }
 
 /* ユーザー検索結果の友達の名前リンク */
 .result-link {
-  color: #c76e54;
+  color: var(--color2);
 }
 
 .result-link:hover {
-  color: #c76e54;
+  color: var(--color2);
 }
 
 /* ユーザー検索結果のテーブル、タイトル全てを含めたクラス */
@@ -72,7 +72,7 @@
 
 /* ユーザー検索結果のテーブル */
 .result-table {
-  background-color: #f5ece4;
+  background-color: var(--color5);
   border-collapse: separate;
   border-radius: 10px;
 }
@@ -85,7 +85,7 @@
   margin: 5px;
 	text-align: center;
 	text-decoration: none;
-	color: #f5ece4;
+	color: var(--color5);
 	background: #84a59d;
   letter-spacing: 0.20em;
   border-radius: 10px;
@@ -97,7 +97,7 @@
 	 opacity:0.8;
 	 cursor: pointer;
 	 text-decoration: none;
-   color: #f5ece4;
+   color: var(--color5);
 }
 
 .btn.follow-button:focus{
@@ -112,7 +112,7 @@
   margin: 5px;
 	text-align: center;
 	text-decoration: none;
-	color: #f5ece4;
+	color: var(--color5);
 	background: #f28482;
   letter-spacing: 0.20em;
   border-radius: 10px;
@@ -124,7 +124,7 @@
 	 opacity:0.8;
 	 cursor: pointer;
 	 text-decoration: none;
-   color: #f5ece4;
+   color: var(--color5);
 }
 
 .btn.unfollow-button:focus{
@@ -133,18 +133,18 @@
 
 /* 新規登録画面のラベル */
 .register {
-  color: #c76e54;
+  color: var(--color2);
   letter-spacing: 0.10em;
 }
 
 /* 新規登録画面のパスワードフォーム */
 .register input[type="password"]{
-  border: 1px solid #f5ece4;
+  border: 1px solid var(--color5);
   padding: 5px 8px;
   border-radius: 20px;
   height: 2.0em;
   overflow: hidden;
-  background: #f5ece4;
+  background: var(--color5);
   color: gray;
   transition:ease-out 0.5s;
 }
@@ -152,11 +152,11 @@
 /* 新規登録画面のパスワードフォーム選択中 */
 .register input[type="password"]:focus {
   outline: none;
-  background: #f5ece4;
+  background: var(--color5);
   box-shadow: none;
   text-shadow: none;
   outline: 0;
-  border-color: #c76e54;
+  border-color: var(--color2);
   height:50px;
 }
 
@@ -170,14 +170,47 @@
   transition: .2s;
 }
 
-/* 新規登録画面のテキストフォーム */
-.register input[type="text"]{
-  border: 1px solid #f5ece4;
+/* 新規登録画面のテーマカラー選択フォーム */
+select#user_color {
+  border: 1px solid var(--color5);
   padding: 5px 8px;
   border-radius: 20px;
   height: 2.0em;
   overflow: hidden;
-  background: #f5ece4;
+  background: var(--color5);
+  color: gray;
+  transition:ease-out 0.5s;
+}
+
+/* 新規登録画面のテーマカラー選択フォーム選択中 */
+select#user_color:focus {
+  outline: none;
+  background: var(--color5);
+  box-shadow: none;
+  text-shadow: none;
+  outline: 0;
+  border-color: var(--color2);
+  height:50px;
+}
+
+/* 新規登録画面のテーマカラー選択フォームのプレースホルダー */
+select#user_color::placeholder { 
+  color: lightgray;
+}
+
+select#user_color:focus::placeholder {
+  color: transparent;
+  transition: .2s;
+}
+
+/* 新規登録画面のテキストフォーム */
+.register input[type="text"]{
+  border: 1px solid var(--color5);
+  padding: 5px 8px;
+  border-radius: 20px;
+  height: 2.0em;
+  overflow: hidden;
+  background: var(--color5);
   color: gray;
   transition:ease-out 0.5s;
 }
@@ -185,11 +218,11 @@
 /* 新規登録画面のテキストフォーム選択中 */
 .register input[type="text"]:focus {
   outline: none;
-  background: #f5ece4;
+  background: var(--color5);
   box-shadow: none;
   text-shadow: none;
   outline: 0;
-  border-color: #c76e54;
+  border-color: var(--color2);
   height:50px;
 }
 
@@ -205,12 +238,12 @@
 
 /* 新規登録画面のemailフォーム */
 .register input[type="email"]{
-  border: 1px solid #f5ece4;
+  border: 1px solid var(--color5);
   padding: 5px 8px;
   border-radius: 20px;
   height: 2.0em;
   overflow: hidden;
-  background: #f5ece4;
+  background: var(--color5);
   color: gray;
   transition:ease-out 0.5s;
 }
@@ -218,11 +251,11 @@
 /* 新規登録画面のemailフォーム選択中 */
 .register input[type="email"]:focus {
   outline: none;
-  background: #f5ece4;
+  background: var(--color5);
   box-shadow: none;
   text-shadow: none;
   outline: 0;
-  border-color: #c76e54;
+  border-color: var(--color2);
   height:50px;
 }
 
@@ -247,12 +280,12 @@
 
 /* 日記新規作成の日付フォーム */
 .register input[type="date"]{
-  border: 1px solid #f5ece4;
+  border: 1px solid var(--color5);
   padding: 5px 8px;
   border-radius: 20px;
   height: 2.0em;
   overflow: hidden;
-  background: #f5ece4;
+  background: var(--color5);
   color: gray;
   letter-spacing: 0.20em;
   transition:ease-out 0.5s;
@@ -260,11 +293,11 @@
 
 .register input[type="date"]:focus {
   outline: none;
-  background: #f5ece4;
+  background: var(--color5);
   box-shadow: none;
   text-shadow: none;
   outline: 0;
-  border-color: #c76e54;
+  border-color: var(--color2);
   height:50px;
 }
 
