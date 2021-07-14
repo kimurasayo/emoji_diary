@@ -20,7 +20,9 @@
           <div class="form-group">
             <%= f.input :password_confirmation, class: "form-control", placeholder: 'password' %>
           </div>
-
+          <div class="form-group">
+            <%= f.input :color, as: :select, selected: 'pink', collection: User.colors.keys, class: "form-control", hint: "マイページのテーマカラーを選択してください" %>
+          </div>
           <div class="text-center">
             <%= f.button :submit, t('defaults.register'), class: 'btn-normal' %>
           </div>

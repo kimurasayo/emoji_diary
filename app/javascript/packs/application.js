@@ -9,6 +9,7 @@ import "channels"
 import 'bootstrap'
 import '@fortawesome/fontawesome-free/js/all'
 import '../src/application.scss'
+import '../src/application_blue.scss'
 import 'packs/flash.js'
 
 require('jquery');

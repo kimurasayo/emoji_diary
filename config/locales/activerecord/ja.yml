@@ -10,6 +10,7 @@ ja:
         password: password
         password_confirmation: password confirmation
         email: email
+        color: theme color
       diary:
         feeling: feeling
         body: about

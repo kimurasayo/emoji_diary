@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<% if !logged_in? || (current_user.color == "pink") %>
 <html>
   <head>
     <title><%= page_title(yield(:title)) %></title>
@@ -13,15 +14,42 @@
   </head>
 
   <body>
-
-      <% if logged_in? %>
-        <%= render 'shared/header' %>
-      <% else %>
-        <%= render 'shared/before_login_header' %>
-      <% end %>
-      <%= render 'shared/flash_message' %>
-      <%= yield %>
-      <%= render 'shared/footer' %>
-
+    <% if logged_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
+    <%= render 'shared/flash_message' %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
+
+<% else %>
+
+<html class="blue">
+  <head>
+    <title><%= page_title(yield(:title)) %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application_blue', media: 'all' %>
+
+    <%= javascript_pack_tag 'application' %>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <% if logged_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
+    <%= render 'shared/flash_message' %>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+  </body>
+</html>
+<% end %>

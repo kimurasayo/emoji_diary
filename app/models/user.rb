@@ -40,6 +40,9 @@ class User < ApplicationRecord
   # 一般ユーザー、管理者、ゲストユーザー
   enum role: { general: 0, admin: 1 }
 
+  # サイトのテーマカラー
+  enum color: { pink: 0, blue: 1}
+
   # フォローする
   def follow(other_user)
     # 自分自身はフォローできない

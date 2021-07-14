@@ -57,7 +57,7 @@ class UsersController < ApplicationController
 
   # パラメーターで送ることができるカラムの情報
   def user_params
-    params.require(:user).permit(:nickname, :name, :password, :password_confirmation, :email)
+    params.require(:user).permit(:nickname, :name, :password, :password_confirmation, :email, :color)
   end
 
   # ユーザー検索で受け取ることができるカラムの情報

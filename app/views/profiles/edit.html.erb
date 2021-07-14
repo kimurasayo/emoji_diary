@@ -14,6 +14,9 @@
             <div class="form-group">
               <%= f.input :email, class: 'form-control mb-3' %>
             </div>
+            <div class="form-group">
+            <%= f.input :color, as: :select, include_blank: false, collection: User.colors.keys, class: "form-control", hint: "マイページのテーマカラーを選択してください" %>
+          </div>
             <div class="form-group">  
               <%= f.input :password, class: 'form-control mb-3', label: 'reset password', hint: '半角英数字8文字以上で入力してください' %>
             </div>

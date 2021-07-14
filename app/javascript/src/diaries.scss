@@ -26,7 +26,7 @@ input[type="radio"]:checked + label.face {
 /* 詳細画面の日付 */
 .show-date {
   letter-spacing: 0.15em;
-  color: #c76e54;
+  color: var(--color2);
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -34,7 +34,7 @@ input[type="radio"]:checked + label.face {
 /* 絵文字日記の本文 */
 .rounded {
   letter-spacing: 0.5em;
-  background-color: #f5cdbd;
+  background-color: var(--color3);
   padding: 10px;
   margin: 10px;
 }
@@ -58,8 +58,8 @@ input[type="radio"]:checked + label.face {
   margin: 5px;
 	text-align: center;
 	text-decoration: none;
-	color: #f5ece4;
-	background: #bf9288;
+	color: var(--color5);
+	background: var(--color4);
   letter-spacing: 0.20em;
   border-radius: 10px;
   border: none;
@@ -70,7 +70,7 @@ input[type="radio"]:checked + label.face {
 	 opacity:0.8;
 	 cursor: pointer;
 	 text-decoration: none;
-   color: #f5ece4;
+   color: var(--color5);
 }
 
 .btn.btn-normal:focus{
@@ -86,8 +86,8 @@ input[type="radio"]:checked + label.face {
   margin: 5px;
 	text-align: center;
 	text-decoration: none;
-	color: #f5ece4;
-	background: #bf9288;
+	color: var(--color5);
+	background: var(--color4);
   letter-spacing: 0.10em;
   border-radius: 10px;
   border: none;
@@ -98,7 +98,7 @@ input[type="radio"]:checked + label.face {
   opacity:0.8;
   cursor: pointer;
   text-decoration: none;
-  color: #f5ece4;
+  color: var(--color5);
 }
 
 .btn-show-back:focus{
@@ -150,7 +150,7 @@ input[type="radio"]:checked + label.face {
 /* カレンダーのタイトル */
 .calendar-name {
   letter-spacing: 0.20em;
-  color: #c76e54;
+  color: var(--color2);
 }
 
 /* 友達の日記一覧ページの友達の名前 */
@@ -160,22 +160,22 @@ h4.calendar-name {
 
 /* 日記一覧のタイトルになってる名前の編集ページにいくリンク */
 .calendar-name-link {
-  color: #c76e54;
+  color: var(--color2);
   letter-spacing: 0.20em;
 }
 
 .calendar-name-link:hover {
-  color: #c76e54;
+  color: var(--color2);
 }
 
 /* 友達の日記一覧ページの友達の名前のリンク */
 .calendar-name-link {
-  color: #c76e54;
+  color: var(--color2);
   letter-spacing: 0.20em;
 }
 
 .calendar-name-link:hover {
-  color: #c76e54;
+  color: var(--color2);
 }
 
 /* 一覧画面の感情の絵文字 */
@@ -184,7 +184,7 @@ h4.calendar-name {
 	text-decoration: none;
   text-align: center;
   font-size: 20px;
-  color: #c76e54;
+  color: var(--color2);
 }
 
 .feeling:hover {
@@ -201,7 +201,7 @@ a.feeling-link:hover {
 
 /* 日記の枠の色 */
 .table > thead > tr > th{
-  border:1px solid #f5cdbd;
+  border:1px solid var(--color3);
 }
 
 /* 感情絵文字のタブ */
@@ -216,7 +216,7 @@ a.feeling-link:hover {
 .tab_class {
   width: calc(100%/6);
   height: 50px;
-  background-color: #f5ece4;
+  background-color: var(--color5);
   line-height: 50px;
   font-size: 18px;
   text-align: center;
@@ -231,8 +231,8 @@ input[name="tab_name"] {
 
 /* タブをチェックしている部分のレイアウト */
 input:checked + .tab_class {
-  background-color: #f5cdbd;
-  color: #c76e54;
+  background-color: var(--color3);
+  color: var(--color2);
 }
  
 /* タブのレイアウト */
@@ -271,8 +271,8 @@ input:checked + .tab_class + .content_class {
   margin: 5px;
 	text-align: center;
 	text-decoration: none;
-	color: #f5ece4;
-	background: #bf9288;
+	color: var(--color5);
+	background: var(--color4);
   letter-spacing: 0.20em;
   border-radius: 10px;
   border: none;
@@ -283,7 +283,7 @@ input:checked + .tab_class + .content_class {
   opacity:0.8;
   cursor: pointer;
   text-decoration: none;
-  color: #f5ece4;
+  color: var(--color5);
 }
 
 .btn.btn-search:focus{
@@ -292,12 +292,12 @@ input:checked + .tab_class + .content_class {
 
 /* 新規登録画面のテキストフォーム */
 .diary_body input[type="text"]{
-  border: 1px solid #f5ece4;
+  border: 1px solid var(--color5);
   padding: 5px 8px;
   border-radius: 20px;
   height: 2.0em;
   overflow: hidden;
-  background: #f5ece4;
+  background: var(--color5);
   color: gray;
   transition:ease-out 0.5s;
 }
@@ -305,11 +305,11 @@ input:checked + .tab_class + .content_class {
 /* 新規登録画面のテキストフォーム選択中 */
 .diary_body input[type="text"]:focus {
   outline: none;
-  background: #f5ece4;
+  background: var(--color5);
   box-shadow: none;
   text-shadow: none;
   outline: 0;
-  border-color: #c76e54;
+  border-color: var(--color2);
   height:50px;
 }
 
@@ -331,7 +331,7 @@ input:checked + .tab_class + .content_class {
   height: 60px;
   margin: 2em 0;
   padding: 0.5em 1em;
-  border: solid 3px #c76e54;
+  border: solid 3px var(--color2);
   opacity: 0.8;
   border-radius: 8px;
   font-size: 13px;
@@ -346,7 +346,7 @@ input:checked + .tab_class + .content_class {
   line-height: 1;
   font-size: 17px;
   background: #FFF;
-  color: #c76e54;
+  color: var(--color2);
   font-weight: bold;
 }
 .box1 p {
