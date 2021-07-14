@@ -187,20 +187,8 @@ h4.calendar-name {
   color: #c76e54;
 }
 
-.feeling::after {
-	position: absolute;
-	content: '';
-	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 1px;
-	background: #c76e54;
-	transition: all 0.3s ease 0s;
-}
-
 .feeling:hover {
   cursor: pointer;
-  
 }
 
 .feeling:hover::after {
@@ -374,50 +362,120 @@ input:checked + .tab_class + .content_class {
 #emoji-feeling-10 {
   background: #8F85AF;
   border-radius: 10px 20px 30px 40px;
-
+  transition: 0.3s;
 }
+
+#emoji-feeling-10:hover {
+	background: #8F85AF;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
 
 #emoji-feeling-20 {
   background: #8DA3C4;
   border-radius: 20px 30px 40px 10px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-20:hover {
+	background: #8DA3C4;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
 #emoji-feeling-30 {
   background: #89BCD6;
   border-radius: 30px 40px 10px 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-30:hover {
+  background: #89BCD6;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
 #emoji-feeling-40 {
   background: #8CBBB8;
   border-radius: 40px 10px 20px 30px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-40:hover {
+  background: #8CBBB8;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
 #emoji-feeling-50 {
   background: #8FB896;
   border-radius: 10px 30px 20px 40px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-50:hover {
+  background: #8FB896;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
 #emoji-feeling-60 {
   background: #B9C998;
   border-radius: 10px 40px 30px 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-60:hover {
+  background: #B9C998;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
 #emoji-feeling-70 {
   background: #DED799;
   border-radius: 20px 10px 40px 30px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-70:hover {
+  background: #DED799;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
 #emoji-feeling-80 {
   background: #D9BA8C;
   border-radius: 20px 40px 10px 30px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-80:hover {
+  background: #D9BA8C;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
 #emoji-feeling-90 {
   background: #D4987E;
   border-radius: 30px 10px 20px 40px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-90:hover {
+  background: #D4987E;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
 #emoji-feeling-100 {
   background: #D49A9C;
   border-radius: 20px 40px 30px 10px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-100:hover {
+  background: #D49A9C;
+  border-radius: 20px;
+  transition: 0.3s;
 }
