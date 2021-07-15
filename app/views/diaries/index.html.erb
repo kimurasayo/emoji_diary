@@ -29,8 +29,8 @@
           <%= date.day %>
       
           <% diaries.each do |diary| %>
-            <div class="feeling" id="emoji-feeling-<%= diary.score %>">
-              <%= link_to diary.feeling, user_diary_path(@user, diary), class: "feeling-link", remote: true, :data => {:toggle=>"modal", :target => "#recordModal", :backdrop => "true"} %>
+            <div class="feeling">
+              <%= link_to diary.feeling, user_diary_path(@user, diary), id: "emoji-feeling-#{diary.score}", class: "feeling-link", remote: true, :data => {:toggle=>"modal", :target => "#recordModal", :backdrop => "true"} %>
               <div class="modal fade" id="recordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
