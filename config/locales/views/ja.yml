@@ -44,3 +44,11 @@ ja:
       - Oct
       - Nov
       - Dec
+  password_resets:
+    create:
+      success: メールを送信しました
+    update:
+      success: パスワードを変更しました
+  contacts:
+    create:
+      success: お問い合わせを受け付けました

@@ -15,3 +15,7 @@ ja:
         feeling: feeling
         body: about
         start_time: date
+      contact:
+        name: name
+        email: email
+        content: content
