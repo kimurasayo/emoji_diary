@@ -38,6 +38,9 @@ group :development, :test do
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'rubocop-checkstyle_formatter'
+
+  #　メール送信テスト用
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :development do

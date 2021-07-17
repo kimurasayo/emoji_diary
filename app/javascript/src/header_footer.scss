@@ -19,6 +19,13 @@
   background-color: var(--color1);
 }
 
+@media screen and (min-width:990px){
+  #header {
+    padding-right: 180px;
+    padding-left: 180px;
+  }
+}
+
 /* フッター */
 #footer {
   position:fixed;
@@ -80,4 +87,16 @@
   33.33333% { transform: translateY(-10px) }
   66.66667% { transform: translateY(-20px) }
   100% { transform: translateY(0) }
+}
+
+/* リンクをホバーすると大きくなる　*/
+.cp_link {
+	display: inline-block;
+	padding: 0.3em;
+	transition: .3s;
+	transform: scale(1);
+	color: #F4511E;
+}
+.cp_link:hover {
+	transform: scale(1.30);
 }

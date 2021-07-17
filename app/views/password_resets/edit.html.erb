@@ -1,0 +1,30 @@
+<% content_for(:title, 'reset password') %>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="card resulting col-10 col-md-6">
+      
+      <div class="card-body">
+        <h2 class="result card-title text-center"><%= @user.nickname %> reset password</h2>
+          <div class='text-center description'>
+            <%= @user.name %>さん、新しく登録するパスワードを入力してください
+          </div>
+        <div class="register">
+        <%= form_with model: @user, url: password_reset_path(@token), method: :put, local: true do |f| %>
+            <div class="form-group">
+              <%= f.label :password, User.human_attribute_name(:password) %>
+              <%= f.password_field :password, class: "form-control", placeholder: 'password' %>
+            </div>
+            <div class="form-group">
+              <%= f.label :password_confirmation, User.human_attribute_name(:password_confirmation) %>
+              <%= f.password_field :password_confirmation, class: "form-control", placeholder: 'password' %>
+            </div>
+            <div class="text-center">
+              <%= f.submit t('defaults.submit'), class: "btn btn-normal" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

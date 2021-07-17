@@ -361,6 +361,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-10 {
   background: #8F85AF;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 10px 20px 30px 40px;
   transition: 0.3s;
 }
@@ -374,6 +377,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-20 {
   background: #8DA3C4;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 20px 30px 40px 10px;
   transition: 0.3s;
 }
@@ -386,6 +392,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-30 {
   background: #89BCD6;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 30px 40px 10px 20px;
   transition: 0.3s;
 }
@@ -398,6 +407,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-40 {
   background: #8CBBB8;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 40px 10px 20px 30px;
   transition: 0.3s;
 }
@@ -410,6 +422,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-50 {
   background: #8FB896;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 10px 30px 20px 40px;
   transition: 0.3s;
 }
@@ -422,6 +437,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-60 {
   background: #B9C998;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 10px 40px 30px 20px;
   transition: 0.3s;
 }
@@ -434,6 +452,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-70 {
   background: #DED799;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 20px 10px 40px 30px;
   transition: 0.3s;
 }
@@ -446,6 +467,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-80 {
   background: #D9BA8C;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 20px 40px 10px 30px;
   transition: 0.3s;
 }
@@ -458,6 +482,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-90 {
   background: #D4987E;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 30px 10px 20px 40px;
   transition: 0.3s;
 }
@@ -470,6 +497,9 @@ input:checked + .tab_class + .content_class {
 
 #emoji-feeling-100 {
   background: #D49A9C;
+  width: 100%;
+  margin: auto;
+  padding: 6px 13px 6px 13px;
   border-radius: 20px 40px 30px 10px;
   transition: 0.3s;
 }
@@ -478,4 +508,66 @@ input:checked + .tab_class + .content_class {
   background: #D49A9C;
   border-radius: 20px;
   transition: 0.3s;
+}
+
+@media screen and (max-width:600px){
+  #emoji-feeling-100 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
+
+  #emoji-feeling-90 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
+
+  #emoji-feeling-80 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
+
+  #emoji-feeling-70 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
+
+  #emoji-feeling-60 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
+
+  #emoji-feeling-50 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
+
+  #emoji-feeling-40 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
+
+  #emoji-feeling-30 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
+
+  #emoji-feeling-20 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
+
+  #emoji-feeling-10 {
+    width: 100%;
+    margin: auto;
+    padding: 6px 6px 6px 7px;
+  }
 }

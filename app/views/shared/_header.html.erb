@@ -1,28 +1,34 @@
 <header>
   <nav class="navbar navbar-expand-lg navigation navbar-light fixed-top", id="header">
-      <%= link_to user_diaries_path(current_user), class: "navbar-brand" do %>
-        <img src="<%= asset_pack_path 'media/images/emory.png' %>" >
+    <% if !logged_in? || (current_user.color == "pink") %>
+      <%= link_to root_path, class: "navbar-brand cp_link" do %>
+        <img src="<%= asset_pack_path 'media/images/emory_pink.png' %>" >
       <% end %>
+    <% else %>
+      <%= link_to root_path, class: "navbar-brand cp_link" do %>
+        <img src="<%= asset_pack_path 'media/images/emory_blue.png' %>" >
+      <% end %>
+    <% end %>
       <button class="navbar-toggler" data-toggle="collapse" data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
         <span class="navbar-toggler-icon"></span>
       </button>
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto main-nav align-items-center">
         <li class='nav-item'>
-          <%= link_to t('defaults.mine'), user_diaries_path(current_user), class: 'nav-link' %>
+          <%= link_to t('defaults.mine'), user_diaries_path(current_user), class: 'nav-link cp_link' %>
         </li>
         <li class='nav-item'>
-          <%= link_to t('defaults.friends_diary'), user_followers_path(current_user), class: 'nav-link' %>
+          <%= link_to t('defaults.friends_diary'), user_followers_path(current_user), class: 'nav-link cp_link' %>
         </li>
         <li class='nav-item'>
-          <%= link_to t('defaults.search'), users_path, class: 'nav-link' %>
+          <%= link_to t('defaults.search'), users_path, class: 'nav-link cp_link' %>
         </li>
         <li class='nav-item'>
           <%= link_to t('defaults.logout'), logout_path, method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
-          ログアウトしますか?", commit: 'logout', cancel: 'cancel' }, class: 'nav-link' %>
+          ログアウトしますか?", commit: 'logout', cancel: 'cancel' }, class: 'nav-link cp_link' %>
         </li>
         <li class='nav-item'>
-          <%= link_to current_user.nickname, profiles_path %>
+          <%= link_to current_user.nickname, profiles_path, class: 'nav-link cp_link' %>
         </li>
       </ul>
     </div>
