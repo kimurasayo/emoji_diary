@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactMailer.contact_us_email(@contact).deliver
-      redirect_to root_path
+      redirect_to root_path, success: t('.success')
     else
       render :new
     end
