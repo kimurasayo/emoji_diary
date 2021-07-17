@@ -218,3 +218,34 @@ body {
   color: gray;
   font-size: 13px;
 }
+
+/* お問い合わせフォームのtextareaを固定する */
+textarea {
+  resize: none !important;
+  border: 1px solid var(--color5) !important;
+  padding: 5px 8px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  background: var(--color5) !important;
+  color: gray !important;
+}
+
+/* お問い合わせフォームのtextarea選択中 */
+textarea:focus {
+  outline: none !important;
+  background: var(--color5) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  outline: 0 !important;
+  border-color: var(--color2) !important;
+}
+
+/* お問い合わせフォームのプレースホルダー */
+textarea::placeholder { 
+  color: lightgray !important;
+}
+
+textarea:focus::placeholder {
+  color: transparent !important;
+  transition: .2s !important;
+}
