@@ -205,3 +205,16 @@ body {
   color: var(--color4);
   letter-spacing: 0.10em;
 }
+
+/* パスワードリセットのemail */
+.reset_password {
+  font-size: 20px;
+  color: var(--color3);
+  border-bottom: double 6px var(--color2);
+}
+
+/* forgot passwordの説明文 */
+.description {
+  color: gray;
+  font-size: 13px;
+}

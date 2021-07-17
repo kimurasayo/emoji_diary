@@ -37,4 +37,8 @@ Rails.application.routes.draw do
 
   # linebot
   post '/callback', to: 'linebot#callback' 
+
+  resources :password_resets
+
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end
