@@ -44,3 +44,8 @@ ja:
       - Oct
       - Nov
       - Dec
+  password_resets:
+    create:
+      success: メールを送信しました
+    update:
+      success: パスワードを変更しました
