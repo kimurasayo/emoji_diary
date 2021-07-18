@@ -24,7 +24,7 @@ class DiariesController < ApplicationController
     # モデルにメソッド記載
     @diary.score_feeling
     if @diary.save
-      redirect_to user_diaries_path(current_user)
+      redirect_to user_diary_path(current_user, @diary)
     else
       render :new
     end
@@ -44,7 +44,7 @@ class DiariesController < ApplicationController
     if @diary.update(diary_params)
       @diary.score_feeling
       @diary.save
-      redirect_to user_diaries_path(current_user)
+      redirect_to user_diary_path(current_user, @diary)
     else
       render :edit
     end
