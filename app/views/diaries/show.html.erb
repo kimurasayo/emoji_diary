@@ -2,29 +2,26 @@
 <div class="row justify-content-center">
   <div class="col-11 col-md-8 text-center">
     <div class="diary-show">
-        <h4 class="show-date"><%= @user.nickname %> <%= @diary.start_time.strftime("%b %d,%Y(%a)") %></h4>
-        <h3 class="rounded"><%= @diary.feeling %><%= @diary.body %></h3>
+      <h4 class="show-date"><%= @user.nickname %> <%= @diary.start_time.strftime("%b %d,%Y(%a)") %></h4>
+      <h3 class="rounded"><%= @diary.feeling %><%= @diary.body %></h3>
         <div class="text-right">
           <%= render 'bookmarks/bookmark_button', { diary: @diary } %>
         </div>
-        <% if current_user.id == @diary.user.id %>
-          <div class="row justify-content-center">
-            <div class="col-12 col-xl-3">
-              <%= button_to 'edit', edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' %>
-            </div>
-            <div class="col-12 col-xl-3">
-              <%= button_to 'delete', user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
-              削除してもよろしいですか?", commit: 'delete', cancel: 'cancel' }, class:'btn btn-normal' %>
-            </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-xl-3">
+            <%= button_to 'edit', edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' %>
           </div>
-        <% else %>
-          <%= button_to user_diaries_path(@user), id: "button-edit-#{@diary.id}", method: :get, class:'btn-show-back' do %>
-            <%= @user.name %>'s diary
-          <% end %>
-        <% end %>
+          <div class="col-12 col-xl-3">
+            <%= button_to 'delete', user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
+              削除してもよろしいですか?", commit: 'delete', cancel: 'cancel' }, class:'btn btn-normal' %>
+          </div>
+        </div>
     </div>
   </div>
 </div>
 </div>
 
-<%= link_to "write diary", new_user_diary_path(current_user), class: "btn-circle-border" %>
+<%= link_to "https://twitter.com/intent/tweet?text=#{@user.nickname}#{@diary.start_time.strftime("%-m月%e日")}の日記%0a%22#{@diary.feeling}#{@diary.body}%22%0a%0a#{@user.name}さんをフォローする→&url=https://emory-diary.herokuapp.com/users/#{@user.id}/diaries%0a&hashtags=絵文字,日記%0a",
+        target: '_blank', rel: "noopener noreferrer", class: "btn-social-circle btn-social-circle--twitter" do %>
+          <i class="fab fa-twitter"></i>
+<% end %>
