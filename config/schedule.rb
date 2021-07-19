@@ -27,7 +27,7 @@ set :environment, rails_env
 
 set :output, "#{Rails.root}/log/cron.log"
 
-#every 1.minute do
-every 1.day, at: ['9:00 pm'] do
-  rake 'push_line:push_line_message'
-end
+# every 1.minute do
+# every 1.day, at: ['9:00 pm'] do
+  # rake 'push_line:push_line_message'
+#end
