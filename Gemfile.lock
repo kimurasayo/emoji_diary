@@ -162,6 +162,8 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.1)
+    meta-tags (2.14.0)
+      actionpack (>= 3.2.0, < 6.2)
     method_source (1.0.0)
     mini_mime (1.0.3)
     minitest (5.14.4)
@@ -381,6 +383,7 @@ DEPENDENCIES
   letter_opener_web (~> 1.0)
   line-bot-api
   listen (~> 3.3)
+  meta-tags
   mysql2 (~> 0.5)
   pagy
   pry-byebug

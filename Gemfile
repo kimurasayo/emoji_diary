@@ -105,3 +105,6 @@ gem 'line-bot-api'
 gem 'whenever', require: false
 
 gem 'rails-i18n'
+
+# TwitterシェアなどのOGP設定のコードをまとめるgem
+gem 'meta-tags'

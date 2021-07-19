@@ -13,14 +13,15 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
     <%= favicon_pack_tag 'favicon.png' %>
-
-    <!-- twitterカード --!>
+    <%= display_meta_tags(default_meta_tags) %>
+    <!--
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@sayo_saru" />
     <meta property="og:url" content="https://emory-diary.herokuapp.com/" />
     <meta property="og:title" content="emory" />
     <meta property="og:description" content="絵文字だけで日記をつけてみませんか？"　/>
     <meta property="og:image" content="https://emory-diary.herokuapp.com/packs/media/images/twitter_share-9d368f38de91dd9932aaf8c2d68941fe.png" />
+    --!>
   </head>
 
   <body>
