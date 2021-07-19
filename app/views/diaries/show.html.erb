@@ -21,7 +21,9 @@
 </div>
 </div>
 
-<%= link_to "https://twitter.com/intent/tweet?text=#{@user.nickname}#{@diary.start_time.strftime("%-m月%e日")}の日記%0a%22#{@diary.feeling}#{@diary.body}%22%0a%0a#{@user.name}さんをフォローする→&url=https://emory-diary.herokuapp.com/users/#{@user.id}/diaries%0a&hashtags=絵文字,日記%0a",
+<% if @user == current_user %>
+<%= link_to "https://twitter.com/intent/tweet?text=#{current_user.nickname}#{@diary.start_time.strftime("%-m月%e日")}の日記%0a%22#{@diary.feeling}#{@diary.body}%22%0a%0a#{current_user.name}さんをフォローする→&url=https://emory-diary.herokuapp.com/users/#{current_user.id}/diaries%0a&hashtags=絵文字,日記%0a",
         target: '_blank', rel: "noopener noreferrer", class: "btn-social-circle btn-social-circle--twitter" do %>
           <i class="fab fa-twitter"></i>
+<% end %>
 <% end %>
