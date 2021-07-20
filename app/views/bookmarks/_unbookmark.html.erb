@@ -4,6 +4,6 @@
             remote: true do %>
   <i class="fas fa-heart unlike-btn"></i>
 <% end %>
-<%= link_to user_bookmarks_path(current_user, @diary), class: "count" do %>
+<%= link_to user_bookmarks_path(current_user.name, @diary), class: "count" do %>
   <%= diary.bookmarks.count %>
 <% end %>

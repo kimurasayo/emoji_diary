@@ -3,11 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'tops#home'
 
-  # new_user_path, users_path
-  # user_followers_path
-  # user_diaries_path(index), new_user_diary_path, edit_user_diary, user_diary(show)
-  # user_bookmarks_path
-  resources :users, only: [:new, :create, :index, :destroy] do
+  # ユーザーのパスには:nameが入るようにしてあります
+  resources :users, param: :name, only: [:new, :create, :index, :destroy] do
     resources :followers, only: [:index]
 
     get 'following', to: 'users#following'

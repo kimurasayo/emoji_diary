@@ -31,7 +31,9 @@ class UsersController < ApplicationController
 
   # 退会
   def destroy
-    @user = User.find(params[:id])
+    #　@user = User.find(params[:id])
+    # userのnemeをパラメータで取得してユーザーを指定する
+    @user = User.find_by(name: params[:name])
     @user.destroy
     redirect_to root_path, success: 'thank you'
   end
@@ -66,6 +68,8 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = User.find(params[:user_id])
+    #　@user = User.find(params[:user_id])
+    # userのnemeをパラメータで取得してユーザーを指定する
+    @user = User.find_by(name: params[:user_name])
   end
 end

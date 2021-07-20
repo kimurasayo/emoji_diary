@@ -41,10 +41,10 @@
         </div>
       <% end %>
       <div class="text-center">
-        <%= link_to 'back', user_diaries_path(@user), class: "btn btn-normal" %>
+        <%= link_to 'back', user_diaries_path(@user.name), class: "btn btn-normal" %>
       </div>
     </div>
   </div>
 </div>
 
-<%= link_to "write diary", new_user_diary_path(current_user), class: "btn-circle-border" %>
+<%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
