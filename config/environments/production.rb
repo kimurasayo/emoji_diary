@@ -69,7 +69,7 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.default_url_options = {  :host => 'https://emory-diary.herokuapp.com/' }
+  config.action_mailer.default_url_options = {  :host => 'https://www.emory.app/' }
   # 送信方法
   config.action_mailer.delivery_method = :smtp
   # 送信方法として:smtpを指定した場合は、このconfigを使って送信詳細の設定を行います

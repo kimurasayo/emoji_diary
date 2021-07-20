@@ -41,7 +41,8 @@ input[type="radio"]:checked + label.face {
 
 /* 日記詳細の枠 */
 .diary-show {
-  margin-top: 80px;
+  margin-top: 100px;
+  margin-bottom: 150px;
   padding-top: 50px;
   padding-bottom: 100px;
   padding-left: 8px;
@@ -570,4 +571,53 @@ input:checked + .tab_class + .content_class {
     margin: auto;
     padding: 6px 6px 6px 7px;
   }
+}
+
+/* twitterシェアボタン */
+.btn-social-circle {
+  position:fixed;
+  bottom: 50px;
+  right: 30px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #FFF;
+  width: 80px;
+  height: 80px;
+  line-height: 30px;
+  padding: 15px;
+  font-size: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  transition: .2s;
+}
+
+@media screen and (min-width:750px) {
+  .btn-social-circle {
+    right: 170px;
+  }
+}
+
+.btn-social-circle .fa {
+  line-height: 30px;
+}
+.btn-social-circle:hover {
+  box-shadow: none;
+}
+
+.btn-social-circle--twitter {
+  background: #1da1f3;
+  border: solid 5px #1da1f3;
+}
+
+.btn-social-circle--twitter {
+  animation: float_2979 3s linear infinite;
+  transform-origin: 50% 50%;
+}
+ 
+@keyframes float_2979 {
+  0% { transform: translateY(0) }
+  33.33333% { transform: translateY(-10px) }
+  66.66667% { transform: translateY(-20px) }
+  100% { transform: translateY(0) }
 }
