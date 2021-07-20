@@ -14,10 +14,10 @@
         <% if current_user.id == @diary.user.id %>
           <div class="row justify-content-center">
             <div class="col-12 col-xl-3">
-              <%= button_to 'edit', edit_user_diary_path(@diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' %>
+              <%= button_to 'edit', edit_user_diary_path(current_user.name, @diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' %>
             </div>
             <div class="col-12 col-xl-3">
-              <%= button_to 'delete', user_diary_path(@diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
+              <%= button_to 'delete', user_diary_path(current_user.name, @diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
               削除してもよろしいですか?", commit: 'delete', cancel: 'cancel' }, class:'btn btn-normal' %>
             </div>
           </div>

@@ -3,7 +3,9 @@ class DiariesController < ApplicationController
   # user_diaries_path。ユーザーのidをパラメータで受け取って、@userに入れる。
   # @userの日記一覧を@diariesに入れる。
   def index
-    @user = User.find(params[:user_id])
+    # @user = User.find(params[:user_id])
+    # userのnemeをパラメータで取得してユーザーを指定する
+    @user = User.find_by(name: params[:user_name])
     @diaries = @user.diaries
   end
 
@@ -24,7 +26,7 @@ class DiariesController < ApplicationController
     # モデルにメソッド記載
     @diary.score_feeling
     if @diary.save
-      redirect_to user_diary_path(current_user, @diary)
+      redirect_to user_diary_path(current_user.name, @diary)
     else
       render :new
     end
@@ -33,7 +35,7 @@ class DiariesController < ApplicationController
   # 日記消去アクション
   def destroy
     @diary.destroy
-    redirect_to user_diaries_path(current_user)
+    redirect_to user_diaries_path(current_user.name)
   end
 
   # edit_user_diary_path
@@ -44,7 +46,7 @@ class DiariesController < ApplicationController
     if @diary.update(diary_params)
       @diary.score_feeling
       @diary.save
-      redirect_to user_diary_path(current_user, @diary)
+      redirect_to user_diary_path(current_user.name, @diary)
     else
       render :edit
     end

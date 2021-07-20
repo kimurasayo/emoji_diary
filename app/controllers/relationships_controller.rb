@@ -1,8 +1,8 @@
 class RelationshipsController < ApplicationController
   # フォローする
   def create
-    # パラメータでfollower_idを取得
-    @other_user = User.find(params[:follower])
+    # パラメータでfollowerのnameを取得
+    @other_user = User.find_by(name: params[:follower])
     # 現在ログインしているユーザーが@other_userをフォローする
     current_user.follow(@other_user)
   end

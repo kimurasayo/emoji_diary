@@ -24,7 +24,7 @@
         </div>
         <% @users.each do |user| %>
           <h4 class="calendar-name">
-            <%= link_to user_diaries_path(user), class: "calendar-name-link" do %>
+            <%= link_to user_diaries_path(user.name), class: "calendar-name-link" do %>
               <%= user.nickname %> <%= user.name %>
             <% end %>
           </h4>
@@ -33,7 +33,7 @@
             <%= date %>
             <% diaries.each do |diary| %>
               <div class="feeling">
-              <%= link_to diary.feeling, user_diary_path(user, diary), id: "emoji-feeling-#{diary.score}", class: "feeling-link", remote: true, :data => {:toggle=>"modal", :target => "#recordModal", :backdrop => "true"} %>
+              <%= link_to diary.feeling, user_diary_path(user.name, diary), id: "emoji-feeling-#{diary.score}", class: "feeling-link", remote: true, :data => {:toggle=>"modal", :target => "#recordModal", :backdrop => "true"} %>
               <div class="modal fade" id="recordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
@@ -52,4 +52,4 @@
   </div>
 </div>
 
-<%= link_to "write diary", new_user_diary_path(current_user), class: "btn-circle-border" %>
+<%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
