@@ -249,3 +249,23 @@ textarea:focus::placeholder {
   color: transparent !important;
   transition: .2s !important;
 }
+
+.document {
+  margin-top: 100px;
+  margin-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+
+  h1 {
+    color: var(--color2);
+    font-weight: bold;
+  }
+
+  h3 {
+    color: var(--color2);
+  }
+}
