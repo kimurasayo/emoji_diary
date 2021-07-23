@@ -17,6 +17,15 @@ body {
   margin-right: auto;
 }
 
+.qr-image {
+  display: flex;
+  height: 100px;
+  length: 100px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (min-width:600px){
   /*600px以上で適用する内容*/
   .calendar {

@@ -100,3 +100,41 @@
 .cp_link:hover {
 	transform: scale(1.30);
 }
+
+.flowbtn10{
+  display:inline-block;	
+  font-size:30px;
+  text-decoration:none;
+  transition:.5s;
+  color: gray;
+}
+
+@media screen and (min-width:992px){
+  .flowbtn10{
+    margin-left: 13px;
+  }
+}
+
+.flowbtn10 .fa-line:hover{
+  color:#00c300;
+}
+
+.line-close {
+  padding: 15px 30px 15px;
+}
+
+.line-modal {
+  margin-top: 100px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+h3.line-title {
+  color: var(--color2);
+}
+
+p.line-body {
+  color: gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
