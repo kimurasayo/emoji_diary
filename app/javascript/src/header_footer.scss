@@ -70,17 +70,14 @@
   border: solid 2px rgba(255, 255, 255, 0.47);
   transition: .4s;
   z-index: 1;
+  animation: float_2979 3s linear infinite;
+  transform-origin: 50% 50%;
 }
 
 /* 日記新規作成のボタン、ホバー時 */
 .btn-circle-border:hover {
   border-style: dashed;
   color: rgba(255, 255, 255, 0.47);
-}
-
-.btn-circle-border {
-  animation: float_2979 3s linear infinite;
-  transform-origin: 50% 50%;
 }
  
 @keyframes float_2979 {

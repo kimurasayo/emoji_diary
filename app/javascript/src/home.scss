@@ -285,27 +285,39 @@ table.login-btn {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width:992px){
-.image-horizontal-scroll{
-	overflow-x: auto;
-	white-space: nowrap;
-	-webkit-overflow-scrolling: touch;
-  margin-top: 0px;
-}
-.box{
-	display: inline-block;
-	width: 70% !important;
-}
-.login2 {
-  display: none;
-}
+@media screen and (min-width:992px) {
+  .image-horizontal-scroll{
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px;
+  }
+
+  .box{
+	  display: inline-block;
+	  width: 70% !important;
+  }
+
+  .login2 {
+    display: none;
+  }
+
+  table.login-btn2 {
+    margin: auto;
+    margin-bottom: 100px;
+  }
+
+  .home {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
 }
 
 /* トップの画像一つ一つのレイアウト */
 .box{
 	display: inline-block;
 	width: 100%;
-	margin: 10px;
+	margin: 10 15 10 0px;
 }
 
 /* 画像の横の点を消す */
@@ -317,4 +329,21 @@ ul {
 .home {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+@media screen and (max-width:991px){
+  table.login-btn2 {
+    display: none;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .image-horizontal-scroll{
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+
+.login2 {
+  position: fixed;
 }
