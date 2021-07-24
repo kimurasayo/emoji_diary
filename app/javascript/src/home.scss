@@ -281,17 +281,35 @@ textarea:focus::placeholder {
 
 table.login-btn {
   margin:auto;
+  margin-bottom: 50px;
 }
 
+@media screen and (min-width:992px){
 .image-horizontal-scroll{
 	overflow-x: auto;
 	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
-  margin-top: 50px;
+  margin-top: 10px;
+}
+.box{
+	display: inline-block;
+	width: 70% !important;
+	margin: 10px;
+}
 }
 
 .box{
 	display: inline-block;
-	width: 70%;
+	width: 100%;
 	margin: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px !important;
+}
+
+.home {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
