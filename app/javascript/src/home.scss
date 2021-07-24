@@ -279,6 +279,7 @@ textarea:focus::placeholder {
   }
 }
 
+/* ログインボタン等 */
 table.login-btn {
   margin:auto;
   margin-bottom: 50px;
@@ -289,21 +290,25 @@ table.login-btn {
 	overflow-x: auto;
 	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .box{
 	display: inline-block;
 	width: 70% !important;
-	margin: 10px;
+}
+.login2 {
+  display: none;
 }
 }
 
+/* トップの画像一つ一つのレイアウト */
 .box{
 	display: inline-block;
 	width: 100%;
 	margin: 10px;
 }
 
+/* 画像の横の点を消す */
 ul {
   list-style: none;
   padding-left: 0px !important;

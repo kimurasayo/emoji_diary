@@ -2,6 +2,18 @@
 
 <div class='top-wrapper'>
   <div class='home col-12'>
+
+  <div class="login2">
+    <% if !logged_in? %>
+      <table class="login-btn">
+      <tr>
+        <td><%= button_to t('defaults.login'), login_path, class:'btn btn-normal' %></td>
+        <td><%= button_to t('defaults.register'), new_user_path, class:'btn btn-normal' %></td>
+      </tr>
+      </table>
+    <% end %>
+  </div>
+
     <ul class="image-horizontal-scroll">
     <li class="box">
       <div><img src="<%= asset_pack_path 'media/images/top1.png' %>" class="img-responsive" ></div>
@@ -16,16 +28,16 @@
     <div><img src="<%= asset_pack_path 'media/images/top4.png' %>" class="img-responsive" ></div>
     </li>
     </ul>
+
     <% if !logged_in? %>
-    <table class="login-btn">
+      <table class="login-btn">
       <tr>
         <td><%= button_to t('defaults.login'), login_path, class:'btn btn-normal' %></td>
         <td><%= button_to t('defaults.register'), new_user_path, class:'btn btn-normal' %></td>
       </tr>
-    </table>
+      </table>
     <% else %>
       <%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
     <% end %>
-
   </div>      
 </div>
