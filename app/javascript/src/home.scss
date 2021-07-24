@@ -278,3 +278,20 @@ textarea:focus::placeholder {
     color: var(--color2);
   }
 }
+
+table.login-btn {
+  margin:auto;
+}
+
+.image-horizontal-scroll{
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+  margin-top: 50px;
+}
+
+.box{
+	display: inline-block;
+	width: 70%;
+	margin: 10px;
+}

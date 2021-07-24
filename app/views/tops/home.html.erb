@@ -2,6 +2,26 @@
 
 <div class='top-wrapper'>
   <div class='home col-12'>
-    <img src="<%= asset_pack_path 'media/images/emory.png' %>" class="img-responsive" >
-  </div>
+    <ul class="image-horizontal-scroll">
+    <li class="box">
+      <div><img src="<%= asset_pack_path 'media/images/top1.png' %>" class="img-responsive" ></div>
+    </li>
+    <li class="box">
+      <div><img src="<%= asset_pack_path 'media/images/top2.png' %>" class="img-responsive" ></div>
+    </li>
+    <li class="box">
+    <div><img src="<%= asset_pack_path 'media/images/top3.png' %>" class="img-responsive" ></div>
+    </li>
+    <li class="box">
+    <div><img src="<%= asset_pack_path 'media/images/top4.png' %>" class="img-responsive" ></div>
+    </li>
+    </ul>
+    <table class="login-btn">
+      <tr>
+        <td><%= button_to t('defaults.login'), login_path, class:'btn btn-normal' %></td>
+        <td><%= button_to t('defaults.register'), new_user_path, class:'btn btn-normal' %></td>
+      </tr>
+    </table>
+
+  </div>      
 </div>

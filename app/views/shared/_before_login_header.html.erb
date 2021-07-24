@@ -1,26 +1,10 @@
 <header>
   <nav class="navbar navbar-expand-lg navigation navbar-light fixed-top", id="header"> 
-    <% if !logged_in? || (current_user.color == "pink") %>
-      <%= link_to root_path, class: "navbar-brand cp_link" do %>
-        <img src="<%= asset_pack_path 'media/images/emory_pink.png' %>" >
-      <% end %>
-    <% else %>
-      <%= link_to root_path, class: "navbar-brand cp_link" do %>
-        <img src="<%= asset_pack_path 'media/images/emory_blue.png' %>" >
-      <% end %>
+    <%= link_to root_path, class: "navbar-brand cp_link" do %>
+      <img src="<%= asset_pack_path 'media/images/emory_pink.png' %>" >
     <% end %>
-      <button class="navbar-toggler" data-toggle="collapse" data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="navbar-collapse collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto main-nav align-items-center">
-        <li class="nav-item">
-          <%= link_to t('defaults.login'), login_path, class: "nav-link cp_link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to t('defaults.register'), new_user_path, class: "nav-link cp_link" %>
-        </li>
+      <ul class="navbar-nav ml-auto align-items-center message">
+        share and write your emoji diary ...
       </ul>
-    </div>
   </nav>
 </header>

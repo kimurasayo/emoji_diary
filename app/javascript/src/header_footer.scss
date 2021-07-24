@@ -4,10 +4,11 @@
   height: 40px;
 }
 
-/* ヘッダーの左側の文字 */
+/* ヘッダーの右側の文字 */
 .message {
   color: gray;
-  font-size: 10px;
+  letter-spacing: 0.05em;
+  font-size: 13px;
 }
 
 /* ヘッダーのリンク */
