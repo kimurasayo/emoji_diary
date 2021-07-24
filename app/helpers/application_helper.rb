@@ -29,7 +29,7 @@ module ApplicationHelper
         description: "絵文字だけを使って日記をつけてみませんか？",
         type: "website",
         url: request.original_url,
-        image: asset_pack_url("media/images/twitter_share.png"),
+        image: asset_pack_url("media/images/LINE.png"),
         site_name: "emory",
         locale: "ja_JP"
       },

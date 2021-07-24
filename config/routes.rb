@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'tops#home'
+  get 'privacy', to: 'tops#privacy'
+  get 'uses', to: 'tops#uses'
+  get 'line', to: 'tops#line'
 
   # ユーザーのパスには:nameが入るようにしてあります
   resources :users, param: :name, only: [:new, :create, :index, :destroy] do

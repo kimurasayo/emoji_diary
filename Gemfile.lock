@@ -244,6 +244,7 @@ GEM
       rails (>= 5.0, < 7)
       remotipart (~> 1.3)
       sassc-rails (>= 1.3, < 3)
+    rails_admin-i18n (1.16.1)
     railties (6.1.3.2)
       actionpack (= 6.1.3.2)
       activesupport (= 6.1.3.2)
@@ -392,6 +393,7 @@ DEPENDENCIES
   rails (~> 6.1.3, >= 6.1.3.1)
   rails-i18n
   rails_admin (~> 2.0)
+  rails_admin-i18n
   ransack
   rspec-rails
   rspec_junit_formatter

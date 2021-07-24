@@ -17,6 +17,15 @@ body {
   margin-right: auto;
 }
 
+.qr-image {
+  display: flex;
+  height: 100px;
+  length: 100px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (min-width:600px){
   /*600px以上で適用する内容*/
   .calendar {
@@ -248,4 +257,93 @@ textarea::placeholder {
 textarea:focus::placeholder {
   color: transparent !important;
   transition: .2s !important;
+}
+
+.document {
+  margin-top: 100px;
+  margin-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+
+  h1 {
+    color: var(--color2);
+    font-weight: bold;
+  }
+
+  h3 {
+    color: var(--color2);
+  }
+}
+
+/* ログインボタン等 */
+table.login-btn {
+  margin:auto;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width:992px) {
+  .image-horizontal-scroll{
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px;
+  }
+
+  .box{
+	  display: inline-block;
+	  width: 70% !important;
+  }
+
+  .login2 {
+    display: none;
+  }
+
+  table.login-btn2 {
+    margin: auto;
+    margin-bottom: 100px;
+  }
+
+  .home {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+}
+
+/* トップの画像一つ一つのレイアウト */
+.box{
+	display: inline-block;
+	width: 100%;
+	margin: 10 15 10 0px;
+}
+
+/* 画像の横の点を消す */
+ul {
+  list-style: none;
+  padding-left: 0px !important;
+}
+
+.home {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width:991px){
+  table.login-btn2 {
+    display: none;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .image-horizontal-scroll{
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+
+.login2 {
+  position: fixed;
 }

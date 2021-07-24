@@ -30,7 +30,18 @@
         <li class='nav-item'>
           <%= link_to current_user.nickname, profiles_path, class: 'nav-link cp_link' %>
         </li>
+        <li class='nav-item'>
+        <%= link_to line_path, class: "flowbtn10", remote: true, :data => {:toggle=>"modal", :target => "#lineModal", :backdrop => "true"} do %>
+          <i class="fab fa-line"></i>
+        <% end %>
+        </li>
       </ul>
     </div>
   </nav>
 </header>
+
+<div class="modal fade" id="lineModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content"></div>
+  </div>
+</div>
