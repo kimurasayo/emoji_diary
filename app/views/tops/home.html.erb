@@ -3,17 +3,6 @@
 <div class='top-wrapper'>
   <div class='home col-12'>
 
-  <div class="login2">
-    <% if !logged_in? %>
-      <table class="login-btn">
-      <tr>
-        <td><%= button_to t('defaults.login'), login_path, class:'btn btn-normal' %></td>
-        <td><%= button_to t('defaults.register'), new_user_path, method: :get, class:'btn btn-normal' %></td>
-      </tr>
-      </table>
-    <% end %>
-  </div>
-
   <% if !logged_in? || (current_user.color == "pink") %>
     <ul class="image-horizontal-scroll">
     <li class="box">

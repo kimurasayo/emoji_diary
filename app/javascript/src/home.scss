@@ -298,10 +298,6 @@ table.login-btn {
 	  width: 70% !important;
   }
 
-  .login2 {
-    display: none;
-  }
-
   table.login-btn2 {
     margin: auto;
     margin-bottom: 100px;
@@ -333,7 +329,6 @@ ul {
 
 @media screen and (max-width:991px){
   table.login-btn2 {
-    display: none;
     margin: auto;
     margin-bottom: 50px;
   }
@@ -341,9 +336,13 @@ ul {
   .image-horizontal-scroll{
     margin-top: 60px;
     margin-bottom: 100px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
-}
 
-.login2 {
-  position: fixed;
+  .box{
+	  display: inline-block;
+	  width: 90% !important;
+  }
 }
