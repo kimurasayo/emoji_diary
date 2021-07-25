@@ -19,3 +19,49 @@ ja:
         name: name
         email: email
         content: content
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              format: '%{message}'
+              blank: 入力必須項目です
+              too_long: 15文字以内で入力してください
+              taken: 既に存在するユーザー名です
+            email:
+              format: '%{message}'
+              blank: 入力必須項目です
+              taken: 既に存在するメールアドレスです
+            password:
+              format: '%{message}'
+              too_short: 8文字以上入力してください
+              blank: 入力必須項目です
+            password_confirmation:
+              format: '%{message}'
+              too_short: 8文字以上入力してください
+              blank: 入力必須項目です
+              confirmation: パスワードが一致しません
+        contact:
+          attributes:
+            name:
+              format: '%{message}'
+              blank: 入力必須項目です
+            email:
+              format: '%{message}'
+              blank: 入力必須項目です
+            content:
+              format: '%{message}'
+              blank: 入力必須項目です
+        diary:
+          attributes:
+            feeling:
+              format: '%{message}'
+              blank: 入力必須項目です
+              too_long: 1文字で入力してください
+            body:
+              format: '%{message}'
+              too_long: 絵文字の数が多すぎます、少し減らしてください
+            start_time:
+              format: '%{message}'
+              blank: 入力必須項目です
+              taken: 設定した日付の日記は既に存在しています

@@ -18,7 +18,7 @@ ja:
       title: register
       to_login_page: already a member?
     create:
-      success: 新規登録できました
+      success: ご登録ありがとうございます
     destroy:
       success: 退会しました。ご利用ありがとうございました！
     follower:
@@ -34,7 +34,8 @@ ja:
       title: login
       to_register_page: make a new account
     create:
-      success: ログインしました
+      success: ログインしました。おかえりなさい
+      fail: パスワードまたはメールアドレスが違います
     destroy:
       success: ログアウトしました
   date:
