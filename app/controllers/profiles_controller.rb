@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to profiles_path
+      redirect_to profiles_path, success: t('.success', name: @user.name)
     else
       render :edit
     end

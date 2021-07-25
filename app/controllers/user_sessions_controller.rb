@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
   def create
     @user = login(params[:email], params[:password])
     if @user
-      redirect_to user_diaries_path(current_user)
+      redirect_to user_diaries_path(current_user), success: t('.success')
     else
       render :new
     end
@@ -18,6 +18,6 @@ class UserSessionsController < ApplicationController
   # ログアウト、トップページに遷移する
   def destroy
     logout
-    redirect_to root_path
+    redirect_to root_path, success: t('.success')
   end
 end

@@ -17,10 +17,26 @@ ja:
     new:
       title: register
       to_login_page: already a member?
+    create:
+      success: 新規登録できました
+    destroy:
+      success: 退会しました。ご利用ありがとうございました！
+    follower:
+      title: followers
+    following:
+      title: followings
+    index:
+      title: user search
+    search:
+      title: search result
   user_sessions:
     new:
       title: login
       to_register_page: make a new account
+    create:
+      success: ログインしました
+    destroy:
+      success: ログアウトしました
   date:
     abbr_day_names:
       - sun
@@ -49,6 +65,45 @@ ja:
       success: メールを送信しました
     update:
       success: パスワードを変更しました
+    edit:
+      title: reset password
+    new:
+      title: forgot password
   contacts:
     create:
       success: お問い合わせを受け付けました
+    new:
+      title: contact us
+  diaries:
+    create:
+      success: "%{date}の日記を作成しました"
+    update:
+      success: "%{date}の日記を更新しました"
+    edit:
+      title: edit diary
+    index:
+      title: "%{name} diary"
+    new:
+      title: new diary
+    show:
+      title: "%{date} diary"
+    destroy:
+      success: "%{date}の日記を削除しました"
+  profiles:
+    update:
+      success: "『%{name}』のプロフィールを更新しました"
+    edit:
+      title: edit profile
+    show:
+      title: profile
+  bookmarks:
+    index:
+      title: bookmarks
+  followers:
+    index:
+      title: friend diary
+  tops:
+    privacy:
+      title: privacy policy
+    uses:
+      title: terms of service
