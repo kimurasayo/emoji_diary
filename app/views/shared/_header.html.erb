@@ -2,11 +2,11 @@
   <nav class="navbar navbar-expand-lg navigation navbar-light fixed-top", id="header">
     <% if !logged_in? || (current_user.color == "pink") %>
       <%= link_to root_path, class: "navbar-brand cp_link" do %>
-        <img src="<%= asset_pack_path 'media/images/emory_pink.png' %>" >
+        <img src="<%= asset_pack_path 'media/images/emory_pink.jpg' %>" >
       <% end %>
     <% else %>
       <%= link_to root_path, class: "navbar-brand cp_link" do %>
-        <img src="<%= asset_pack_path 'media/images/emory_blue.png' %>" >
+        <img src="<%= asset_pack_path 'media/images/emory_blue.jpg' %>" >
       <% end %>
     <% end %>
       <button class="navbar-toggler" data-toggle="collapse" data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
