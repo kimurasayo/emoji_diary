@@ -334,8 +334,9 @@ ul {
 
 @media screen and (max-width:991px){
   table.login-btn2 {
-    margin: auto;
-    margin-bottom: 50px;
+    padding: auto;
+    position:fixed;
+    bottom: 40px;
   }
   
   .image-horizontal-scroll{
@@ -344,7 +345,7 @@ ul {
 
   .image-horizontal-scroll-smart{
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
