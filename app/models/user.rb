@@ -28,8 +28,13 @@ class User < ApplicationRecord
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
-  # emailは必須条件、一意であること
-  validates :email, uniqueness: true, presence: true
+  # emailのバリデーション
+  # コールバック。emailをセーブする前に全て小文字にする
+  before_save { self.email = email.downcase }
+  # emailの形式になっていてる確認する。@や.など必須項目があるか確認する
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  # emailは必須条件、一意であることを確認するときに大文字小文字の区別をしている
+  validates :email, {presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }}
 
   # nicknameは必須項目
   validates :nickname, presence: true
