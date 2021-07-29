@@ -20,7 +20,7 @@ body {
 .qr-image {
   display: flex;
   height: 100px;
-  length: 100px;
+  width: 100px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -286,20 +286,21 @@ table.login-btn {
 }
 
 @media screen and (min-width:992px) {
+  .image-horizontal-scroll-smart{
+    display: none;
+  }
+
   .image-horizontal-scroll{
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    margin: 10px;
+    margin-left: 80px;
+    margin-right: 50px;
   }
 
   .box{
 	  display: inline-block;
-	  width: 70% !important;
-  }
-
-  .login2 {
-    display: none;
+	  width: 75% !important;
   }
 
   table.login-btn2 {
@@ -309,7 +310,7 @@ table.login-btn {
 
   .home {
     padding-top: 0px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
   }
 }
 
@@ -333,17 +334,25 @@ ul {
 
 @media screen and (max-width:991px){
   table.login-btn2 {
-    display: none;
-    margin: auto;
-    margin-bottom: 50px;
+    padding: auto;
+    position:fixed;
+    bottom: 40px;
   }
-
+  
   .image-horizontal-scroll{
-    margin-top: 60px;
-    margin-bottom: 100px;
+    display: none;
   }
-}
 
-.login2 {
-  position: fixed;
+  .image-horizontal-scroll-smart{
+    margin-top: 0px;
+    margin-bottom: 100px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .box{
+	  display: inline-block;
+	  width: 90% !important;
+  }
 }

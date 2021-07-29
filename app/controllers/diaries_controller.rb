@@ -26,7 +26,7 @@ class DiariesController < ApplicationController
     # モデルにメソッド記載
     @diary.score_feeling
     if @diary.save
-      redirect_to user_diary_path(current_user.name, @diary)
+      redirect_to user_diary_path(current_user.name, @diary), success: t('.success', date: @diary.start_time.strftime("%-m月%-e日"))
     else
       render :new
     end
@@ -35,7 +35,7 @@ class DiariesController < ApplicationController
   # 日記消去アクション
   def destroy
     @diary.destroy
-    redirect_to user_diaries_path(current_user.name)
+    redirect_to user_diaries_path(current_user.name), success: t('.success', date: @diary.start_time.strftime("%-m月%-e日"))
   end
 
   # edit_user_diary_path
@@ -46,7 +46,7 @@ class DiariesController < ApplicationController
     if @diary.update(diary_params)
       @diary.score_feeling
       @diary.save
-      redirect_to user_diary_path(current_user.name, @diary)
+      redirect_to user_diary_path(current_user.name, @diary), success: t('.success', date: @diary.start_time.strftime("%-m月%e日"))
     else
       render :edit
     end

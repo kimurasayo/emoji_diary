@@ -1,7 +1,6 @@
 /* ユーザー検索のフォーム、タイトルを含めたクラス */
 .searching {
   margin: 100px;
-  padding: 100px;
 }
 
 .user_search{
@@ -66,6 +65,12 @@
 
 /* ユーザー検索結果のテーブル、タイトル全てを含めたクラス */
 .resulting {
+  margin-top: 100px;
+  margin-bottom: 180px;
+}
+
+/* フォローしている人、フォロワーの一覧、プロフィール */
+.follow-relation {
   margin-top: 100px;
   margin-bottom: 180px;
 }

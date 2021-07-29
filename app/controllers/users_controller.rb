@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user.nickname = @user.emoji_nickname
     if @user.save
       auto_login(@user)
-      redirect_to new_user_diary_path(@user)
+      redirect_to new_user_diary_path(@user), success: t('.success')
     else
       render :new
     end
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     # userのnemeをパラメータで取得してユーザーを指定する
     @user = User.find_by(name: params[:name])
     @user.destroy
-    redirect_to root_path, success: 'thank you'
+    redirect_to root_path, success: t('.success')
   end
 
   # フォローしている人全員
