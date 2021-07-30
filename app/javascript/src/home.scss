@@ -5,7 +5,7 @@
 
 /* フラッシュメッセージが見えるように */
 body { 
-  padding-top: 60px; 
+  padding-top: 65px; 
 }
 
 /* 画像をレスポンシブ対応させる */
@@ -355,4 +355,8 @@ ul {
 	  display: inline-block;
 	  width: 90% !important;
   }
+}
+
+.top-calendar {
+  color: gray;
 }
