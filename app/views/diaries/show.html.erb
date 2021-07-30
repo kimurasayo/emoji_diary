@@ -9,15 +9,25 @@
         <div class="text-right">
           <%= render 'bookmarks/bookmark_button', { diary: @diary } %>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-xl-3">
-            <%= button_to 'edit', edit_user_diary_path(current_user.name, @diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' %>
-          </div>
-          <div class="col-12 col-xl-3">
-            <%= button_to 'delete', user_diary_path(current_user.name, @diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
+
+        <% if current_user.id == @diary.user.id %>
+          <div class="row justify-content-center">
+            <div class="col-12 col-xl-3">
+              <%= button_to 'edit', edit_user_diary_path(current_user.name, @diary), id: "button-edit-#{@diary.id}", method: :get, class:'btn btn-normal' %>
+            </div>
+            <div class="col-12 col-xl-3">
+              <%= button_to 'delete', user_diary_path(current_user.name, @diary), id: "button-delete-#{@diary.id}", method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
               削除してもよろしいですか?", commit: 'delete', cancel: 'cancel' }, class:'btn btn-normal' %>
+            </div>
           </div>
-        </div>
+          <div class="text-center">
+            <%= button_to 'back', user_diaries_path(@user.name), method: :get, class:'btn btn-normal' %>
+          </div>
+        <% else %>
+          <%= button_to user_diaries_path(@user), id: "button-edit-#{@diary.id}", method: :get, class:'btn-show-back' do %>
+            <%= @user.name %>'s diary
+          <% end %>
+        <% end %>
     </div>
   </div>
 </div>
