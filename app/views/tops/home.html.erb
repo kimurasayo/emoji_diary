@@ -6,7 +6,10 @@
   <% if !logged_in? || (current_user.color == "pink") %>
     <ul class="image-horizontal-scroll">
     <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top.jpg' %>" class="img-responsive" ></div>
+      <div><%= link_to index_path do %>
+        <img src="<%= asset_pack_path 'media/images/top.jpg' %>" class="img-responsive" >
+        <% end %>
+      </div>
     </li>
     <li class="box">
       <div><img src="<%= asset_pack_path 'media/images/top1.jpg' %>" class="img-responsive" ></div>
@@ -24,7 +27,10 @@
 
     <ul class="image-horizontal-scroll-smart">
     <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top-smart.jpg' %>" class="img-responsive" ></div>
+      <div><%= link_to index_path do %>
+        <img src="<%= asset_pack_path 'media/images/top-smart.jpg' %>" class="img-responsive" >
+        <% end %>
+      </div>
     </li>
     <li class="box">
       <div><img src="<%= asset_pack_path 'media/images/top1-smart.jpg' %>" class="img-responsive" ></div>
@@ -42,7 +48,10 @@
   <% else %>
     <ul class="image-horizontal-scroll">
     <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top-blue.jpg' %>" class="img-responsive" ></div>
+      <div><%= link_to index_path do %>
+        <img src="<%= asset_pack_path 'media/images/top-blue.jpg' %>" class="img-responsive" >
+        <% end %>
+      </div>
     </li>
     <li class="box">
       <div><img src="<%= asset_pack_path 'media/images/top1-blue.jpg' %>" class="img-responsive" ></div>
@@ -60,7 +69,10 @@
 
     <ul class="image-horizontal-scroll-smart">
     <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top-smart-blue.jpg' %>" class="img-responsive" ></div>
+      <div><%= link_to index_path do %>
+        <img src="<%= asset_pack_path 'media/images/top-smart-blue.jpg' %>" class="img-responsive" >
+        <% end %>
+      </div>
     </li>
     <li class="box">
       <div><img src="<%= asset_pack_path 'media/images/top1-smart-blue.jpg' %>" class="img-responsive" ></div>
