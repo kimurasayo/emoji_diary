@@ -369,12 +369,27 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-10 {
+  background: #8F85AF;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 10px 20px 30px 40px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-10:hover {
 	background: #8F85AF;
   border-radius: 20px;
   transition: 0.3s;
 }
 
+#emoji-feeling-top-10:hover {
+	background: #8F85AF;
+  border-radius: 20px;
+  transition: 0.3s;
+}
 
 #emoji-feeling-20 {
   background: #8F85AF;
@@ -385,7 +400,23 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-20 {
+  background: #8F85AF;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 20px 30px 40px 10px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-20:hover {
+	background: #8F85AF;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-top-20:hover {
 	background: #8F85AF;
   border-radius: 20px;
   transition: 0.3s;
@@ -400,7 +431,23 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-30 {
+  background: #89BCD6;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 30px 40px 10px 20px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-30:hover {
+  background: #89BCD6;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-top-30:hover {
   background: #89BCD6;
   border-radius: 20px;
   transition: 0.3s;
@@ -415,7 +462,23 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-40 {
+  background: #89BCD6;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 40px 10px 20px 30px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-40:hover {
+  background: #89BCD6;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-top-40:hover {
   background: #89BCD6;
   border-radius: 20px;
   transition: 0.3s;
@@ -430,7 +493,23 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-50 {
+  background: #B9C998;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 10px 30px 20px 40px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-50:hover {
+  background: #B9C998;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-top-50:hover {
   background: #B9C998;
   border-radius: 20px;
   transition: 0.3s;
@@ -445,7 +524,23 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-60 {
+  background: #B9C998;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 10px 40px 30px 20px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-60:hover {
+  background: #B9C998;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-top-60:hover {
   background: #B9C998;
   border-radius: 20px;
   transition: 0.3s;
@@ -460,7 +555,23 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-70 {
+  background: #DED799;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 20px 10px 40px 30px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-70:hover {
+  background: #DED799;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-top-70:hover {
   background: #DED799;
   border-radius: 20px;
   transition: 0.3s;
@@ -475,7 +586,23 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-80 {
+  background: #DED799;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 20px 40px 10px 30px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-80:hover {
+  background: #DED799;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-top-80:hover {
   background: #DED799;
   border-radius: 20px;
   transition: 0.3s;
@@ -490,7 +617,23 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-90 {
+  background: #D49A9C;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 30px 10px 20px 40px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-90:hover {
+  background: #D49A9C;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-top-90:hover {
   background: #D49A9C;
   border-radius: 20px;
   transition: 0.3s;
@@ -505,7 +648,23 @@ input:checked + .tab_class + .content_class {
   transition: 0.3s;
 }
 
+#emoji-feeling-top-100 {
+  background: #D49A9C;
+  width: 100%;
+  margin: 10px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 20px 40px 30px 10px;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
 #emoji-feeling-100:hover {
+  background: #D49A9C;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#emoji-feeling-top-100:hover {
   background: #D49A9C;
   border-radius: 20px;
   transition: 0.3s;
@@ -620,4 +779,9 @@ input:checked + .tab_class + .content_class {
   33.33333% { transform: translateY(-10px) }
   66.66667% { transform: translateY(-20px) }
   100% { transform: translateY(0) }
+}
+
+all-diaries {
+  padding: 5px;
+  float: left;
 }

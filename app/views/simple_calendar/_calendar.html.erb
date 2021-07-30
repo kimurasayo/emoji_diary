@@ -5,9 +5,9 @@
     <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
   </div>
 
-  <table class="table">
+  <table class="table table-sm">
     <thead>
-      <tr>
+      <tr class="week">
         <% date_range.slice(0, 7).each do |day| %>
           <th><%= t('date.abbr_day_names')[day.wday] %></th>
         <% end %>

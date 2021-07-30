@@ -48,4 +48,6 @@
   </div>
 </div>
 
-<%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
+<% if logged_in? %>
+  <%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
+<% end %>
