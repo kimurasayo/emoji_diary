@@ -9,7 +9,9 @@
         <h1 class="calendar-name">
           <%= @user.nickname %><%= @user.name %>
         </h1>
-        <%= render 'relationships/follow_button_area', user: @user %>
+        <% if logged_in? %>
+          <%= render 'relationships/follow_button_area', user: @user %>
+        <% end %>
       <% else %>
         <h1 class="calendar-name">
           <%= link_to profiles_path, class: "calendar-name-link" do %>
@@ -18,10 +20,11 @@
         </h1>
       <% end %>
     </div>
-    
+    <% if logged_in? %>
     <div class="row justify-content-center">
       <%= render 'relationships/follow_count_area', user: @user %>
     </div>
+    <% end %>
 
     <div class="row">
       <div class="col-12 col-lg-6">
