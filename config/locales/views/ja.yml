@@ -1,7 +1,7 @@
 ja:
   defaults:
     login: login
-    register: register
+    register: sign up
     submit: submit
     logout: logout
     save: save
@@ -15,7 +15,7 @@ ja:
     friends_diary: friend's diary
   users:
     new:
-      title: register
+      title: sign up
       to_login_page: already a member?
     create:
       success: ご登録ありがとうございます

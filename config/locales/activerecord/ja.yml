@@ -32,6 +32,7 @@ ja:
               format: '%{message}'
               blank: 入力必須項目です
               taken: 既に存在するメールアドレスです
+              invalid: 正しいメールアドレスを入力してください
             password:
               format: '%{message}'
               too_short: 8文字以上入力してください
