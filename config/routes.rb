@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'privacy', to: 'tops#privacy'
   get 'uses', to: 'tops#uses'
   get 'line', to: 'tops#line'
+  get 'index', to: 'tops#index'
 
   # ユーザーのパスには:nameが入るようにしてあります
   resources :users, param: :name, only: [:new, :create, :index, :destroy] do

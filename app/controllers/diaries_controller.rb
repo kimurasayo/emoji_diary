@@ -1,5 +1,6 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: %i[edit update destroy]
+  skip_before_action :require_login, only: %i[index]
   # user_diaries_path。ユーザーのidをパラメータで受け取って、@userに入れる。
   # @userの日記一覧を@diariesに入れる。
   def index

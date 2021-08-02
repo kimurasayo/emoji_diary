@@ -9,7 +9,9 @@
         <h1 class="calendar-name">
           <%= @user.nickname %><%= @user.name %>
         </h1>
-        <%= render 'relationships/follow_button_area', user: @user %>
+        <% if logged_in? %>
+          <%= render 'relationships/follow_button_area', user: @user %>
+        <% end %>
       <% else %>
         <h1 class="calendar-name">
           <%= link_to profiles_path, class: "calendar-name-link" do %>
@@ -18,10 +20,11 @@
         </h1>
       <% end %>
     </div>
-    
+    <% if logged_in? %>
     <div class="row justify-content-center">
       <%= render 'relationships/follow_count_area', user: @user %>
     </div>
+    <% end %>
 
     <div class="row">
       <div class="col-12 col-lg-6">
@@ -30,13 +33,7 @@
       
           <% diaries.each do |diary| %>
             <div class="feeling">
-              <%= link_to diary.feeling, user_diary_path(@user, diary), id: "emoji-feeling-#{diary.score}", class: "feeling-link", remote: true, :data => {:toggle=>"modal", :target => "#recordModal", :backdrop => "true"} %>
-              <div class="modal fade" id="recordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                  </div>
-                </div>
-              </div>
+              <%= link_to diary.feeling, user_diary_path(@user, diary), id: "emoji-feeling-#{diary.score}", class: "feeling-link" %>
             </div>
           <% end %>
         <% end %>
@@ -45,7 +42,14 @@
         <%= area_chart @diaries.current_month.group(:start_time).sum(:score) %>
       </div>
     </div>
+    <% if !logged_in? %>
+    <div class="text-center">
+      <%= button_to 'back', index_path, method: :get, class:'btn btn-normal' %>
+    </div>
+    <% end %>
   </div>
 </div>
 
-<%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
+<% if logged_in? %>
+  <%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
+<% end %>

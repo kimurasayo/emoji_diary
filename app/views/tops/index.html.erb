@@ -1,0 +1,22 @@
+<% content_for(:title, 'everyone diary') %>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="friend-calendar col-12 col-md-8">
+    <p class="text-center top-calendar">気になる絵文字をクリックしてみてください。<br>日記を書いたユーザーのページをみることができます。</p>
+      <%= week_calendar events: @diaries do |date, diaries| %>
+        <%= date %>
+      
+        <% diaries.shuffle.first(7).each do |diary| %>
+          <% @user = diary.user %>
+          <div class="feeling text-center" %>
+            <%= link_to diary.feeling, user_diaries_path(@user), id: "emoji-feeling-top-#{diary.score}", class: "feeling-link" %>
+          </div>
+        <% end %>
+      <% end %>
+      <div class="text-center">
+      <%= button_to 'back', root_path, method: :get, class:'btn btn-normal' %>
+      </div>
+    </div>
+  </div>
+</div>
