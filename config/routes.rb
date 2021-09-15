@@ -43,5 +43,7 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:new, :create]
 
+  post 'guest', to: 'guest_sessions#create'
+
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end
