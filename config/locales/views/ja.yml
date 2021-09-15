@@ -35,7 +35,7 @@ ja:
       to_register_page: make a new account
     create:
       success: ログインしました。おかえりなさい
-      fail: パスワードまたはメールアドレスが違います
+      fail: ログインに失敗しました。
     destroy:
       success: ログアウトしました
   date:
