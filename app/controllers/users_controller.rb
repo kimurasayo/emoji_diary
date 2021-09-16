@@ -9,7 +9,11 @@ class UsersController < ApplicationController
   # ransackを使って検索したユーザーを@qに入れている
   # ユーザー検索ページ
   def index
-    @q = User.ransack(params[:q])
+    if current_user.name == 'guest'
+      redirect_to user_diaries_path(current_user), success: "『ゲスト』はユーザー検索できません"
+    else
+      @q = User.ransack(params[:q])
+    end
   end
 
   # 新規作成したユーザー
@@ -36,9 +40,13 @@ class UsersController < ApplicationController
   def destroy
     #　@user = User.find(params[:id])
     # userのnemeをパラメータで取得してユーザーを指定する
-    @user = User.find_by(name: params[:name])
-    @user.destroy
-    redirect_to root_path, success: t('.success')
+    if current_user.name == 'guest'
+      redirect_to profiles_path, success: "『ゲスト』は退会できません"
+    else
+      @user = User.find_by(name: params[:name])
+      @user.destroy
+      redirect_to root_path, success: t('.success')
+    end
   end
 
   # フォローしている人全員
