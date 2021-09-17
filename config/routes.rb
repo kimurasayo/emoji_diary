@@ -14,11 +14,7 @@ Rails.application.routes.draw do
     get 'following', to: 'users#following'
     get 'follower', to: 'users#follower'
 
-    resources :diaries do
-      member do
-        resources :bookmarks, only: [:index]
-      end
-    end
+    resources :diaries
   end
 
   resources :relationships, only: [:create, :destroy]
@@ -42,6 +38,8 @@ Rails.application.routes.draw do
   resources :password_resets, only: [:new, :create, :edit, :update]
 
   resources :contacts, only: [:new, :create]
+
+  post 'guest', to: 'guest_sessions#create'
 
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end

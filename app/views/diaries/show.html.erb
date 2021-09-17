@@ -33,7 +33,7 @@
 </div>
 </div>
 
-<% if @user == current_user %>
+<% if @user == current_user && ( current_user.name != "guest" ) %>
   <%= link_to "https://twitter.com/intent/tweet?text=#{current_user.nickname}#{@diary.start_time.strftime("%-m月%e日")}の日記%0a%22#{@diary.feeling}#{@diary.body}%22%0a%0a#{current_user.name}さんの日記を見てみる→&url=https://www.emory.app/users/#{current_user.name}/diaries&hashtags=絵文字,日記%0a",
         target: '_blank', rel: "noopener noreferrer", class: "btn-social-circle btn-social-circle--twitter" do %>
           <i class="fab fa-twitter"></i>

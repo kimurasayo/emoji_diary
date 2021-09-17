@@ -2,7 +2,11 @@ class UserSessionsController < ApplicationController
   # new, createアクション(ログイン)の前にrequire_loginを行わない
   skip_before_action :require_login, only: %i[new create]
 
-  def new; end
+  def new
+    if current_user
+      redirect_to user_diaries_path(current_user.name), danger: t('.fail')
+    end
+  end
 
   # ログイン時はnameとpasswordの情報でDBからユーザーを探す
   # もしユーザーが探せたら自分の日記一覧ページに遷移、一致しなかったらログインページに遷移
@@ -11,6 +15,7 @@ class UserSessionsController < ApplicationController
     if @user
       redirect_back_or_to user_diaries_path(current_user), success: t('.success')
     else
+      flash[:danger] = t('.fail')
       render :new
     end
   end

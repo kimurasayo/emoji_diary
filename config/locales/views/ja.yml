@@ -17,6 +17,7 @@ ja:
     new:
       title: sign up
       to_login_page: already a member?
+      fail: 既にログインしています
     create:
       success: ご登録ありがとうございます
     destroy:
@@ -33,9 +34,10 @@ ja:
     new:
       title: login
       to_register_page: make a new account
+      fail: 既にログインしています
     create:
       success: ログインしました。おかえりなさい
-      fail: パスワードまたはメールアドレスが違います
+      fail: ログインに失敗しました。
     destroy:
       success: ログアウトしました
   date:

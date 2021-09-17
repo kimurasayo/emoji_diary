@@ -31,6 +31,15 @@ input[type="radio"]:checked + label.face {
   margin-bottom: 50px;
 }
 
+/* 詳細画面の日付 */
+.show-date-friend {
+  letter-spacing: 0.15em;
+  color: gray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
 /* 絵文字日記の本文 */
 .rounded {
   letter-spacing: 0.5em;
@@ -39,12 +48,32 @@ input[type="radio"]:checked + label.face {
   margin: 10px;
 }
 
+/* 友達の日記一覧の表示部分 */
+.rounded-friend {
+  letter-spacing: 0.5em;
+  background-color: var(--color3);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
 /* 日記詳細の枠 */
 .diary-show {
   margin-top: 30px;
   margin-bottom: 150px;
   padding-top: 10px;
   padding-bottom: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+}
+
+/* 友達の日記一覧の日記表示部分 */
+.diary-show-friend {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-top: 10px;
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 20px;
@@ -109,9 +138,9 @@ input[type="radio"]:checked + label.face {
 
 /* いいねボタン */
 .like-btn {
-  width: 50px;
-  height: 65px;
-  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
   color: #e54747; 
   margin-left: 20px;
 }
@@ -122,25 +151,15 @@ input[type="radio"]:checked + label.face {
 
 /* いいね解除ボタン */
 .unlike-btn {
-  width: 50px;
-  height: 65px;
-  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
   color: #e54747;
   margin-left: 20px;
 }
 
 .unlike-btn:hover {
   text-decoration: none;
-}
-
-/* いいね数 */
-.count {
-  color: #e54747;
-}
-
-/* いいね数を部分にカーソル当てた時 */
-.count:hover {
-  color: #e54747;
 }
 
 .calendar {
@@ -157,6 +176,10 @@ input[type="radio"]:checked + label.face {
 /* 友達の日記一覧ページの友達の名前 */
 h4.calendar-name {
   margin-top: 50px;
+}
+
+h4.friend-diary-name {
+  margin-top: 10px;
 }
 
 /* 日記一覧のタイトルになってる名前の編集ページにいくリンク */
@@ -850,4 +873,14 @@ input:checked + .tab_class + .content_class {
 all-diaries {
   padding: 5px;
   float: left;
+}
+
+
+// 友達の日記一覧のいいねボタンと日付を横並びにする
+.box2{
+  float: left;
+}
+
+.boxContainer{
+  overflow: hidden;
 }

@@ -5,7 +5,11 @@ class ProfilesController < ApplicationController
   def show; end
 
   # DBから取得したオブジェクトを使用する。
-  def edit; end
+  def edit
+    if current_user.name == 'guest'
+      redirect_to profiles_path, success: "『ゲスト』はプロフィールを編集できません"
+    end
+  end
 
   def update
     if @user.update(user_params)
