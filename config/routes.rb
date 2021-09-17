@@ -14,11 +14,7 @@ Rails.application.routes.draw do
     get 'following', to: 'users#following'
     get 'follower', to: 'users#follower'
 
-    resources :diaries do
-      member do
-        resources :bookmarks, only: [:index]
-      end
-    end
+    resources :diaries
   end
 
   resources :relationships, only: [:create, :destroy]

@@ -16,37 +16,25 @@
           </div>
         </div>
       <% else %>
-        <div class="text-center">
-          <%= search_form_for @q, url: user_followers_path do |f| %>
-            <%= f.search_field :name_cont, placeholder: 'user name' %>
-          <%= f.submit t('defaults.search'), class: 'btn btn-search' %>
-          <% end %>
-        </div>
-        <% @users.each do |user| %>
-          <h4 class="calendar-name">
-            <%= link_to user_diaries_path(user.name), class: "calendar-name-link" do %>
-              <%= user.nickname %> <%= user.name %>
-            <% end %>
-          </h4>
-          <% @diaries = Diary.where(user_id: user.id) %>
-          <%= week_calendar events: @diaries do |date, diaries| %>
-            <%= date %>
-            <% diaries.each do |diary| %>
-              <div class="feeling">
-              <%= link_to diary.feeling, user_diary_path(user.name, diary), id: "emoji-feeling-#{diary.score}", class: "feeling-link", remote: true, :data => {:toggle=>"modal", :target => "#recordModal", :backdrop => "true"} %>
-              <div class="modal fade" id="recordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                  </div>
-                </div>
+        <% @diaries.each do |diary| %>
+          <% @users.each do |user| %>
+            <% if diary.user_id == user.id %>
+              <div class="diary-show-friend">
+                <h4 class="friend-diary-name">
+                  <%= link_to user_diaries_path(user.name), class: "calendar-name-link" do %>
+                    <%= user.nickname %> <%= user.name %>
+                  <% end %>
+                </h4>
+                <h4 class="rounded-friend"><%= diary.feeling %><%= diary.body %></h4>
+                  <h6 class="show-date-friend"><%= diary.start_time.strftime("%b %d,%Y(%a)") %>
+                  <%= render 'bookmarks/bookmark_button', { diary: diary } %></h6>
               </div>
-            </div>
             <% end %>
           <% end %>
         <% end %>
-          <div class="row justify-content-center">
-            <%== pagy_bootstrap_nav(@pagy) %>
-          </div>
+        <div class="row justify-content-center">
+          <%== pagy_bootstrap_nav(@pagy) %>
+        </div>
       <% end %>
     </div>
   </div>
