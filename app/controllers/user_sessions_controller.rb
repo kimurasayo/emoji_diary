@@ -15,7 +15,7 @@ class UserSessionsController < ApplicationController
     if @user
       redirect_back_or_to user_diaries_path(current_user), success: t('.success')
     else
-      flash[:danger] = t('.fail')
+      flash.now[:danger] = t('.fail')
       render :new
     end
   end
