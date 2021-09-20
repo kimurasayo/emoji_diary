@@ -1,105 +1,50 @@
 <% content_for(:title) %>
 
 <div class='top-wrapper'>
-  <div class='home col-12'>
+  <div class='col-12 home'>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <% if !logged_in? || (current_user.color == "pink") %>
+        <img src="<%= asset_pack_path 'media/images/emory_top.jpg' %>" class="" >
+      <% else %>
+        <img src="<%= asset_pack_path 'media/images/emory_top_blue.jpg' %>" class="" >
+      <% end %>
+    </div>
+    <div class="col-12 col-lg-6 d-flex">
+      <% if !logged_in? %>
+        <div class="">
+          <div class="col-12 col-xl-3">
+            <%= button_to t('defaults.login'), login_path, method: :get, class:'btn btn-normal' %>
+          </div>
+          <div class="col-12 col-xl-3">
+            <%= button_to t('defaults.register'), new_user_path, method: :get, class:'btn btn-normal' %>
+          </div>
+    
+          <div class="text-center">
+            <%= button_to 'guest login', guest_path, method: :post, class:'btn btn-normal' %>
+          </div>
+        </div>
+      <% else %>
+      <div class="">
+        <div class="text-center">
+          <p>絵文字だけで日記をつけて友達とシェアしませんか？</p>
+        </div>
+        <div class="col-12 col-xl-3">
+          <%= button_to t('defaults.mine'), user_diaries_path(current_user), method: :get, class:'btn btn-normal' %>
+        </div>
+        <div class="col-12 col-xl-3">
+          <%= button_to t('defaults.logout'), logout_path, method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
+          ログアウトしますか?", commit: 'logout', cancel: 'cancel' }, class:'btn btn-normal' %>
+        </div>
+      </div>
 
-  <% if !logged_in? || (current_user.color == "pink") %>
-    <ul class="image-horizontal-scroll">
-    <li class="box">
-      <div><%= link_to index_path do %>
-        <img src="<%= asset_pack_path 'media/images/top.jpg' %>" class="img-responsive" >
-        <% end %>
-      </div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top1.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top2.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-    <div><img src="<%= asset_pack_path 'media/images/top3.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-    <div><img src="<%= asset_pack_path 'media/images/top4.jpg' %>" class="img-responsive" ></div>
-    </li>
-    </ul>
-
-    <ul class="image-horizontal-scroll-smart">
-    <li class="box">
-      <div><%= link_to index_path do %>
-        <img src="<%= asset_pack_path 'media/images/top-smart.jpg' %>" class="img-responsive" >
-        <% end %>
-      </div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top1-smart.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top2-smart.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top3-smart.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top4-smart.jpg' %>" class="img-responsive" ></div>
-    </li>
-    </ul>
-  <% else %>
-    <ul class="image-horizontal-scroll">
-    <li class="box">
-      <div><%= link_to index_path do %>
-        <img src="<%= asset_pack_path 'media/images/top-blue.jpg' %>" class="img-responsive" >
-        <% end %>
-      </div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top1-blue.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top2-blue.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top3-blue.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top4-blue.jpg' %>" class="img-responsive" ></div>
-    </li>
-    </ul>
-
-    <ul class="image-horizontal-scroll-smart">
-    <li class="box">
-      <div><%= link_to index_path do %>
-        <img src="<%= asset_pack_path 'media/images/top-smart-blue.jpg' %>" class="img-responsive" >
-        <% end %>
-      </div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top1-smart-blue.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top2-smart-blue.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top3-smart-blue.jpg' %>" class="img-responsive" ></div>
-    </li>
-    <li class="box">
-      <div><img src="<%= asset_pack_path 'media/images/top4-smart-blue.jpg' %>" class="img-responsive" ></div>
-    </li>
-    </ul>
+      <%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
+  </div>
   <% end %>
 
-    <% if !logged_in? %>
-    <table class="login-btn2">
-      <tr>
-        <td><%= button_to t('defaults.login'), login_path, method: :get, class:'btn btn-normal' %></td>
-        <td><%= button_to t('defaults.register'), new_user_path, method: :get, class:'btn btn-normal' %></td>
-        <td><%= button_to 'guest login', guest_path, method: :post, class:'btn btn-normal' %></td>
-      </tr>
-    </table>
-    <% else %>
-    <%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
-    <% end %>
-
-  </div>      
+  <p>------------------------------</p>
+  <p>友達の日記をのぞき見👀絵文字だけで書かれた日記を見て、友達の1日がどんな1日だったのか想像してみてね。</p>
+  <p>感情の変化が一目でわかる！疲れた日が続いているのにスグ気付けるよ。</p>
+  
+  </div>
 </div>
