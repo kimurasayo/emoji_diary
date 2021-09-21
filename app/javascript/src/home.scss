@@ -29,7 +29,7 @@ body {
 @media screen and (min-width:600px){
   /*600px以上で適用する内容*/
   .calendar {
-    padding: 40px;
+    padding: 10px 40px;
   }
 
   .resulting {
@@ -307,10 +307,15 @@ table.login-btn {
     margin: auto;
     margin-bottom: 100px;
   }
-
+  
   .home {
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
+  }
+
+  .top-image1 {
+    height: 333px;
+    width: 500px;
   }
 }
 
@@ -328,7 +333,7 @@ ul {
 }
 
 .home {
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 50px;
 }
 
@@ -338,25 +343,31 @@ ul {
     position:fixed;
     bottom: 40px;
   }
-  
-  .image-horizontal-scroll{
-    display: none;
-  }
-
-  .image-horizontal-scroll-smart{
-    margin-top: 0px;
-    margin-bottom: 100px;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
 
   .box{
 	  display: inline-block;
 	  width: 90% !important;
   }
+
+  .top-image {
+    height: 300px;
+    width: 300px;
+  }
+
+  .top-image1 {
+    height: 166px;
+    width: 250px;
+  }
+
+  .top-card {
+    margin-top: 50px;
+  }
 }
 
 .top-calendar {
   color: gray;
+}
+
+.top-card {
+  margin-bottom: 70px;
 }
