@@ -307,7 +307,7 @@ table.login-btn {
     margin: auto;
     margin-bottom: 100px;
   }
-
+  
   .home {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -328,7 +328,7 @@ ul {
 }
 
 .home {
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 50px;
 }
 
@@ -338,22 +338,15 @@ ul {
     position:fixed;
     bottom: 40px;
   }
-  
-  .image-horizontal-scroll{
-    display: none;
-  }
-
-  .image-horizontal-scroll-smart{
-    margin-top: 0px;
-    margin-bottom: 100px;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
 
   .box{
 	  display: inline-block;
 	  width: 90% !important;
+  }
+
+  .top-image {
+    height: 300px;
+    width: 300px;
   }
 }
 

@@ -1,50 +1,57 @@
 <% content_for(:title) %>
 
 <div class='top-wrapper'>
-  <div class='col-12 home'>
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-6">
-      <% if !logged_in? || (current_user.color == "pink") %>
-        <img src="<%= asset_pack_path 'media/images/emory_top.jpg' %>" class="" >
+  <div class="col-12 home">
+    <div class="row justify-content-center">
+      <% if !logged_in? %>
+        <% if !logged_in? || (current_user.color == "pink") %>
+          <img src="<%= asset_pack_path 'media/images/emory_top.jpg' %>" class="top-image">
+        <% else %>
+          <img src="<%= asset_pack_path 'media/images/emory_top_blue.jpg' %>" class="top-image" >
+        <% end %>
+        
+        <div class="d-flex align-items-center text-center">
+          <div class="text-center">
+            <p>絵文字だけで日記をつけて
+            <br>友達とシェアしませんか？</p>
+            <div class="">
+              <%= button_to t('defaults.login'), login_path, method: :get, class:'btn btn-normal' %>
+            </div>
+            <div class="">
+              <%= button_to t('defaults.register'), new_user_path, method: :get, class:'btn btn-normal' %>
+            </div>
+            <div class="">
+              <%= button_to 'guest login', guest_path, method: :post, class:'btn btn-normal' %>
+            </div>
+          </div>
+        </div>
       <% else %>
-        <img src="<%= asset_pack_path 'media/images/emory_top_blue.jpg' %>" class="" >
+        <div class="text-center">
+          <% if !logged_in? || (current_user.color == "pink") %>
+            <img src="<%= asset_pack_path 'media/images/emory_top.jpg' %>" class="top-image">
+          <% else %>
+            <img src="<%= asset_pack_path 'media/images/emory_top_blue.jpg' %>" class="top-image" >
+          <% end %>
+        </div>
+        <div class="d-flex align-items-center text-center">
+          <div class="text-center">
+            <p>絵文字だけで日記をつけて
+            <br>友達とシェアしませんか？</p>
+            <div class="">
+              <%= button_to t('defaults.mine'), user_diaries_path(current_user), method: :get, class:'btn btn-normal' %>
+            </div>
+            <div class="">
+              <%= button_to t('defaults.logout'), logout_path, method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
+              ログアウトしますか?", commit: 'logout', cancel: 'cancel' }, class:'btn btn-normal' %>
+            </div>
+          </div>
+        </div>
+        <%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
       <% end %>
     </div>
-    <div class="col-12 col-lg-6 d-flex">
-      <% if !logged_in? %>
-        <div class="">
-          <div class="col-12 col-xl-3">
-            <%= button_to t('defaults.login'), login_path, method: :get, class:'btn btn-normal' %>
-          </div>
-          <div class="col-12 col-xl-3">
-            <%= button_to t('defaults.register'), new_user_path, method: :get, class:'btn btn-normal' %>
-          </div>
-    
-          <div class="text-center">
-            <%= button_to 'guest login', guest_path, method: :post, class:'btn btn-normal' %>
-          </div>
-        </div>
-      <% else %>
-      <div class="">
-        <div class="text-center">
-          <p>絵文字だけで日記をつけて友達とシェアしませんか？</p>
-        </div>
-        <div class="col-12 col-xl-3">
-          <%= button_to t('defaults.mine'), user_diaries_path(current_user), method: :get, class:'btn btn-normal' %>
-        </div>
-        <div class="col-12 col-xl-3">
-          <%= button_to t('defaults.logout'), logout_path, method: :delete, data: { confirm: "<i class='fa fa-exclamation-circle'></i>
-          ログアウトしますか?", commit: 'logout', cancel: 'cancel' }, class:'btn btn-normal' %>
-        </div>
-      </div>
-
-      <%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
-  </div>
-  <% end %>
-
-  <p>------------------------------</p>
-  <p>友達の日記をのぞき見👀絵文字だけで書かれた日記を見て、友達の1日がどんな1日だったのか想像してみてね。</p>
-  <p>感情の変化が一目でわかる！疲れた日が続いているのにスグ気付けるよ。</p>
-  
+    <div class="text-center">
+      <p>友達の日記をのぞき見👀絵文字だけで書かれた日記を見て、友達の1日がどんな1日だったのか想像してみてね。</p>
+      <p>感情の変化が一目でわかる！疲れた日が続いているのにスグ気付けるよ。</p>
+    </div>
   </div>
 </div>
