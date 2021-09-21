@@ -310,7 +310,12 @@ table.login-btn {
   
   .home {
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
+  }
+
+  .top-image1 {
+    height: 333px;
+    width: 500px;
   }
 }
 
@@ -348,8 +353,21 @@ ul {
     height: 300px;
     width: 300px;
   }
+
+  .top-image1 {
+    height: 166px;
+    width: 250px;
+  }
+
+  .top-card {
+    margin-top: 50px;
+  }
 }
 
 .top-calendar {
   color: gray;
+}
+
+.top-card {
+  margin-bottom: 70px;
 }

@@ -49,9 +49,27 @@
         <%= link_to "write diary", new_user_diary_path(current_user.name), class: "btn-circle-border" %>
       <% end %>
     </div>
-    <div class="text-center">
-      <p>友達の日記をのぞき見👀絵文字だけで書かれた日記を見て、友達の1日がどんな1日だったのか想像してみてね。</p>
-      <p>感情の変化が一目でわかる！疲れた日が続いているのにスグ気付けるよ。</p>
+    <div class="row justify-content-center text-center">
+      <div class="col-11 card-deck top-card">
+        <div class="card">
+          <div class="card-body">
+            <p>カレンダーの色とグラフをみたら
+            <br>感情の変化が一目でわかる！
+            <br>疲れた日が続いているのにスグ気付けるよ。</p>
+            <img src="<%= asset_pack_path 'media/images/top-calendar.png' %>" class="top-image1">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <p>友達の日記をのぞき見👀
+            <br>絵文字だけで書かれた日記を見て、
+            <br>友達の1日がどんな1日だったのか想像してみてね。</p>
+            <img src="<%= asset_pack_path 'media/images/top-show.png' %>" class="top-image1">
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
