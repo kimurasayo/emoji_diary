@@ -64,10 +64,30 @@
   | ---- | ---- |
   | <img width="1180" alt="diary-new" src="https://user-images.githubusercontent.com/76583053/134182779-b3516635-fce4-4b45-af65-1f78d881f4c9.png"> | <img width="1197" alt="blue-top" src="https://user-images.githubusercontent.com/76583053/134195311-373f8e15-ba60-433a-8112-c1f64550004b.png"> |
   
-  <br>
-  
-  ## 🌼ER図
-  <img width="541" alt="er" src="https://user-images.githubusercontent.com/76583053/134193703-0ca4d7d8-0d48-4c25-b169-876f19997a5e.png">
-
   
   </div>
+
+  <br>
+  
+***
+ 
+  <br>
+  
+  ### 🌸ER図
+  <img width="541" alt="er" src="https://user-images.githubusercontent.com/76583053/134193703-0ca4d7d8-0d48-4c25-b169-876f19997a5e.png">
+
+  <br>
+
+  ### 🌸使用技術
+  
+  #### バックエンド
+  Ruby 2.7.2  
+  Rails 6.1.3  
+  Rubocop  
+  RSpec  
+  
+  #### フロントエンド
+  HTML  
+  CSS(SCSS)  
+  JavaScript(jQuery)  
+  bootstrap4  
