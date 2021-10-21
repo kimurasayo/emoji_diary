@@ -74,10 +74,11 @@
   <br>
   
   ### 🌸ER図
-  <img width="760" alt="スクリーンショット 2021-09-23 14 00 54" src="https://user-images.githubusercontent.com/76583053/134456928-262e2807-8155-4a16-b1c4-f7fe6efea30b.png">
 
+  <img width="541" alt="er" src="https://user-images.githubusercontent.com/76583053/134193703-0ca4d7d8-0d48-4c25-b169-876f19997a5e.png">
 
   <br>
+
 
   ### 🌸使用技術
   
