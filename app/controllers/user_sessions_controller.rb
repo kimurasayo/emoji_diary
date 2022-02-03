@@ -3,9 +3,7 @@ class UserSessionsController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
 
   def new
-    if current_user
-      redirect_to user_diaries_path(current_user.name), danger: t('.fail')
-    end
+    redirect_to user_diaries_path(current_user.name), danger: t('.fail') if current_user
   end
 
   # ログイン時はnameとpasswordの情報でDBからユーザーを探す

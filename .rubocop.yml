@@ -25,7 +25,7 @@ Layout/LineLength:
   Enabled: false
 
 Metrics/AbcSize:
-  Max: 25
+  Max: 101
 
 Metrics/BlockLength:
   Max: 30
@@ -43,7 +43,7 @@ Metrics/CyclomaticComplexity:
 
 Metrics/MethodLength:
   CountComments: false
-  Max: 30
+  Max: 55
 
 Naming/AccessorMethodName:
   Exclude:

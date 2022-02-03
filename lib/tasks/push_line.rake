@@ -21,6 +21,7 @@ namespace :push_line do
     # Body
     params = { 'messages' => [{ 'type' => 'text', 'text' => send_message }] }
 
-    response = http.post(uri.path, params.to_json, headers)
+    # response = http.post(uri.path, params.to_json, headers)
+    http.post(uri.path, params.to_json, headers)
   end
 end

@@ -19,9 +19,7 @@ class UsersController < ApplicationController
   # 新規作成したユーザー
   def new
     @user = User.new
-    if current_user
-      redirect_to user_diaries_path(current_user.name), danger: t('.fail')
-    end
+    redirect_to user_diaries_path(current_user.name), danger: t('.fail') if current_user
   end
 
   # 新規作成するユーザー情報
