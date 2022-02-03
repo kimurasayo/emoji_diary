@@ -19,7 +19,7 @@
 
 # Learn more: http://github.com/javan/whenever
 
-require File.expand_path(File.dirname(__FILE__) + "/environment")
+require File.expand_path("#{File.dirname(__FILE__)}/environment")
 
 rails_env = ENV['RAILS_ENV'] || :development
 
@@ -29,5 +29,5 @@ set :output, "#{Rails.root}/log/cron.log"
 
 # every 1.minute do
 # every 1.day, at: ['9:00 pm'] do
-  # rake 'push_line:push_line_message'
-#end
+# rake 'push_line:push_line_message'
+# end

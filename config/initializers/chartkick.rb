@@ -1,7 +1,7 @@
 Chartkick.options = {
-  colors: ["#F7EDDC"],
-  empty: "まだ日記をつけていません",
-  suffix: "%",
+  colors: ['#F7EDDC'],
+  empty: 'まだ日記をつけていません',
+  suffix: '%',
   min: 0,
   max: 100,
   library: {
@@ -13,7 +13,7 @@ Chartkick.options = {
       }
     },
     tooltip: {
-      enabled: false,
+      enabled: false
     }
   }
 }

@@ -1,4 +1,4 @@
-inherit_from: .rubocop_todo.yml
+# inherit_from: .rubocop_todo.yml
 
 AllCops:
   Exclude:
@@ -7,7 +7,15 @@ AllCops:
     - 'bin/**/*'
     - 'spec/**/*'
     - 'node_modules/**/*'
+    - 'config/puma.rb'
+    - 'config/spring.rb'
+    - 'config/initializers/backtrace_silencers.rb'
+    - 'config/boot.rb'
+    - 'Rakefile'
+    - 'config/initializers/filter_parameter_logging.rb'
   DisplayCopNames: true
+  SuggestExtensions: false
+  NewCops: enable
 
 Layout/MultilineBlockLayout:
   Exclude:
@@ -17,7 +25,7 @@ Layout/LineLength:
   Enabled: false
 
 Metrics/AbcSize:
-  Max: 25
+  Max: 101
 
 Metrics/BlockLength:
   Max: 30
@@ -35,7 +43,7 @@ Metrics/CyclomaticComplexity:
 
 Metrics/MethodLength:
   CountComments: false
-  Max: 30
+  Max: 55
 
 Naming/AccessorMethodName:
   Exclude:

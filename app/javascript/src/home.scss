@@ -4,8 +4,8 @@
 }
 
 /* フラッシュメッセージが見えるように */
-body { 
-  padding-top: 65px; 
+body {
+  padding-top: 65px;
 }
 
 /* 画像をレスポンシブ対応させる */
@@ -101,18 +101,18 @@ body {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
   }
- 
+
   .modal-title,
   button.close {
     display: none;
   }
- 
+
   .modal-body {
     text-align: center;
     font-size: 15px;
     padding: 30px 0 5px;
   }
- 
+
   .fa-exclamation-circle:before {
       color: var(--color4);
       font-size: 40px;
@@ -120,17 +120,17 @@ body {
       position: relative;
       top: 5px;
   }
- 
+
   .modal-footer {
     border-top: none;
   }
 
-  .btn.btn-danger:hover, .btn.btn-danger:focus, 
+  .btn.btn-danger:hover, .btn.btn-danger:focus,
   .btn.btn-danger:active, .btn.btn-danger:active:focus, .btn.btn-danger:active:hover, .btn.btn-danger:active.focus,
   .btn.btn-danger.active, .btn.btn-danger.active:focus, .btn.btn-danger.active:hover, .btn.btn-danger.active.focus,
-  .open > .dropdown-toggle.btn.btn-danger, 
+  .open > .dropdown-toggle.btn.btn-danger,
   .open > .dropdown-toggle.btn.btn-danger:hover,
-  .open > .dropdown-toggle.btn.btn-danger:focus, 
+  .open > .dropdown-toggle.btn.btn-danger:focus,
   .open > .dropdown-toggle.btn.btn-danger.focus,
   .btn.btn-danger.disabled:hover, .btn.btn-danger[disabled]:hover, fieldset[disabled] .btn.btn-danger:hover,
   .btn.btn-danger.disabled:focus, .btn.btn-danger[disabled]:focus, fieldset[disabled] .btn.btn-danger:focus,
@@ -157,14 +157,14 @@ body {
     border: none;
     outline: none;
   }
-  
+
   .btn.commit:hover {
     opacity:0.8;
     cursor: pointer;
     text-decoration: none;
     color: var(--color5);
   }
-  
+
   .btn.commit:focus {
     box-shadow: none;
     color: var(--color5);
@@ -183,14 +183,14 @@ body {
     border: none;
     outline: none;
   }
-  
+
   .btn.canel:hover {
     opacity:0.8;
     cursor: pointer;
     text-decoration: none;
     color: var(--color4);
   }
-  
+
   .btn.cancel:focus {
     box-shadow: none;
     color: var(--color4);
@@ -250,7 +250,7 @@ textarea:focus {
 }
 
 /* お問い合わせフォームのプレースホルダー */
-textarea::placeholder { 
+textarea::placeholder {
   color: lightgray !important;
 }
 
@@ -307,7 +307,7 @@ table.login-btn {
     margin: auto;
     margin-bottom: 100px;
   }
-  
+
   .home {
     padding-top: 0px;
     padding-bottom: 10px;

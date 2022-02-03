@@ -2,7 +2,7 @@ module ApplicationHelper
   include Pagy::Frontend
 
   def page_title(page_title = '')
-    base_title = "emory"
+    base_title = 'emory'
     if page_title.empty?
       base_title
     else
@@ -13,25 +13,25 @@ module ApplicationHelper
   # twitter OGP
   def default_meta_tags
     {
-      title:       "emory",
-      description: "絵文字だけを使って日記をつけてみませんか？",
-      keywords:    "emoji,diary",
+      title: 'emory',
+      description: '絵文字だけを使って日記をつけてみませんか？',
+      keywords: 'emoji,diary',
       icon: [
         # { href: image_url('favicon.ico') },
         # { href: image_url('sample.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
       ],
-      noindex: ! Rails.env.production?,
+      noindex: !Rails.env.production?,
       canonical: request.original_url,
-      charset: "UTF-8",
+      charset: 'UTF-8',
       # OGPの設定
       og: {
-        title: "emory",
-        description: "絵文字だけを使って日記をつけてみませんか？",
-        type: "website",
+        title: 'emory',
+        description: '絵文字だけを使って日記をつけてみませんか？',
+        type: 'website',
         url: request.original_url,
-        image: asset_pack_url("media/images/twitter_share.png"),
-        site_name: "emory",
-        locale: "ja_JP"
+        image: asset_pack_url('media/images/twitter_share.png'),
+        site_name: 'emory',
+        locale: 'ja_JP'
       },
       twitter: {
         site: '@sayo_saru',
@@ -39,7 +39,7 @@ module ApplicationHelper
         image: asset_pack_url('media/images/twitter_share.png')
       },
       fb: {
-        #app_id: ''
+        # app_id: ''
       }
     }
   end

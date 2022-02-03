@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # テスト関連
   gem 'factory_bot_rails'
   gem 'rspec-rails'
@@ -39,7 +39,7 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rubocop-checkstyle_formatter'
 
-  #　メール送信テスト用
+  # 　メール送信テスト用
   gem 'letter_opener_web', '~> 1.0'
 end
 
@@ -63,7 +63,7 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # 環境変数を管理するgem
 gem 'dotenv-rails'
@@ -73,7 +73,7 @@ gem 'sorcery'
 gem 'pry-byebug'
 
 # カレンダー
-gem "simple_calendar", "~> 2.4"
+gem 'simple_calendar', '~> 2.4'
 
 # 初期データを作成
 gem 'seed-fu'
@@ -82,10 +82,10 @@ gem 'seed-fu'
 gem 'ransack'
 
 # Ajax実装のためのjquery
-gem "jquery-rails"
+gem 'jquery-rails'
 
 # グラフ
-gem "chartkick"
+gem 'chartkick'
 
 # フォーム
 gem 'simple_form'

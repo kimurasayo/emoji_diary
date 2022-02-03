@@ -21,10 +21,10 @@ class User < ApplicationRecord
   has_many :bookmark_diaries, through: :bookmarks, source: :diary
 
   # パスワードは半角英数字数字のみ可能。
-  VALID_PASSWORD_REGEX = /\A[a-zA-Z0-9]+\z/
+  VALID_PASSWORD_REGEX = /\A[a-zA-Z0-9]+\z/.freeze
 
   # if~内容変更時パスワードの入力を省略させることが出来る。パスワードの長さは8文字以上。
-  validates :password, length: { minimum: 8 }, format: { with: VALID_PASSWORD_REGEX, message: "半角英数字のみ使用できます" }, if: -> { new_record? || changes[:crypted_password] }
+  validates :password, length: { minimum: 8 }, format: { with: VALID_PASSWORD_REGEX, message: '半角英数字のみ使用できます' }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
@@ -32,21 +32,21 @@ class User < ApplicationRecord
   # コールバック。emailをセーブする前に全て小文字にする
   before_save { self.email = email.downcase }
   # emailの形式になっていてる確認する。@や.など必須項目があるか確認する
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   # emailは必須条件、一意であることを確認するときに大文字小文字の区別をしている
-  validates :email, {presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }}
+  validates :email, { presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false } }
 
   # nicknameは必須項目
   validates :nickname, presence: true
 
   # nameはTwitterでいうユーザーIDのようなもの。一意で必須項目。15文字以内。半角英数字のみ。
-  validates :name, uniqueness: true, presence: true, length: { maximum: 15 }, format: { with: /\A[a-zA-Z0-9]+\z/, message: "半角英数字のみ使用できます" }
+  validates :name, uniqueness: true, presence: true, length: { maximum: 15 }, format: { with: /\A[a-zA-Z0-9]+\z/, message: '半角英数字のみ使用できます' }
 
   # 一般ユーザー、管理者、ゲストユーザー
   enum role: { general: 0, admin: 1 }
 
   # サイトのテーマカラー
-  enum color: { pink: 0, blue: 1}
+  enum color: { pink: 0, blue: 1 }
 
   # フォローする
   def follow(other_user)
