@@ -104,7 +104,7 @@ class User < ApplicationRecord
 
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
-      user.password = SecureRandom.urlsafe_base64
+      user.password = SecureRandom.hex(10)
       user.password_confirmation = user.password
       user.name = 'guest'
       user.nickname = '🔰'
@@ -113,10 +113,10 @@ class User < ApplicationRecord
 
   def self.other_user
     find_or_create_by!(email: 'guest2@example.com') do |user|
-      user.password = SecureRandom.urlsafe_base64
+      user.password = SecureRandom.hex(10)
       user.password_confirmation = user.password
       user.name = 'guest2'
-      user.nickname = '🎀'
+      user.nickname = '🍑'
     end
   end
 end

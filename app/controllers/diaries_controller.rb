@@ -1,10 +1,8 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: %i[edit update destroy]
   skip_before_action :require_login, only: %i[index]
-  # user_diaries_path。ユーザーのidをパラメータで受け取って、@userに入れる。
-  # @userの日記一覧を@diariesに入れる。
+
   def index
-    # @user = User.find(params[:user_id])
     # userのnemeをパラメータで取得してユーザーを指定する
     @user = User.find_by(name: params[:user_name])
     @diaries = @user.diaries
@@ -23,19 +21,12 @@ class DiariesController < ApplicationController
 
   # 日記作成アクション。作成できたら一覧ページ、失敗したら日記新規作成ページへ。
   def create
-    def create
-      if current_user.name == 'guest'
-        redirect_to user_diaries_path(current_user), success: "『ゲスト』は日記を作成できません"
-      else
-        @diary = current_user.diaries.new(diary_params)
-        # モデルにメソッド記載
-        @diary.score_feeling
-        if @diary.save
-          redirect_to user_diary_path(current_user.name, @diary), success: t('.success', date: @diary.start_time.strftime("%-m月%-e日"))
-        else
-          render :new
-        end
-      end
+    @diary = current_user.diaries.new(diary_params)
+    @diary.score_feeling
+    if @diary.save
+      redirect_to user_diary_path(current_user.name, @diary), success: t('.success', date: @diary.start_time.strftime("%-m月%-e日"))
+    else
+      render :new
     end
   end
 

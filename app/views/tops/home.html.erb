@@ -12,7 +12,7 @@
         
         <div class="d-flex align-items-center text-center">
           <div class="text-center">
-            <p>絵文字だけで日記をつけて
+            <p class="top-letter">絵文字だけで日記をつけて
             <br>友達とシェアしませんか？</p>
             <div class="">
               <%= button_to t('defaults.login'), login_path, method: :get, class:'btn btn-normal' %>
@@ -35,7 +35,7 @@
         </div>
         <div class="d-flex align-items-center text-center">
           <div class="text-center">
-            <p>絵文字だけで日記をつけて
+            <p class="top-letter">絵文字だけで日記をつけて
             <br>友達とシェアしませんか？</p>
             <div class="">
               <%= button_to t('defaults.mine'), user_diaries_path(current_user), method: :get, class:'btn btn-normal' %>
@@ -53,16 +53,16 @@
       <div class="col-11 card-deck top-card">
         <div class="card">
           <div class="card-body">
-            <p>カレンダーの色とグラフをみたら
+            <p class="top-letter">カレンダーの色とグラフをみたら
             <br>感情の変化が一目でわかる！
-            <br>疲れた日が続いているのにスグ気付けるよ。</p>
+            <br>疲れた日が続いていることにスグ気がつけるよ。</p>
             <img src="<%= asset_pack_path 'media/images/top-calendar.png' %>" class="top-image1">
           </div>
         </div>
 
         <div class="card">
           <div class="card-body">
-            <p>友達の日記をのぞき見👀
+            <p class="top-letter">友達の日記をのぞき見👀
             <br>絵文字だけで書かれた日記を見て、
             <br>友達の1日がどんな1日だったのか想像してみてね。</p>
             <img src="<%= asset_pack_path 'media/images/top-show.png' %>" class="top-image1">

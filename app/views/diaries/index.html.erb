@@ -42,11 +42,6 @@
         <%= area_chart @diaries.current_month.group(:start_time).sum(:score) %>
       </div>
     </div>
-    <% if !logged_in? %>
-    <div class="text-center">
-      <%= button_to 'back', index_path, method: :get, class:'btn btn-normal' %>
-    </div>
-    <% end %>
   </div>
 </div>
 
