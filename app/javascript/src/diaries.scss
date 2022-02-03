@@ -141,10 +141,10 @@ input[type="radio"]:checked + label.face {
   width: 40px;
   height: 40px;
   font-size: 30px;
-  color: #e54747; 
+  color: #e54747;
   margin-left: 20px;
 }
- 
+
 .like-btn:hover {
   text-decoration: none;
 }
@@ -235,7 +235,7 @@ a.feeling-link:hover {
   flex-wrap: wrap;
   display: flex;
 }
- 
+
 /* ６分割するタブの設定 */
 .tab_class {
   width: calc(100%/6);
@@ -258,7 +258,7 @@ input:checked + .tab_class {
   background-color: var(--color3);
   color: var(--color2);
 }
- 
+
 /* タブのレイアウト */
 .content_class {
   display: none;
@@ -266,7 +266,7 @@ input:checked + .tab_class {
   text-align: center;
   padding-top: 20px;
 }
- 
+
 input:checked + .tab_class + .content_class {
   display: block;
 }
@@ -338,7 +338,7 @@ input:checked + .tab_class + .content_class {
 }
 
 /* テキストフォームのプレースホルダー */
-.diary_body input[type="text"]::placeholder { 
+.diary_body input[type="text"]::placeholder {
   opacity: 0.3;
 }
 
@@ -374,7 +374,7 @@ input:checked + .tab_class + .content_class {
   font-weight: bold;
 }
 .box1 p {
-  margin: 0; 
+  margin: 0;
   padding: 0;
   color: gray;
 }
@@ -862,7 +862,7 @@ input:checked + .tab_class + .content_class {
   animation: float_2979 3s linear infinite;
   transform-origin: 50% 50%;
 }
- 
+
 @keyframes float_2979 {
   0% { transform: translateY(0) }
   33.33333% { transform: translateY(-10px) }

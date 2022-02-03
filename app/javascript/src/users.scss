@@ -31,7 +31,7 @@
   height:50px;
 }
 
-.user_search input[type="search"]::placeholder { 
+.user_search input[type="search"]::placeholder {
   color: lightgray;
 }
 
@@ -166,7 +166,7 @@
 }
 
 /* パスワードフォームのプレースホルダー */
-.register input[type="password"]::placeholder { 
+.register input[type="password"]::placeholder {
   color: lightgray;
 }
 
@@ -199,7 +199,7 @@ select#user_color:focus {
 }
 
 /* 新規登録画面のテーマカラー選択フォームのプレースホルダー */
-select#user_color::placeholder { 
+select#user_color::placeholder {
   color: lightgray;
 }
 
@@ -232,7 +232,7 @@ select#user_color:focus::placeholder {
 }
 
 /* テキストフォームのプレースホルダー */
-.register input[type="text"]::placeholder { 
+.register input[type="text"]::placeholder {
   color: lightgray;
 }
 
@@ -265,7 +265,7 @@ select#user_color:focus::placeholder {
 }
 
 /* emailのプレースホルダー */
-.register input[type="email"]::placeholder { 
+.register input[type="email"]::placeholder {
   color: lightgray;
 }
 
@@ -307,7 +307,7 @@ select#user_color:focus::placeholder {
 }
 
 /* 日記フォームの日付のプレースホルダー */
-.register input[type="date"]::placeholder { 
+.register input[type="date"]::placeholder {
   color: lightgray;
 }
 
