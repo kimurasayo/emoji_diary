@@ -57,6 +57,6 @@ class GuestSessionsController < ApplicationController
       @diary13.score_feeling
       @diary13.save
     end
-    redirect_to user_diaries_path(@user), success: 'ゲストユーザーでログインしました'
+    redirect_to user_diaries_path(@user), success: t('.success')
   end
 end

@@ -22,12 +22,14 @@ ja:
       success: ご登録ありがとうございます
     destroy:
       success: 退会しました。ご利用ありがとうございました！
+      fail: 『ゲスト』は退会できません
     follower:
       title: followers
     following:
       title: followings
     index:
       title: user search
+      fail: 『ゲスト』はユーザー検索できません
     search:
       title: search result
   user_sessions:
@@ -40,6 +42,9 @@ ja:
       fail: ログインに失敗しました。
     destroy:
       success: ログアウトしました
+  guest_sessions:
+    create:
+      success: ゲストユーザーでログインしました
   date:
     abbr_day_names:
       - sun
@@ -82,6 +87,7 @@ ja:
       success: "%{date}の日記を作成しました"
     update:
       success: "%{date}の日記を更新しました"
+      fail: 『ゲスト』は日記を更新できません
     edit:
       title: edit diary
     index:
@@ -92,11 +98,13 @@ ja:
       title: "%{date} diary"
     destroy:
       success: "%{date}の日記を削除しました"
+      fail: 『ゲスト』は日記を削除できません
   profiles:
     update:
       success: "『%{name}』のプロフィールを更新しました"
     edit:
       title: edit profile
+      fail: 『ゲスト』はプロフィールを編集できません
     show:
       title: profile
   bookmarks:

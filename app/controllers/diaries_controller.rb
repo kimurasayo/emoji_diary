@@ -33,7 +33,7 @@ class DiariesController < ApplicationController
   # 日記消去アクション
   def destroy
     if current_user.name == 'guest'
-      redirect_to user_diaries_path(current_user), success: '『ゲスト』は日記を削除できません'
+      redirect_to user_diaries_path(current_user), danger: t('.fail')
     else
       @diary.destroy
       redirect_to user_diaries_path(current_user.name), success: t('.success', date: @diary.start_time.strftime('%-m月%-e日'))
@@ -46,12 +46,13 @@ class DiariesController < ApplicationController
   # 日記更新アクション。作成できたら一覧ページ、失敗したら日記編集ページへ。
   def update
     if current_user.name == 'guest'
-      redirect_to user_diaries_path(current_user), success: '『ゲスト』は日記を更新できません'
-    elsif ActiveRecord::Base.transaction do
-      @diary.update(diary_params)
-      @diary.score_feeling
-      @diary.save
-    end
+      redirect_to user_diaries_path(current_user), danger: t('.fail')
+    elsif
+      ActiveRecord::Base.transaction do
+        @diary.update(diary_params)
+        @diary.score_feeling
+        @diary.save
+      end
       redirect_to user_diary_path(current_user.name, @diary), success: t('.success', date: @diary.start_time.strftime('%-m月%e日'))
     else
       render :edit
