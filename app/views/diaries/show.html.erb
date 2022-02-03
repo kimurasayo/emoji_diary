@@ -2,7 +2,12 @@
 
 <div class="container">
 <div class="row justify-content-center">
-  <div class="col-11 col-md-8 text-center">
+<% if @diary.next.present? %>
+  <%= link_to user_diary_path(@user, @diary.next), class: "btn_arrow" do %>
+    <i class="fas fa-angle-double-left"></i>
+  <% end %>
+<% end %>
+  <div class="col-10 col-md-8 text-center">
     <div class="diary-show">
       <h4 class="show-date"><%= @user.nickname %> <%= @diary.start_time.strftime("%b %d,%Y(%a)") %></h4>
       <h3 class="rounded"><%= @diary.feeling %><%= @diary.body %></h3>
@@ -30,6 +35,11 @@
         <% end %>
     </div>
   </div>
+  <% if @diary.previous.present? %>
+    <%= link_to user_diary_path(@user, @diary.previous), class: "btn_arrow_back" do %>
+      <i class="fas fa-angle-double-right"></i>
+    <% end %>
+  <% end %>
 </div>
 </div>
 

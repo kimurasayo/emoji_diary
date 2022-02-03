@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
 
   # DBから取得したオブジェクトを使用する。
   def edit
-    redirect_to profiles_path, success: '『ゲスト』はプロフィールを編集できません' if current_user.name == 'guest'
+    redirect_to profiles_path, danger: t('.fail') if current_user.name == 'guest'
   end
 
   def update

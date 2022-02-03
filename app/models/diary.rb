@@ -4,12 +4,8 @@ class Diary < ApplicationRecord
   # 各日記はたくさんのブックマークをもつことが出来る
   has_many :bookmarks, dependent: :destroy
 
-  # 感情を表す絵文字は1つ必須
-  validates :feeling, presence: true,
-                      format: { with: /["😀, 😃😄😁😆😅🤣😂😉😊😇🤗😋😝🙂😎🤠🤩🥰😍
-😘😗😚😙😛😜🤪🤑🥳🤤😳🤓😌🥸😲😯😮😬🤭🤫🤔🤐🤨🧐😏😒🙃🙄🤥🥺🥲😞😥😢😭😓😔😣😩😵😷🤕🤢🤮🤧🥵🥶🥴🤒😐😶😑😕😟🙁😖😫🥱😪😴😦😧😨😰😱🤯😤😡😠🤬😈👿]/,
-                                message: '絵文字だけ入力できます' },
-                      length: { maximum: 1 }
+  # 感情を表す絵文字は必須
+  validates :feeling, presence: true
 
   # バリデーターにて使用できる文字を定義している
   validates :body, emoji: true, length: { maximum: 160 }
@@ -54,5 +50,13 @@ class Diary < ApplicationRecord
     when '😭', '😱', '😖', '😫', '🤬', '😈', '👿', '🤢', '🤮'
       self.score = 10
     end
+  end
+
+  def previous
+    Diary.where(user_id: user.id).where("id < ?", self.id).order("id DESC").first
+  end
+
+  def next
+    Diary.where(user_id: user.id).where("id > ?", self.id).order("id ASC").first
   end
 end

@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # ユーザー検索ページ
   def index
     if current_user.name == 'guest'
-      redirect_to user_diaries_path(current_user), success: '『ゲスト』はユーザー検索できません'
+      redirect_to user_diaries_path(current_user), danger: t('.fail')
     else
       @q = User.ransack(params[:q])
     end
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
     # 　@user = User.find(params[:id])
     # userのnemeをパラメータで取得してユーザーを指定する
     if current_user.name == 'guest'
-      redirect_to profiles_path, success: '『ゲスト』は退会できません'
+      redirect_to profiles_path, danger: t('.fail')
     else
       @user = User.find_by(name: params[:name])
       @user.destroy
