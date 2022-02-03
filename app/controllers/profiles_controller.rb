@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
   # DBから取得したオブジェクトを使用する。
   def edit
     if current_user.name == 'guest'
-      redirect_to profiles_path, success: "『ゲスト』はプロフィールを編集できません"
+      redirect_to profiles_path, success: '『ゲスト』はプロフィールを編集できません'
     end
   end
 

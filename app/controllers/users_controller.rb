@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # ユーザー検索ページ
   def index
     if current_user.name == 'guest'
-      redirect_to user_diaries_path(current_user), success: "『ゲスト』はユーザー検索できません"
+      redirect_to user_diaries_path(current_user), success: '『ゲスト』はユーザー検索できません'
     else
       @q = User.ransack(params[:q])
     end
@@ -38,10 +38,10 @@ class UsersController < ApplicationController
 
   # 退会
   def destroy
-    #　@user = User.find(params[:id])
+    # 　@user = User.find(params[:id])
     # userのnemeをパラメータで取得してユーザーを指定する
     if current_user.name == 'guest'
-      redirect_to profiles_path, success: "『ゲスト』は退会できません"
+      redirect_to profiles_path, success: '『ゲスト』は退会できません'
     else
       @user = User.find_by(name: params[:name])
       @user.destroy
@@ -79,7 +79,7 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    #　@user = User.find(params[:user_id])
+    # 　@user = User.find(params[:user_id])
     # userのnemeをパラメータで取得してユーザーを指定する
     @user = User.find_by(name: params[:user_name])
   end

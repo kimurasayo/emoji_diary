@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'index', to: 'tops#index'
 
   # ユーザーのパスには:nameが入るようにしてあります
-  resources :users, param: :name, only: [:new, :create, :index, :destroy] do
+  resources :users, param: :name, only: %i[new create index destroy] do
     resources :followers, only: [:index]
 
     get 'following', to: 'users#following'
@@ -17,12 +17,12 @@ Rails.application.routes.draw do
     resources :diaries
   end
 
-  resources :relationships, only: [:create, :destroy]
+  resources :relationships, only: %i[create destroy]
 
-  resources :bookmarks, only: [:create, :destroy]
+  resources :bookmarks, only: %i[create destroy]
 
   # profiles_path, edit_profiles_path
-  resource :profiles, only: [:show, :edit, :update]
+  resource :profiles, only: %i[show edit update]
 
   # login_path
   get 'login', to: 'user_sessions#new', as: :login
@@ -33,11 +33,11 @@ Rails.application.routes.draw do
   get 'search', to: 'users#search'
 
   # linebot
-  post '/callback', to: 'linebot#callback' 
+  post '/callback', to: 'linebot#callback'
 
-  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :password_resets, only: %i[new create edit update]
 
-  resources :contacts, only: [:new, :create]
+  resources :contacts, only: %i[new create]
 
   post 'guest', to: 'guest_sessions#create'
 
