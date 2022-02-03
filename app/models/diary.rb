@@ -51,4 +51,12 @@ class Diary < ApplicationRecord
       self.score = 10
     end
   end
+
+  def previous
+    Diary.where(user_id: user.id).where("id < ?", self.id).order("id DESC").first
+  end
+
+  def next
+    Diary.where(user_id: user.id).where("id > ?", self.id).order("id ASC").first
+  end
 end

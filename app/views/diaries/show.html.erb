@@ -2,6 +2,9 @@
 
 <div class="container">
 <div class="row justify-content-center">
+<% if @diary.next.present? %>
+  <%= link_to "<<", user_diary_path(@user, @diary.next), class: "btn_arrow" %>
+<% end %>
   <div class="col-11 col-md-8 text-center">
     <div class="diary-show">
       <h4 class="show-date"><%= @user.nickname %> <%= @diary.start_time.strftime("%b %d,%Y(%a)") %></h4>
@@ -30,6 +33,9 @@
         <% end %>
     </div>
   </div>
+  <% if @diary.previous.present? %>
+    <%= link_to ">>", user_diary_path(@user, @diary.previous), class: "btn_arrow_back"%>
+  <% end %>
 </div>
 </div>
 
