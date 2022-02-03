@@ -47,9 +47,11 @@ class DiariesController < ApplicationController
   def update
     if current_user.name == 'guest'
       redirect_to user_diaries_path(current_user), success: '『ゲスト』は日記を更新できません'
-    elsif @diary.update(diary_params)
+    elsif ActiveRecord::Base.transaction do
+      @diary.update(diary_params)
       @diary.score_feeling
       @diary.save
+    end
       redirect_to user_diary_path(current_user.name, @diary), success: t('.success', date: @diary.start_time.strftime('%-m月%e日'))
     else
       render :edit

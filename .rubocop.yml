@@ -25,10 +25,10 @@ Layout/LineLength:
   Enabled: false
 
 Metrics/AbcSize:
-  Max: 101
+  Max: 102
 
 Metrics/BlockLength:
-  Max: 30
+  Max: 60
   Exclude:
     - 'Gemfile'
     - 'config/**/*'
@@ -43,7 +43,7 @@ Metrics/CyclomaticComplexity:
 
 Metrics/MethodLength:
   CountComments: false
-  Max: 55
+  Max: 60
 
 Naming/AccessorMethodName:
   Exclude:
