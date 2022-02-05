@@ -53,10 +53,10 @@ class Diary < ApplicationRecord
   end
 
   def previous
-    Diary.where(user_id: user.id).where("id < ?", self.id).order("id DESC").first
+    Diary.where(user_id: user.id).where("start_time < ?", self.start_time).order("start_time DESC").first
   end
 
   def next
-    Diary.where(user_id: user.id).where("id > ?", self.id).order("id ASC").first
+    Diary.where(user_id: user.id).where("start_time > ?", self.start_time).order("start_time ASC").first
   end
 end

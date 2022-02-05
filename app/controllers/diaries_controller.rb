@@ -21,12 +21,16 @@ class DiariesController < ApplicationController
 
   # 日記作成アクション。作成できたら一覧ページ、失敗したら日記新規作成ページへ。
   def create
-    @diary = current_user.diaries.new(diary_params)
-    @diary.score_feeling
-    if @diary.save
-      redirect_to user_diary_path(current_user.name, @diary), success: t('.success', date: @diary.start_time.strftime('%-m月%-e日'))
+    if current_user.name == 'guest'
+      redirect_to user_diaries_path(current_user), danger: t('.fail')
     else
-      render :new
+      @diary = current_user.diaries.new(diary_params)
+      @diary.score_feeling
+      if @diary.save
+        redirect_to user_diary_path(current_user.name, @diary), success: t('.success', date: @diary.start_time.strftime('%-m月%-e日'))
+      else
+        render :new
+      end
     end
   end
 
