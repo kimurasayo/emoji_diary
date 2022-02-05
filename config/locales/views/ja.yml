@@ -85,6 +85,7 @@ ja:
   diaries:
     create:
       success: "%{date}の日記を作成しました"
+      fail: 『ゲスト』は日記を作成できません
     update:
       success: "%{date}の日記を更新しました"
       fail: 『ゲスト』は日記を更新できません

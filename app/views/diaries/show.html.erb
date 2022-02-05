@@ -2,8 +2,8 @@
 
 <div class="container">
 <div class="row justify-content-center">
-<% if @diary.next.present? %>
-  <%= link_to user_diary_path(@user, @diary.next), class: "btn_arrow" do %>
+<% if @diary.previous.present? %>
+  <%= link_to user_diary_path(@user, @diary.previous), class: "btn_arrow" do %>
     <i class="fas fa-angle-double-left"></i>
   <% end %>
 <% end %>
@@ -35,8 +35,8 @@
         <% end %>
     </div>
   </div>
-  <% if @diary.previous.present? %>
-    <%= link_to user_diary_path(@user, @diary.previous), class: "btn_arrow_back" do %>
+  <% if @diary.next.present? %>
+    <%= link_to user_diary_path(@user, @diary.next), class: "btn_arrow_back" do %>
       <i class="fas fa-angle-double-right"></i>
     <% end %>
   <% end %>
