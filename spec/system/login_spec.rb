@@ -26,6 +26,13 @@ RSpec.describe "Login", type: :system do
           expect(page).to have_content "ログインに失敗しました。"
         end
       end
+
+      it '新規登録ページへ遷移する' do
+        visit root_path
+        click_link 'login'
+        click_link 'make a new account'
+        expect(current_path).to eq new_user_path
+      end
     end
 
     describe 'ログアウト' do

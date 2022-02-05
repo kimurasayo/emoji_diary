@@ -25,5 +25,12 @@ RSpec.describe "Users", type: :system do
       click_button 'sign up'
       expect(current_path).to eq users_path
     end
+
+    it 'ログインページへ遷移する' do
+      visit root_path
+      click_link 'sign up'
+      click_link 'already a member?'
+      expect(current_path).to eq login_path
+    end
   end
 end
