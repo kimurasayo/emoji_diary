@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "Diaries", type: :system do
   describe '日記のCRUD機能' do
     let(:user) { create(:user) }
+    let(:friend) { create(:user, :friend) }
     let(:diary) { create(:diary, user: user) }
     let(:yesterday_diary) { create(:diary, :yesterday, user: user) }
 
@@ -62,11 +63,52 @@ RSpec.describe "Diaries", type: :system do
 
     describe '日記の詳細画面' do
       context 'ログインしている場合' do
+        before { Login_as(user) }
+
         it '日記詳細ページから日記編集ページにアクセスできる' do
-          Login_as(user)
           visit user_diary_path(user_name: user.name, id: diary.id)
           click_on "edit"
           expect(current_path).to eq edit_user_diary_path(user_name: user.name, id: diary.id)
+        end
+
+        it '他ユーザの日記の詳細ページにはeditボタンは表示されていない' do
+          visit user_diary_path(user_name: friend.name, id: diary.id)
+          expect(page).not_to have_content 'edit'
+        end
+
+        it '他ユーザの日記の詳細ページにはdeleteボタンは表示されていない' do
+          visit user_diary_path(user_name: friend.name, id: diary.id)
+          expect(page).not_to have_content 'delete'
+        end
+
+        it '日記の詳細ページに前の日記へ遷移する<<が表示されている' do
+          yesterday_diary
+          visit user_diary_path(user_name: user.name, id: diary.id)
+          expect(page).to have_selector ".btn_arrow"
+        end
+
+        it '日記の詳細ページに前の日記がない場合は<<が表示されない' do
+          visit user_diary_path(user_name: user.name, id: diary.id)
+          expect(page).not_to have_selector ".btn_arrow"
+        end
+
+        it '日記の詳細ページに次の日記へ遷移する>>をクリックすると前日の日記が表示される' do
+          yesterday_diary
+          visit user_diary_path(user_name: user.name, id: diary.id)
+          find(".btn_arrow").click
+          expect(current_path).to eq user_diary_path(user_name: user.name, id: yesterday_diary.id)
+        end
+
+        it '日記の詳細ページに次の日記がない場合は>>が表示されない' do
+          visit user_diary_path(user_name: user.name, id: diary.id)
+          expect(page).not_to have_selector ".btn_arrow_back"
+        end
+
+        it '日記の詳細ページに前の日記へ遷移する>>をクリックすると前日の日記が表示される' do
+          diary
+          visit user_diary_path(user_name: user.name, id: yesterday_diary.id)
+          find(".btn_arrow_back").click
+          expect(current_path).to eq user_diary_path(user_name: user.name, id: diary.id)
         end
       end
 

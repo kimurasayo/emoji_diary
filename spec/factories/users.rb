@@ -20,4 +20,9 @@ FactoryBot.define do
     sequence(:email) { |n| "blue#{n}@example.com" }
     color { "blue" }
   end
+
+  trait :friend do
+    sequence(:name, "friend1")
+    sequence(:email) { |n| "friend#{n}@example.com" }
+  end
 end
