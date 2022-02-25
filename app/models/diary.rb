@@ -29,7 +29,7 @@ class Diary < ApplicationRecord
 
   def score_feeling
     case feeling
-    when "\u{1F92F}", "\u{1F970}", "\u{1F60D}", "\u{1F618}", "\u{1F973}", "\u{1F92A}"
+    when "\u{1F929}", "\u{1F970}", "\u{1F60D}", "\u{1F618}", "\u{1F973}", "\u{1F92A}"
       self.score = 100
     when "\u{1F60B}", "\u{1F61C}", "\u{1F61D}", "\u{1F917}", "\u{1F633}", "\u{1F923}", "\u{1F602}"
       self.score = 90
@@ -53,10 +53,10 @@ class Diary < ApplicationRecord
   end
 
   def previous
-    Diary.where(user_id: user.id).where("start_time < ?", self.start_time).order("start_time DESC").first
+    Diary.where(user_id: user.id).where('start_time < ?', start_time).order('start_time DESC').first
   end
 
   def next
-    Diary.where(user_id: user.id).where("start_time > ?", self.start_time).order("start_time ASC").first
+    Diary.where(user_id: user.id).where('start_time > ?', start_time).order('start_time ASC').first
   end
 end
