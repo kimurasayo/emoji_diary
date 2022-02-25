@@ -36,13 +36,12 @@ class User < ApplicationRecord
   # emailは必須条件、一意であることを確認するときに大文字小文字の区別をしている
   validates :email, { presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false } }
 
-  # nicknameは必須項目
-  validates :nickname, presence: true
+  # nicknameは必須項目、絵文字だけ受け取る、絵文字1文字だけ許可
+  validates :nickname, presence: true, emoji: true, a_emoji_nickname: true
 
   # nameはTwitterでいうユーザーIDのようなもの。一意で必須項目。15文字以内。半角英数字のみ。
   validates :name, uniqueness: true, presence: true, length: { maximum: 15 }, format: { with: /\A[a-zA-Z0-9]+\z/, message: '半角英数字のみ使用できます' }
 
-  # 一般ユーザー、管理者、ゲストユーザー
   enum role: { general: 0, admin: 1 }
 
   # サイトのテーマカラー

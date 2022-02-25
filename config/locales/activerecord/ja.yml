@@ -23,6 +23,9 @@ ja:
       models:
         user:
           attributes:
+            nickname:
+              format: '%{message}'
+              blank: 入力必須項目です
             name:
               format: '%{message}'
               blank: 入力必須項目です
@@ -61,7 +64,6 @@ ja:
               too_long: 1文字で入力してください
             body:
               format: '%{message}'
-              too_long: 絵文字の数が多すぎます、少し減らしてください
             start_time:
               format: '%{message}'
               blank: 入力必須項目です

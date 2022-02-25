@@ -8,7 +8,7 @@ class Diary < ApplicationRecord
   validates :feeling, presence: true
 
   # バリデーターにて使用できる文字を定義している
-  validates :body, emoji: true, length: { maximum: 160 }
+  validates :body, emoji: true, lots_of_emoji: true
 
   # 日記の日付は必須
   validates :start_time, presence: true
