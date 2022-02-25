@@ -8,6 +8,18 @@ RSpec.describe User, type: :model do
       expect(user.errors[:nickname]).to include("を入力してください")
     end
 
+    it 'iconの絵文字が1文字以上入力されていると無効になる' do
+      user = build(:user, nickname: '🍔🍟')
+      user.valid?
+      expect(user.errors[:nickname]).to include("絵文字は1文字だけ入力してください")
+    end
+
+    it 'iconに絵文字以外が入力されていると無効になる' do
+      user = build(:user, nickname: 'ハナコ')
+      user.valid?
+      expect(user.errors[:nickname]).to include("絵文字以外の文字は入力できません")
+    end
+
     it 'user nameが入力されていないと無効になる' do
       user = build(:user, name: nil)
       user.valid?
